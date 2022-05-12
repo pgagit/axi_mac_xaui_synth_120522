@@ -71,17 +71,17 @@ set rc [catch {
   create_project -in_memory -part xc7a200tifbv676-1L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.cache/wt [current_project]
-  set_property parent.project_path /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.xpr [current_project]
-  set_property ip_output_repo /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.cache/wt [current_project]
+  set_property parent.project_path /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.xpr [current_project]
+  set_property ip_output_repo /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.runs/synth_1/xaui_0_example_design.dcp
+  add_files -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/synth_1/xaui_0_example_design.dcp
   read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/xaui_0.xci
   read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1.xci
   read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ten_gig_eth_mac_0/ten_gig_eth_mac_0.xci
-  read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/vio_0/vio_0.xci
+  read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0.xci
   read_xdc /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc
   link_design -top xaui_0_example_design -part xc7a200tifbv676-1L
   close_msg_db -file init_design.pb

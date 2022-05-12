@@ -1,0 +1,1 @@
+-wto "a24a8c28fe4b4c53b27c1efd2724c19a" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "xaui_v12_3_6" -L "ten_gig_eth_mac_v15_1_7" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "testbench_behav" "xil_defaultlib.testbench" "xil_defaultlib.glbl" -log "elaborate.log" 

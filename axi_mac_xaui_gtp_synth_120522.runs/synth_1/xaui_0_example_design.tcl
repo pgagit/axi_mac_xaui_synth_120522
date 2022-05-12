@@ -26,12 +26,12 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.cache/wt [current_project]
-set_property parent.project_path /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.xpr [current_project]
+set_property webtalk.parent_dir /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.cache/wt [current_project]
+set_property parent.project_path /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.cache/ip [current_project]
+set_property ip_output_repo /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/new/my_axi_generator.vhd
@@ -58,9 +58,9 @@ read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_
 set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ten_gig_eth_mac_0/synth/ten_gig_eth_mac_0.xdc]
 set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ten_gig_eth_mac_0/synth/ten_gig_eth_mac_0_ooc.xdc]
 
-read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/vio_0/vio_0.xci
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/vio_0/vio_0.xdc]
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/vio_0/vio_0_ooc.xdc]
+read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0.xci
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0.xdc]
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

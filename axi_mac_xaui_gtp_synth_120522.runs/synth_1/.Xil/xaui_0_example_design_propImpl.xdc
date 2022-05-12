@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc rfile:../../../../../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc rfile:../../../../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC GTPE2_CHANNEL_X0Y4 [get_cells -hierarchical -filter {NAME =~ */gt_wrapper_i/gt3_xaui_0_gt_wrapper_i/gtpe2_i}]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
