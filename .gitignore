@@ -1,0 +1,52 @@
+## Master Gitignore V1
+## to reset to gitignore do :  $ git rm -r --cached .
+##Ignore all: with "*"
+
+*
+
+## not ignore subfolders????????????????????????????ßßß
+!*/ 
+!.gitignore
+
+###
+# dont ignore subdirectories
+!sim_sources/
+!hdl_sources/
+!constraints_sources/
+
+###########################################################################
+##	VIVADO
+###########################################################################
+#########
+#Source files:
+#########
+#Do NOT ignore VHDL, Verilog, block diagrams or EDIF files.
+!*.vhd
+!*.vhdl
+!*.v
+
+#!*.bd
+#!*.edif
+#########
+#IP files
+#########
+#.xci: IP-core property file with core container disabled
+!*.xci
+#Do NOT ignore *.xpr files
+!*.xpr
+
+#########
+#Constraint files
+#########
+#Do NOT ignore *.xdc files
+!*.xdc
+!*.txt
+#########
+#TCL - files
+#########
+!*.tcl
+# Don't ignore markdown...
+!*.md
+
+### Simulation
+!*.wcfg

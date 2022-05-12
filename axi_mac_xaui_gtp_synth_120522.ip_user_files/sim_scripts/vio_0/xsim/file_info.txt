@@ -1,0 +1,2 @@
+vio_0.vhd,vhdl,xil_defaultlib,../../../../../axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/vio_0/sim/vio_0.vhd,incdir="../../../../../axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/vio_0/hdl/verilog"incdir="../../../../../axi_mac_xaui_syntrh/git_forshare/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/vio_0/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v
