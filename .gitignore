@@ -41,6 +41,8 @@
 #Do NOT ignore *.xdc files
 !*.xdc
 !*.txt
+!*.xml
+!*.xcix
 #########
 #TCL - files
 #########
@@ -50,3 +52,6 @@
 
 ### Simulation
 !*.wcfg
+
+#### pictures
+!*.png
