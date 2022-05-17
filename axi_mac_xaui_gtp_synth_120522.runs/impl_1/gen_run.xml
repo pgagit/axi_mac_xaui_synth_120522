@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a200tifbv676-1L" LaunchTime="1652445998">
+<GenRun Id="impl_1" LaunchPart="xc7a200tifbv676-1L" LaunchTime="1652769008">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="xaui_0_example_design.drc"/>
   <File Type="BG-BGN" Name="xaui_0_example_design.bgn"/>
@@ -106,6 +106,7 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="xaui_0_example_design"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -54,7 +54,9 @@ ENTITY vio_0 IS
 PORT (
 CLK : IN STD_LOGIC;
 probe_in0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) := "0"
+probe_in1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) := "0";
+probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) := "0" 
 );
 END vio_0;
 ARCHITECTURE vio_0_arch OF vio_0 IS
