@@ -39,6 +39,10 @@ read_vhdl -library xil_defaultlib {
   /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/imports/imports/xaui_0_support_clocking.vhd
   /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/imports/imports/xaui_0_example_design.vhd
 }
+read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/xaui_0.xci
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/synth/xaui_0.xdc]
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/synth/xaui_0_ooc.xdc]
+
 read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
@@ -58,10 +62,6 @@ read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_ma
 set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0.xdc]
 set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0_ooc.xdc]
 
-read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/xaui_0.xci
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/synth/xaui_0.xdc]
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/synth/xaui_0_ooc.xdc]
-
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -73,6 +73,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc
 set_property used_in_implementation false [get_files /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
