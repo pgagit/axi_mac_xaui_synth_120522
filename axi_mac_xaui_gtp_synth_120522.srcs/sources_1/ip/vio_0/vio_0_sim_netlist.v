@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Tue May 17 11:07:01 2022
+// Date        : Mon May 23 13:50:35 2022
 // Host        : pc-140-151-2 running 64-bit Ubuntu 20.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0_sim_netlist.v
+//               /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0_sim_netlist.v
 // Design      : vio_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,22 +18,49 @@ module vio_0
    (clk,
     probe_in0,
     probe_in1,
+    probe_in2,
+    probe_in3,
+    probe_in4,
+    probe_in5,
+    probe_in6,
     probe_out0,
     probe_out1,
-    probe_out2);
+    probe_out2,
+    probe_out3,
+    probe_out4,
+    probe_out5,
+    probe_out6);
   input clk;
   input [0:0]probe_in0;
   input [0:0]probe_in1;
+  input [0:0]probe_in2;
+  input [0:0]probe_in3;
+  input [0:0]probe_in4;
+  input [0:0]probe_in5;
+  input [0:0]probe_in6;
   output [0:0]probe_out0;
   output [0:0]probe_out1;
   output [3:0]probe_out2;
+  output [0:0]probe_out3;
+  output [0:0]probe_out4;
+  output [0:0]probe_out5;
+  output [0:0]probe_out6;
 
   wire clk;
   wire [0:0]probe_in0;
   wire [0:0]probe_in1;
+  wire [0:0]probe_in2;
+  wire [0:0]probe_in3;
+  wire [0:0]probe_in4;
+  wire [0:0]probe_in5;
+  wire [0:0]probe_in6;
   wire [0:0]probe_out0;
   wire [0:0]probe_out1;
   wire [3:0]probe_out2;
+  wire [0:0]probe_out3;
+  wire [0:0]probe_out4;
+  wire [0:0]probe_out5;
+  wire [0:0]probe_out6;
   wire [0:0]NLW_inst_probe_out10_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out100_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out101_UNCONNECTED;
@@ -210,7 +237,6 @@ module vio_0
   wire [0:0]NLW_inst_probe_out27_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out28_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out29_UNCONNECTED;
-  wire [0:0]NLW_inst_probe_out3_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out30_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out31_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out32_UNCONNECTED;
@@ -221,7 +247,6 @@ module vio_0
   wire [0:0]NLW_inst_probe_out37_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out38_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out39_UNCONNECTED;
-  wire [0:0]NLW_inst_probe_out4_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out40_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out41_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out42_UNCONNECTED;
@@ -232,7 +257,6 @@ module vio_0
   wire [0:0]NLW_inst_probe_out47_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out48_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out49_UNCONNECTED;
-  wire [0:0]NLW_inst_probe_out5_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out50_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out51_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out52_UNCONNECTED;
@@ -243,7 +267,6 @@ module vio_0
   wire [0:0]NLW_inst_probe_out57_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out58_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out59_UNCONNECTED;
-  wire [0:0]NLW_inst_probe_out6_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out60_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out61_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out62_UNCONNECTED;
@@ -306,8 +329,8 @@ module vio_0
   (* C_MAX_WIDTH_PER_PROBE = "256" *) 
   (* C_MINOR_VERSION = "1" *) 
   (* C_NEXT_SLAVE = "0" *) 
-  (* C_NUM_PROBE_IN = "2" *) 
-  (* C_NUM_PROBE_OUT = "3" *) 
+  (* C_NUM_PROBE_IN = "7" *) 
+  (* C_NUM_PROBE_OUT = "7" *) 
   (* C_PIPE_IFACE = "0" *) 
   (* C_PROBE_IN0_WIDTH = "1" *) 
   (* C_PROBE_IN100_WIDTH = "1" *) 
@@ -787,7 +810,7 @@ module vio_0
   (* C_PROBE_OUT199_WIDTH = "1" *) 
   (* C_PROBE_OUT19_INIT_VAL = "1'b0" *) 
   (* C_PROBE_OUT19_WIDTH = "1" *) 
-  (* C_PROBE_OUT1_INIT_VAL = "1'b0" *) 
+  (* C_PROBE_OUT1_INIT_VAL = "1'b1" *) 
   (* C_PROBE_OUT1_WIDTH = "1" *) 
   (* C_PROBE_OUT200_INIT_VAL = "1'b0" *) 
   (* C_PROBE_OUT200_WIDTH = "1" *) 
@@ -1597,11 +1620,11 @@ module vio_0
   (* LC_LOW_BIT_POS_PROBE_OUT99 = "16'b0000000001100110" *) 
   (* LC_PROBE_IN_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
   (* LC_PROBE_OUT_HIGH_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000000010000000000000000" *) 
-  (* LC_PROBE_OUT_INIT_VAL_STRING = "259'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
+  (* LC_PROBE_OUT_INIT_VAL_STRING = "259'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010" *) 
   (* LC_PROBE_OUT_LOW_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000001000000000000000010000000000000000" *) 
   (* LC_PROBE_OUT_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000000000000" *) 
-  (* LC_TOTAL_PROBE_IN_WIDTH = "2" *) 
-  (* LC_TOTAL_PROBE_OUT_WIDTH = "6" *) 
+  (* LC_TOTAL_PROBE_IN_WIDTH = "7" *) 
+  (* LC_TOTAL_PROBE_OUT_WIDTH = "10" *) 
   (* syn_noprune = "1" *) 
   vio_0_vio_v3_0_20_vio inst
        (.clk(clk),
@@ -1717,7 +1740,7 @@ module vio_0
         .probe_in197(1'b0),
         .probe_in198(1'b0),
         .probe_in199(1'b0),
-        .probe_in2(1'b0),
+        .probe_in2(probe_in2),
         .probe_in20(1'b0),
         .probe_in200(1'b0),
         .probe_in201(1'b0),
@@ -1784,7 +1807,7 @@ module vio_0
         .probe_in27(1'b0),
         .probe_in28(1'b0),
         .probe_in29(1'b0),
-        .probe_in3(1'b0),
+        .probe_in3(probe_in3),
         .probe_in30(1'b0),
         .probe_in31(1'b0),
         .probe_in32(1'b0),
@@ -1795,7 +1818,7 @@ module vio_0
         .probe_in37(1'b0),
         .probe_in38(1'b0),
         .probe_in39(1'b0),
-        .probe_in4(1'b0),
+        .probe_in4(probe_in4),
         .probe_in40(1'b0),
         .probe_in41(1'b0),
         .probe_in42(1'b0),
@@ -1806,7 +1829,7 @@ module vio_0
         .probe_in47(1'b0),
         .probe_in48(1'b0),
         .probe_in49(1'b0),
-        .probe_in5(1'b0),
+        .probe_in5(probe_in5),
         .probe_in50(1'b0),
         .probe_in51(1'b0),
         .probe_in52(1'b0),
@@ -1817,7 +1840,7 @@ module vio_0
         .probe_in57(1'b0),
         .probe_in58(1'b0),
         .probe_in59(1'b0),
-        .probe_in6(1'b0),
+        .probe_in6(probe_in6),
         .probe_in60(1'b0),
         .probe_in61(1'b0),
         .probe_in62(1'b0),
@@ -2040,7 +2063,7 @@ module vio_0
         .probe_out27(NLW_inst_probe_out27_UNCONNECTED[0]),
         .probe_out28(NLW_inst_probe_out28_UNCONNECTED[0]),
         .probe_out29(NLW_inst_probe_out29_UNCONNECTED[0]),
-        .probe_out3(NLW_inst_probe_out3_UNCONNECTED[0]),
+        .probe_out3(probe_out3),
         .probe_out30(NLW_inst_probe_out30_UNCONNECTED[0]),
         .probe_out31(NLW_inst_probe_out31_UNCONNECTED[0]),
         .probe_out32(NLW_inst_probe_out32_UNCONNECTED[0]),
@@ -2051,7 +2074,7 @@ module vio_0
         .probe_out37(NLW_inst_probe_out37_UNCONNECTED[0]),
         .probe_out38(NLW_inst_probe_out38_UNCONNECTED[0]),
         .probe_out39(NLW_inst_probe_out39_UNCONNECTED[0]),
-        .probe_out4(NLW_inst_probe_out4_UNCONNECTED[0]),
+        .probe_out4(probe_out4),
         .probe_out40(NLW_inst_probe_out40_UNCONNECTED[0]),
         .probe_out41(NLW_inst_probe_out41_UNCONNECTED[0]),
         .probe_out42(NLW_inst_probe_out42_UNCONNECTED[0]),
@@ -2062,7 +2085,7 @@ module vio_0
         .probe_out47(NLW_inst_probe_out47_UNCONNECTED[0]),
         .probe_out48(NLW_inst_probe_out48_UNCONNECTED[0]),
         .probe_out49(NLW_inst_probe_out49_UNCONNECTED[0]),
-        .probe_out5(NLW_inst_probe_out5_UNCONNECTED[0]),
+        .probe_out5(probe_out5),
         .probe_out50(NLW_inst_probe_out50_UNCONNECTED[0]),
         .probe_out51(NLW_inst_probe_out51_UNCONNECTED[0]),
         .probe_out52(NLW_inst_probe_out52_UNCONNECTED[0]),
@@ -2073,7 +2096,7 @@ module vio_0
         .probe_out57(NLW_inst_probe_out57_UNCONNECTED[0]),
         .probe_out58(NLW_inst_probe_out58_UNCONNECTED[0]),
         .probe_out59(NLW_inst_probe_out59_UNCONNECTED[0]),
-        .probe_out6(NLW_inst_probe_out6_UNCONNECTED[0]),
+        .probe_out6(probe_out6),
         .probe_out60(NLW_inst_probe_out60_UNCONNECTED[0]),
         .probe_out61(NLW_inst_probe_out61_UNCONNECTED[0]),
         .probe_out62(NLW_inst_probe_out62_UNCONNECTED[0]),
@@ -2126,59 +2149,59 @@ module vio_0_vio_v3_0_20_decoder
    (s_drdy_i,
     in0,
     SR,
-    \xsdb_addr_2_0_p1_reg[1]_0 ,
-    Read_int_i_5,
-    \rd_en_reg[6]_0 ,
+    internal_cnt_rst,
+    rd_probe_out_width,
     E,
-    \Bus_data_out_reg[15]_0 ,
+    s_do_i,
     s_rst_o,
     Q,
     out,
     s_daddr_o,
-    addr_count,
     \Bus_data_out_reg[3]_0 ,
-    \Bus_data_out_reg[5]_0 ,
-    probe_width_int,
+    \Bus_data_out_reg[0]_0 ,
+    Bus_Data_out,
     s_den_o,
     s_dwe_o,
+    \rd_en_reg[6]_0 ,
     \rd_en_reg[6]_1 ,
     \rd_en_reg[6]_2 ,
-    \rd_en_reg[6]_3 );
+    \xsdb_addr_2_0_p2_reg[2]_0 );
   output s_drdy_i;
   output in0;
   output [0:0]SR;
-  output [1:0]\xsdb_addr_2_0_p1_reg[1]_0 ;
-  output Read_int_i_5;
-  output \rd_en_reg[6]_0 ;
+  output internal_cnt_rst;
+  output rd_probe_out_width;
   output [0:0]E;
-  output [15:0]\Bus_data_out_reg[15]_0 ;
+  output [15:0]s_do_i;
   input s_rst_o;
   input [15:0]Q;
   input out;
   input [3:0]s_daddr_o;
-  input addr_count;
   input [3:0]\Bus_data_out_reg[3]_0 ;
-  input [5:0]\Bus_data_out_reg[5]_0 ;
-  input probe_width_int;
+  input \Bus_data_out_reg[0]_0 ;
+  input [15:0]Bus_Data_out;
   input s_den_o;
   input s_dwe_o;
+  input \rd_en_reg[6]_0 ;
   input \rd_en_reg[6]_1 ;
   input \rd_en_reg[6]_2 ;
-  input \rd_en_reg[6]_3 ;
+  input [2:0]\xsdb_addr_2_0_p2_reg[2]_0 ;
 
+  wire [15:0]Bus_Data_out;
   wire \Bus_data_out[0]_i_1_n_0 ;
   wire \Bus_data_out[0]_i_2_n_0 ;
-  wire \Bus_data_out[0]_i_3_n_0 ;
   wire \Bus_data_out[10]_i_1_n_0 ;
   wire \Bus_data_out[11]_i_1_n_0 ;
   wire \Bus_data_out[12]_i_1_n_0 ;
   wire \Bus_data_out[13]_i_1_n_0 ;
   wire \Bus_data_out[14]_i_1_n_0 ;
   wire \Bus_data_out[15]_i_1_n_0 ;
+  wire \Bus_data_out[15]_i_2_n_0 ;
   wire \Bus_data_out[1]_i_1_n_0 ;
   wire \Bus_data_out[1]_i_2_n_0 ;
-  wire \Bus_data_out[1]_i_3_n_0 ;
   wire \Bus_data_out[2]_i_1_n_0 ;
+  wire \Bus_data_out[2]_i_2_n_0 ;
+  wire \Bus_data_out[2]_i_3_n_0 ;
   wire \Bus_data_out[3]_i_1_n_0 ;
   wire \Bus_data_out[3]_i_2_n_0 ;
   wire \Bus_data_out[4]_i_1_n_0 ;
@@ -2187,354 +2210,332 @@ module vio_0_vio_v3_0_20_decoder
   wire \Bus_data_out[7]_i_1_n_0 ;
   wire \Bus_data_out[8]_i_1_n_0 ;
   wire \Bus_data_out[9]_i_1_n_0 ;
-  wire [15:0]\Bus_data_out_reg[15]_0 ;
+  wire \Bus_data_out_reg[0]_0 ;
   wire [3:0]\Bus_data_out_reg[3]_0 ;
-  wire [5:0]\Bus_data_out_reg[5]_0 ;
   wire [0:0]E;
   wire Hold_probe_in;
   wire [15:0]Q;
-  wire Read_int_i_5;
   wire [0:0]SR;
-  wire addr_count;
-  wire [2:2]data_info_probe_in__61;
   wire in0;
   wire internal_cnt_rst;
   wire out;
   wire [15:0]probe_out_modified;
-  wire probe_width_int;
   wire \rd_en[6]_i_1_n_0 ;
+  wire \rd_en[6]_i_2_n_0 ;
+  wire \rd_en[6]_i_3_n_0 ;
   wire rd_en_p1;
   wire rd_en_p2;
   wire \rd_en_reg[6]_0 ;
   wire \rd_en_reg[6]_1 ;
   wire \rd_en_reg[6]_2 ;
-  wire \rd_en_reg[6]_3 ;
   wire rd_probe_out_width;
   wire [3:0]s_daddr_o;
   wire s_den_o;
+  wire [15:0]s_do_i;
   wire s_drdy_i;
   wire s_dwe_o;
   wire s_rst_o;
   wire wr_control_reg;
   wire \wr_en[2]_i_1_n_0 ;
+  wire \wr_en[2]_i_2_n_0 ;
+  wire \wr_en[4]_i_1_n_0 ;
   wire \wr_en[4]_i_2_n_0 ;
   wire wr_probe_out_modified;
-  wire [2:2]xsdb_addr_2_0_p1;
-  wire [1:0]\xsdb_addr_2_0_p1_reg[1]_0 ;
   wire [2:0]xsdb_addr_2_0_p2;
+  wire [2:0]\xsdb_addr_2_0_p2_reg[2]_0 ;
   wire xsdb_addr_8_p1;
   wire xsdb_addr_8_p2;
   wire xsdb_drdy_i_1_n_0;
   wire xsdb_rd;
 
-  LUT5 #(
-    .INIT(32'hAAAACFC0)) 
+  LUT6 #(
+    .INIT(64'hBBBBB8BB88888888)) 
     \Bus_data_out[0]_i_1 
        (.I0(\Bus_data_out_reg[3]_0 [0]),
-        .I1(\Bus_data_out[0]_i_2_n_0 ),
-        .I2(xsdb_addr_2_0_p2[2]),
-        .I3(\Bus_data_out[0]_i_3_n_0 ),
-        .I4(xsdb_addr_8_p2),
-        .O(\Bus_data_out[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
-    \Bus_data_out[0]_i_2 
-       (.I0(\Bus_data_out_reg[5]_0 [0]),
-        .I1(probe_width_int),
-        .I2(xsdb_addr_2_0_p2[1]),
-        .I3(probe_out_modified[0]),
-        .I4(xsdb_addr_2_0_p2[0]),
-        .O(\Bus_data_out[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'hF8)) 
-    \Bus_data_out[0]_i_3 
-       (.I0(in0),
-        .I1(xsdb_addr_2_0_p2[1]),
+        .I1(xsdb_addr_8_p2),
         .I2(xsdb_addr_2_0_p2[0]),
-        .O(\Bus_data_out[0]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+        .I3(\Bus_data_out[2]_i_2_n_0 ),
+        .I4(in0),
+        .I5(\Bus_data_out[0]_i_2_n_0 ),
+        .O(\Bus_data_out[0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hF5DD55FFF5DD5555)) 
+    \Bus_data_out[0]_i_2 
+       (.I0(xsdb_addr_2_0_p2[2]),
+        .I1(\Bus_data_out_reg[0]_0 ),
+        .I2(Bus_Data_out[0]),
+        .I3(xsdb_addr_2_0_p2[0]),
+        .I4(xsdb_addr_2_0_p2[1]),
+        .I5(probe_out_modified[0]),
+        .O(\Bus_data_out[0]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[10]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
+       (.I0(Bus_Data_out[10]),
         .I1(probe_out_modified[10]),
         .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+        .I3(xsdb_addr_2_0_p2[0]),
         .O(\Bus_data_out[10]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[11]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
+       (.I0(Bus_Data_out[11]),
         .I1(probe_out_modified[11]),
         .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+        .I3(xsdb_addr_2_0_p2[0]),
         .O(\Bus_data_out[11]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[12]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
+       (.I0(Bus_Data_out[12]),
         .I1(probe_out_modified[12]),
         .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+        .I3(xsdb_addr_2_0_p2[0]),
         .O(\Bus_data_out[12]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[13]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
+       (.I0(Bus_Data_out[13]),
         .I1(probe_out_modified[13]),
         .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+        .I3(xsdb_addr_2_0_p2[0]),
         .O(\Bus_data_out[13]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[14]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
+       (.I0(Bus_Data_out[14]),
         .I1(probe_out_modified[14]),
         .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+        .I3(xsdb_addr_2_0_p2[0]),
         .O(\Bus_data_out[14]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT2 #(
+    .INIT(4'hB)) 
     \Bus_data_out[15]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
-        .I1(probe_out_modified[15]),
-        .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+       (.I0(xsdb_addr_8_p2),
+        .I1(xsdb_addr_2_0_p2[2]),
         .O(\Bus_data_out[15]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAACFC0)) 
+  LUT4 #(
+    .INIT(16'h8380)) 
+    \Bus_data_out[15]_i_2 
+       (.I0(Bus_Data_out[15]),
+        .I1(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[0]),
+        .I3(probe_out_modified[15]),
+        .O(\Bus_data_out[15]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h88B8BBBB88888888)) 
     \Bus_data_out[1]_i_1 
        (.I0(\Bus_data_out_reg[3]_0 [1]),
-        .I1(\Bus_data_out[1]_i_2_n_0 ),
-        .I2(xsdb_addr_2_0_p2[2]),
-        .I3(\Bus_data_out[1]_i_3_n_0 ),
-        .I4(xsdb_addr_8_p2),
+        .I1(xsdb_addr_8_p2),
+        .I2(SR),
+        .I3(xsdb_addr_2_0_p2[0]),
+        .I4(\Bus_data_out[2]_i_2_n_0 ),
+        .I5(\Bus_data_out[1]_i_2_n_0 ),
         .O(\Bus_data_out[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+  LUT6 #(
+    .INIT(64'hF5DD55FFF5DD5555)) 
     \Bus_data_out[1]_i_2 
-       (.I0(\Bus_data_out_reg[5]_0 [1]),
-        .I1(probe_width_int),
-        .I2(xsdb_addr_2_0_p2[1]),
-        .I3(probe_out_modified[1]),
-        .I4(xsdb_addr_2_0_p2[0]),
+       (.I0(xsdb_addr_2_0_p2[2]),
+        .I1(\Bus_data_out_reg[0]_0 ),
+        .I2(Bus_Data_out[1]),
+        .I3(xsdb_addr_2_0_p2[0]),
+        .I4(xsdb_addr_2_0_p2[1]),
+        .I5(probe_out_modified[1]),
         .O(\Bus_data_out[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'h4F)) 
-    \Bus_data_out[1]_i_3 
-       (.I0(xsdb_addr_2_0_p2[0]),
-        .I1(SR),
-        .I2(xsdb_addr_2_0_p2[1]),
-        .O(\Bus_data_out[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT3 #(
-    .INIT(8'hAC)) 
+  LUT6 #(
+    .INIT(64'h88B8BBBB88888888)) 
     \Bus_data_out[2]_i_1 
        (.I0(\Bus_data_out_reg[3]_0 [2]),
-        .I1(data_info_probe_in__61),
-        .I2(xsdb_addr_8_p2),
+        .I1(xsdb_addr_8_p2),
+        .I2(internal_cnt_rst),
+        .I3(xsdb_addr_2_0_p2[0]),
+        .I4(\Bus_data_out[2]_i_2_n_0 ),
+        .I5(\Bus_data_out[2]_i_3_n_0 ),
         .O(\Bus_data_out[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hA0000FC0A00000C0)) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
     \Bus_data_out[2]_i_2 
-       (.I0(\Bus_data_out_reg[5]_0 [2]),
-        .I1(probe_out_modified[2]),
-        .I2(xsdb_addr_2_0_p2[2]),
-        .I3(xsdb_addr_2_0_p2[1]),
-        .I4(xsdb_addr_2_0_p2[0]),
-        .I5(internal_cnt_rst),
-        .O(data_info_probe_in__61));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+       (.I0(xsdb_addr_2_0_p2[1]),
+        .I1(xsdb_addr_2_0_p2[2]),
+        .O(\Bus_data_out[2]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT5 #(
+    .INIT(32'hBB3333F3)) 
+    \Bus_data_out[2]_i_3 
+       (.I0(Bus_Data_out[2]),
+        .I1(xsdb_addr_2_0_p2[2]),
+        .I2(probe_out_modified[2]),
+        .I3(xsdb_addr_2_0_p2[0]),
+        .I4(xsdb_addr_2_0_p2[1]),
+        .O(\Bus_data_out[2]_i_3_n_0 ));
   LUT3 #(
-    .INIT(8'h8F)) 
+    .INIT(8'hEA)) 
     \Bus_data_out[3]_i_1 
-       (.I0(xsdb_addr_8_p2),
+       (.I0(\Bus_data_out[3]_i_2_n_0 ),
         .I1(\Bus_data_out_reg[3]_0 [3]),
-        .I2(\Bus_data_out[3]_i_2_n_0 ),
+        .I2(xsdb_addr_8_p2),
         .O(\Bus_data_out[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBFBFFAFFFFFFFFFF)) 
+    .INIT(64'h4000004440000000)) 
     \Bus_data_out[3]_i_2 
        (.I0(xsdb_addr_8_p2),
-        .I1(\Bus_data_out_reg[5]_0 [3]),
-        .I2(xsdb_addr_2_0_p2[1]),
-        .I3(probe_out_modified[3]),
-        .I4(xsdb_addr_2_0_p2[0]),
-        .I5(xsdb_addr_2_0_p2[2]),
+        .I1(xsdb_addr_2_0_p2[2]),
+        .I2(Bus_Data_out[3]),
+        .I3(xsdb_addr_2_0_p2[0]),
+        .I4(xsdb_addr_2_0_p2[1]),
+        .I5(probe_out_modified[3]),
         .O(\Bus_data_out[3]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000088300000)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[4]_i_1 
-       (.I0(\Bus_data_out_reg[5]_0 [4]),
-        .I1(xsdb_addr_2_0_p2[1]),
-        .I2(probe_out_modified[4]),
+       (.I0(Bus_Data_out[4]),
+        .I1(probe_out_modified[4]),
+        .I2(xsdb_addr_2_0_p2[1]),
         .I3(xsdb_addr_2_0_p2[0]),
-        .I4(xsdb_addr_2_0_p2[2]),
-        .I5(xsdb_addr_8_p2),
         .O(\Bus_data_out[4]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000088300000)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[5]_i_1 
-       (.I0(\Bus_data_out_reg[5]_0 [5]),
-        .I1(xsdb_addr_2_0_p2[1]),
-        .I2(probe_out_modified[5]),
+       (.I0(Bus_Data_out[5]),
+        .I1(probe_out_modified[5]),
+        .I2(xsdb_addr_2_0_p2[1]),
         .I3(xsdb_addr_2_0_p2[0]),
-        .I4(xsdb_addr_2_0_p2[2]),
-        .I5(xsdb_addr_8_p2),
         .O(\Bus_data_out[5]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[6]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
+       (.I0(Bus_Data_out[6]),
         .I1(probe_out_modified[6]),
         .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+        .I3(xsdb_addr_2_0_p2[0]),
         .O(\Bus_data_out[6]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[7]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
+       (.I0(Bus_Data_out[7]),
         .I1(probe_out_modified[7]),
         .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+        .I3(xsdb_addr_2_0_p2[0]),
         .O(\Bus_data_out[7]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[8]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
+       (.I0(Bus_Data_out[8]),
         .I1(probe_out_modified[8]),
         .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+        .I3(xsdb_addr_2_0_p2[0]),
         .O(\Bus_data_out[8]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT4 #(
+    .INIT(16'hA00C)) 
     \Bus_data_out[9]_i_1 
-       (.I0(xsdb_addr_2_0_p2[0]),
+       (.I0(Bus_Data_out[9]),
         .I1(probe_out_modified[9]),
         .I2(xsdb_addr_2_0_p2[1]),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_8_p2),
+        .I3(xsdb_addr_2_0_p2[0]),
         .O(\Bus_data_out[9]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[0] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[0]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [0]),
+        .Q(s_do_i[0]),
         .R(1'b0));
   FDRE \Bus_data_out_reg[10] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[10]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [10]),
-        .R(1'b0));
+        .Q(s_do_i[10]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[11] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[11]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [11]),
-        .R(1'b0));
+        .Q(s_do_i[11]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[12] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[12]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [12]),
-        .R(1'b0));
+        .Q(s_do_i[12]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[13] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[13]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [13]),
-        .R(1'b0));
+        .Q(s_do_i[13]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[14] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[14]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [14]),
-        .R(1'b0));
+        .Q(s_do_i[14]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[15] 
        (.C(out),
         .CE(1'b1),
-        .D(\Bus_data_out[15]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [15]),
-        .R(1'b0));
+        .D(\Bus_data_out[15]_i_2_n_0 ),
+        .Q(s_do_i[15]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[1] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[1]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [1]),
+        .Q(s_do_i[1]),
         .R(1'b0));
   FDRE \Bus_data_out_reg[2] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[2]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [2]),
+        .Q(s_do_i[2]),
         .R(1'b0));
   FDRE \Bus_data_out_reg[3] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[3]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [3]),
+        .Q(s_do_i[3]),
         .R(1'b0));
   FDRE \Bus_data_out_reg[4] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[4]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [4]),
-        .R(1'b0));
+        .Q(s_do_i[4]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[5] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[5]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [5]),
-        .R(1'b0));
+        .Q(s_do_i[5]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[6] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[6]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [6]),
-        .R(1'b0));
+        .Q(s_do_i[6]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[7] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[7]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [7]),
-        .R(1'b0));
+        .Q(s_do_i[7]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[8] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[8]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [8]),
-        .R(1'b0));
+        .Q(s_do_i[8]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE \Bus_data_out_reg[9] 
        (.C(out),
         .CE(1'b1),
         .D(\Bus_data_out[9]_i_1_n_0 ),
-        .Q(\Bus_data_out_reg[15]_0 [9]),
-        .R(1'b0));
+        .Q(s_do_i[9]),
+        .R(\Bus_data_out[15]_i_1_n_0 ));
   FDRE Hold_probe_in_reg
        (.C(out),
         .CE(wr_control_reg),
         .D(Q[3]),
         .Q(Hold_probe_in),
         .R(s_rst_o));
-  LUT4 #(
-    .INIT(16'h0006)) 
-    \addr_count[0]_i_1 
-       (.I0(rd_probe_out_width),
-        .I1(addr_count),
-        .I2(internal_cnt_rst),
-        .I3(s_rst_o),
-        .O(\rd_en_reg[6]_0 ));
   FDRE clear_int_reg
        (.C(out),
         .CE(wr_control_reg),
@@ -2555,7 +2556,7 @@ module vio_0_vio_v3_0_20_decoder
         .R(s_rst_o));
   LUT1 #(
     .INIT(2'h1)) 
-    \probe_in_reg[1]_i_1 
+    \probe_in_reg[6]_i_1 
        (.I0(Hold_probe_in),
         .O(E));
   FDRE \probe_out_modified_reg[0] 
@@ -2654,14 +2655,28 @@ module vio_0_vio_v3_0_20_decoder
         .D(Q[9]),
         .Q(probe_out_modified[9]),
         .R(SR));
-  LUT4 #(
-    .INIT(16'h0008)) 
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
     \rd_en[6]_i_1 
-       (.I0(s_daddr_o[2]),
-        .I1(s_daddr_o[1]),
-        .I2(s_dwe_o),
-        .I3(s_daddr_o[3]),
+       (.I0(\rd_en[6]_i_2_n_0 ),
+        .I1(\rd_en[6]_i_3_n_0 ),
+        .I2(s_daddr_o[2]),
+        .I3(\rd_en_reg[6]_0 ),
+        .I4(\rd_en_reg[6]_1 ),
+        .I5(\rd_en_reg[6]_2 ),
         .O(\rd_en[6]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \rd_en[6]_i_2 
+       (.I0(s_daddr_o[1]),
+        .I1(s_daddr_o[0]),
+        .O(\rd_en[6]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h1)) 
+    \rd_en[6]_i_3 
+       (.I0(s_daddr_o[3]),
+        .I1(s_dwe_o),
+        .O(\rd_en[6]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h2)) 
@@ -2686,79 +2701,71 @@ module vio_0_vio_v3_0_20_decoder
         .CE(1'b1),
         .D(\rd_en[6]_i_1_n_0 ),
         .Q(rd_probe_out_width),
-        .R(Read_int_i_5));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h0400)) 
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'h80000000)) 
     \wr_en[2]_i_1 
-       (.I0(s_daddr_o[3]),
-        .I1(s_daddr_o[1]),
-        .I2(s_daddr_o[2]),
-        .I3(s_dwe_o),
-        .O(\wr_en[2]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hBFFF)) 
-    \wr_en[4]_i_1 
-       (.I0(s_daddr_o[0]),
-        .I1(\rd_en_reg[6]_1 ),
+       (.I0(\wr_en[2]_i_2_n_0 ),
+        .I1(s_dwe_o),
         .I2(\rd_en_reg[6]_2 ),
-        .I3(\rd_en_reg[6]_3 ),
-        .O(Read_int_i_5));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+        .I3(\rd_en_reg[6]_1 ),
+        .I4(\rd_en_reg[6]_0 ),
+        .O(\wr_en[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
-    .INIT(16'h0400)) 
+    .INIT(16'h0100)) 
+    \wr_en[2]_i_2 
+       (.I0(s_daddr_o[3]),
+        .I1(s_daddr_o[2]),
+        .I2(s_daddr_o[0]),
+        .I3(s_daddr_o[1]),
+        .O(\wr_en[2]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \wr_en[4]_i_1 
+       (.I0(\wr_en[4]_i_2_n_0 ),
+        .I1(s_dwe_o),
+        .I2(\rd_en_reg[6]_2 ),
+        .I3(\rd_en_reg[6]_1 ),
+        .I4(\rd_en_reg[6]_0 ),
+        .O(\wr_en[4]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT4 #(
+    .INIT(16'h0100)) 
     \wr_en[4]_i_2 
        (.I0(s_daddr_o[1]),
-        .I1(s_daddr_o[2]),
+        .I1(s_daddr_o[0]),
         .I2(s_daddr_o[3]),
-        .I3(s_dwe_o),
+        .I3(s_daddr_o[2]),
         .O(\wr_en[4]_i_2_n_0 ));
   FDRE \wr_en_reg[2] 
        (.C(out),
         .CE(1'b1),
         .D(\wr_en[2]_i_1_n_0 ),
         .Q(wr_control_reg),
-        .R(Read_int_i_5));
+        .R(1'b0));
   FDRE \wr_en_reg[4] 
        (.C(out),
         .CE(1'b1),
-        .D(\wr_en[4]_i_2_n_0 ),
+        .D(\wr_en[4]_i_1_n_0 ),
         .Q(wr_probe_out_modified),
-        .R(Read_int_i_5));
-  FDRE \xsdb_addr_2_0_p1_reg[0] 
-       (.C(out),
-        .CE(1'b1),
-        .D(s_daddr_o[0]),
-        .Q(\xsdb_addr_2_0_p1_reg[1]_0 [0]),
-        .R(1'b0));
-  FDRE \xsdb_addr_2_0_p1_reg[1] 
-       (.C(out),
-        .CE(1'b1),
-        .D(s_daddr_o[1]),
-        .Q(\xsdb_addr_2_0_p1_reg[1]_0 [1]),
-        .R(1'b0));
-  FDRE \xsdb_addr_2_0_p1_reg[2] 
-       (.C(out),
-        .CE(1'b1),
-        .D(s_daddr_o[2]),
-        .Q(xsdb_addr_2_0_p1),
         .R(1'b0));
   FDRE \xsdb_addr_2_0_p2_reg[0] 
        (.C(out),
         .CE(1'b1),
-        .D(\xsdb_addr_2_0_p1_reg[1]_0 [0]),
+        .D(\xsdb_addr_2_0_p2_reg[2]_0 [0]),
         .Q(xsdb_addr_2_0_p2[0]),
         .R(1'b0));
   FDRE \xsdb_addr_2_0_p2_reg[1] 
        (.C(out),
         .CE(1'b1),
-        .D(\xsdb_addr_2_0_p1_reg[1]_0 [1]),
+        .D(\xsdb_addr_2_0_p2_reg[2]_0 [1]),
         .Q(xsdb_addr_2_0_p2[1]),
         .R(1'b0));
   FDRE \xsdb_addr_2_0_p2_reg[2] 
        (.C(out),
         .CE(1'b1),
-        .D(xsdb_addr_2_0_p1),
+        .D(\xsdb_addr_2_0_p2_reg[2]_0 [2]),
         .Q(xsdb_addr_2_0_p2[2]),
         .R(1'b0));
   FDRE xsdb_addr_8_p1_reg
@@ -2791,9 +2798,10 @@ endmodule
 
 (* ORIG_REF_NAME = "vio_v3_0_20_probe_in_one" *) 
 module vio_0_vio_v3_0_20_probe_in_one
-   (Q,
+   (Bus_Data_out,
     out,
     s_rst_o,
+    internal_cnt_rst,
     Read_int_reg_0,
     Read_int_reg_1,
     Read_int_reg_2,
@@ -2802,82 +2810,196 @@ module vio_0_vio_v3_0_20_probe_in_one
     E,
     D,
     clk);
-  output [5:0]Q;
+  output [15:0]Bus_Data_out;
   input out;
   input s_rst_o;
+  input internal_cnt_rst;
   input Read_int_reg_0;
   input Read_int_reg_1;
   input Read_int_reg_2;
   input [3:0]s_daddr_o;
   input s_dwe_o;
   input [0:0]E;
-  input [1:0]D;
+  input [6:0]D;
   input clk;
 
-  wire [1:0]D;
+  wire [15:0]Bus_Data_out;
+  wire \Bus_Data_out[0]_i_1_n_0 ;
+  wire \Bus_Data_out[1]_i_1_n_0 ;
+  wire \Bus_Data_out[2]_i_1_n_0 ;
+  wire \Bus_Data_out[3]_i_1_n_0 ;
+  wire \Bus_Data_out[4]_i_1_n_0 ;
+  wire [6:0]D;
   wire \DECODER_INST/rd_en_int_7 ;
   wire [0:0]E;
-  wire [5:0]Q;
   wire Read_int;
   wire Read_int_i_2_n_0;
   wire Read_int_reg_0;
   wire Read_int_reg_1;
   wire Read_int_reg_2;
+  wire [2:0]addr_count;
+  wire \addr_count[0]_i_1_n_0 ;
+  wire \addr_count[1]_i_1_n_0 ;
+  wire \addr_count[2]_i_1_n_0 ;
+  wire addr_count_reg0;
+  wire addr_count_reg1;
   wire clk;
-  (* async_reg = "true" *) wire [1:0]data_int_sync1;
-  (* async_reg = "true" *) wire [1:0]data_int_sync2;
-  wire dn_activity1;
-  wire dn_activity11_out;
-  wire \dn_activity_reg_n_0_[0] ;
-  wire \dn_activity_reg_n_0_[1] ;
+  (* async_reg = "true" *) wire [6:0]data_int_sync1;
+  (* async_reg = "true" *) wire [6:0]data_int_sync2;
+  wire \dn_activity[0]_i_1_n_0 ;
+  wire \dn_activity[1]_i_1_n_0 ;
+  wire \dn_activity[2]_i_1_n_0 ;
+  wire \dn_activity[3]_i_1_n_0 ;
+  wire \dn_activity[4]_i_1_n_0 ;
+  wire \dn_activity[5]_i_1_n_0 ;
+  wire \dn_activity[6]_i_1_n_0 ;
+  wire internal_cnt_rst;
   wire out;
-  (* DONT_TOUCH *) wire [1:0]probe_in_reg;
+  wire [20:7]probe_all_int;
+  (* DONT_TOUCH *) wire [6:0]probe_in_reg;
   (* MAX_FANOUT = "200" *) (* RTL_MAX_FANOUT = "found" *) wire read_done;
-  wire read_done_i_1_n_0;
   wire [3:0]s_daddr_o;
   wire s_dwe_o;
   wire s_rst_o;
-  wire up_activity13_out;
   wire \up_activity[0]_i_1_n_0 ;
-  wire \up_activity_reg_n_0_[0] ;
-  wire \up_activity_reg_n_0_[1] ;
+  wire \up_activity[1]_i_1_n_0 ;
+  wire \up_activity[2]_i_1_n_0 ;
+  wire \up_activity[3]_i_1_n_0 ;
+  wire \up_activity[4]_i_1_n_0 ;
+  wire \up_activity[5]_i_1_n_0 ;
+  wire \up_activity[6]_i_1_n_0 ;
 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Bus_Data_out[0]_i_1 
+       (.I0(probe_all_int[16]),
+        .I1(addr_count[0]),
+        .I2(data_int_sync2[0]),
+        .O(\Bus_Data_out[0]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Bus_Data_out[1]_i_1 
+       (.I0(probe_all_int[17]),
+        .I1(addr_count[0]),
+        .I2(data_int_sync2[1]),
+        .O(\Bus_Data_out[1]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Bus_Data_out[2]_i_1 
+       (.I0(probe_all_int[18]),
+        .I1(addr_count[0]),
+        .I2(data_int_sync2[2]),
+        .O(\Bus_Data_out[2]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Bus_Data_out[3]_i_1 
+       (.I0(probe_all_int[19]),
+        .I1(addr_count[0]),
+        .I2(data_int_sync2[3]),
+        .O(\Bus_Data_out[3]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Bus_Data_out[4]_i_1 
+       (.I0(probe_all_int[20]),
+        .I1(addr_count[0]),
+        .I2(data_int_sync2[4]),
+        .O(\Bus_Data_out[4]_i_1_n_0 ));
   FDRE \Bus_Data_out_reg[0] 
        (.C(out),
         .CE(1'b1),
-        .D(data_int_sync2[0]),
-        .Q(Q[0]),
+        .D(\Bus_Data_out[0]_i_1_n_0 ),
+        .Q(Bus_Data_out[0]),
         .R(1'b0));
+  FDRE \Bus_Data_out_reg[10] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_all_int[10]),
+        .Q(Bus_Data_out[10]),
+        .R(addr_count[0]));
+  FDRE \Bus_Data_out_reg[11] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_all_int[11]),
+        .Q(Bus_Data_out[11]),
+        .R(addr_count[0]));
+  FDRE \Bus_Data_out_reg[12] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_all_int[12]),
+        .Q(Bus_Data_out[12]),
+        .R(addr_count[0]));
+  FDRE \Bus_Data_out_reg[13] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_all_int[13]),
+        .Q(Bus_Data_out[13]),
+        .R(addr_count[0]));
+  FDRE \Bus_Data_out_reg[14] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_all_int[14]),
+        .Q(Bus_Data_out[14]),
+        .R(addr_count[0]));
+  FDRE \Bus_Data_out_reg[15] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_all_int[15]),
+        .Q(Bus_Data_out[15]),
+        .R(addr_count[0]));
   FDRE \Bus_Data_out_reg[1] 
        (.C(out),
         .CE(1'b1),
-        .D(data_int_sync2[1]),
-        .Q(Q[1]),
+        .D(\Bus_Data_out[1]_i_1_n_0 ),
+        .Q(Bus_Data_out[1]),
         .R(1'b0));
   FDRE \Bus_Data_out_reg[2] 
        (.C(out),
         .CE(1'b1),
-        .D(\up_activity_reg_n_0_[0] ),
-        .Q(Q[2]),
+        .D(\Bus_Data_out[2]_i_1_n_0 ),
+        .Q(Bus_Data_out[2]),
         .R(1'b0));
   FDRE \Bus_Data_out_reg[3] 
        (.C(out),
         .CE(1'b1),
-        .D(\up_activity_reg_n_0_[1] ),
-        .Q(Q[3]),
+        .D(\Bus_Data_out[3]_i_1_n_0 ),
+        .Q(Bus_Data_out[3]),
         .R(1'b0));
   FDRE \Bus_Data_out_reg[4] 
        (.C(out),
         .CE(1'b1),
-        .D(\dn_activity_reg_n_0_[0] ),
-        .Q(Q[4]),
+        .D(\Bus_Data_out[4]_i_1_n_0 ),
+        .Q(Bus_Data_out[4]),
         .R(1'b0));
   FDRE \Bus_Data_out_reg[5] 
        (.C(out),
         .CE(1'b1),
-        .D(\dn_activity_reg_n_0_[1] ),
-        .Q(Q[5]),
-        .R(1'b0));
+        .D(data_int_sync2[5]),
+        .Q(Bus_Data_out[5]),
+        .R(addr_count[0]));
+  FDRE \Bus_Data_out_reg[6] 
+       (.C(out),
+        .CE(1'b1),
+        .D(data_int_sync2[6]),
+        .Q(Bus_Data_out[6]),
+        .R(addr_count[0]));
+  FDRE \Bus_Data_out_reg[7] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_all_int[7]),
+        .Q(Bus_Data_out[7]),
+        .R(addr_count[0]));
+  FDRE \Bus_Data_out_reg[8] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_all_int[8]),
+        .Q(Bus_Data_out[8]),
+        .R(addr_count[0]));
+  FDRE \Bus_Data_out_reg[9] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_all_int[9]),
+        .Q(Bus_Data_out[9]),
+        .R(addr_count[0]));
   LUT4 #(
     .INIT(16'h8000)) 
     Read_int_i_1
@@ -2900,6 +3022,64 @@ module vio_0_vio_v3_0_20_probe_in_one
         .CE(1'b1),
         .D(\DECODER_INST/rd_en_int_7 ),
         .Q(Read_int),
+        .R(1'b0));
+  LUT4 #(
+    .INIT(16'h002E)) 
+    \addr_count[0]_i_1 
+       (.I0(addr_count[0]),
+        .I1(Read_int),
+        .I2(addr_count[0]),
+        .I3(addr_count_reg0),
+        .O(\addr_count[0]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00002EE2)) 
+    \addr_count[1]_i_1 
+       (.I0(addr_count[1]),
+        .I1(Read_int),
+        .I2(addr_count[0]),
+        .I3(addr_count[1]),
+        .I4(addr_count_reg0),
+        .O(\addr_count[1]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000002EEEE222)) 
+    \addr_count[2]_i_1 
+       (.I0(addr_count[2]),
+        .I1(Read_int),
+        .I2(addr_count[1]),
+        .I3(addr_count[0]),
+        .I4(addr_count[2]),
+        .I5(addr_count_reg0),
+        .O(\addr_count[2]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFF0040)) 
+    \addr_count[2]_i_2 
+       (.I0(addr_count[2]),
+        .I1(Read_int),
+        .I2(addr_count[0]),
+        .I3(addr_count[1]),
+        .I4(s_rst_o),
+        .I5(internal_cnt_rst),
+        .O(addr_count_reg0));
+  (* MAX_FANOUT = "100" *) 
+  FDRE \addr_count_reg[0] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\addr_count[0]_i_1_n_0 ),
+        .Q(addr_count[0]),
+        .R(1'b0));
+  (* MAX_FANOUT = "100" *) 
+  FDRE \addr_count_reg[1] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\addr_count[1]_i_1_n_0 ),
+        .Q(addr_count[1]),
+        .R(1'b0));
+  (* MAX_FANOUT = "100" *) 
+  FDRE \addr_count_reg[2] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\addr_count[2]_i_1_n_0 ),
+        .Q(addr_count[2]),
         .R(1'b0));
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
@@ -2925,6 +3105,56 @@ module vio_0_vio_v3_0_20_probe_in_one
   (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \data_int_sync1_reg[2] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_in_reg[2]),
+        .Q(data_int_sync1[2]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \data_int_sync1_reg[3] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_in_reg[3]),
+        .Q(data_int_sync1[3]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \data_int_sync1_reg[4] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_in_reg[4]),
+        .Q(data_int_sync1[4]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \data_int_sync1_reg[5] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_in_reg[5]),
+        .Q(data_int_sync1[5]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \data_int_sync1_reg[6] 
+       (.C(out),
+        .CE(1'b1),
+        .D(probe_in_reg[6]),
+        .Q(data_int_sync1[6]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \data_int_sync2_reg[0] 
        (.C(out),
         .CE(1'b1),
@@ -2941,35 +3171,160 @@ module vio_0_vio_v3_0_20_probe_in_one
         .D(data_int_sync1[1]),
         .Q(data_int_sync2[1]),
         .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \data_int_sync2_reg[2] 
+       (.C(out),
+        .CE(1'b1),
+        .D(data_int_sync1[2]),
+        .Q(data_int_sync2[2]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \data_int_sync2_reg[3] 
+       (.C(out),
+        .CE(1'b1),
+        .D(data_int_sync1[3]),
+        .Q(data_int_sync2[3]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \data_int_sync2_reg[4] 
+       (.C(out),
+        .CE(1'b1),
+        .D(data_int_sync1[4]),
+        .Q(data_int_sync2[4]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \data_int_sync2_reg[5] 
+       (.C(out),
+        .CE(1'b1),
+        .D(data_int_sync1[5]),
+        .Q(data_int_sync2[5]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \data_int_sync2_reg[6] 
+       (.C(out),
+        .CE(1'b1),
+        .D(data_int_sync1[6]),
+        .Q(data_int_sync2[6]),
+        .R(1'b0));
   LUT3 #(
-    .INIT(8'hBA)) 
+    .INIT(8'hAE)) 
     \dn_activity[0]_i_1 
-       (.I0(\dn_activity_reg_n_0_[0] ),
-        .I1(data_int_sync1[0]),
-        .I2(data_int_sync2[0]),
-        .O(dn_activity1));
+       (.I0(probe_all_int[14]),
+        .I1(data_int_sync2[0]),
+        .I2(data_int_sync1[0]),
+        .O(\dn_activity[0]_i_1_n_0 ));
   LUT3 #(
-    .INIT(8'hBA)) 
+    .INIT(8'hAE)) 
     \dn_activity[1]_i_1 
-       (.I0(\dn_activity_reg_n_0_[1] ),
-        .I1(data_int_sync1[1]),
-        .I2(data_int_sync2[1]),
-        .O(dn_activity11_out));
+       (.I0(probe_all_int[15]),
+        .I1(data_int_sync2[1]),
+        .I2(data_int_sync1[1]),
+        .O(\dn_activity[1]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \dn_activity[2]_i_1 
+       (.I0(probe_all_int[16]),
+        .I1(data_int_sync2[2]),
+        .I2(data_int_sync1[2]),
+        .O(\dn_activity[2]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \dn_activity[3]_i_1 
+       (.I0(probe_all_int[17]),
+        .I1(data_int_sync2[3]),
+        .I2(data_int_sync1[3]),
+        .O(\dn_activity[3]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \dn_activity[4]_i_1 
+       (.I0(probe_all_int[18]),
+        .I1(data_int_sync2[4]),
+        .I2(data_int_sync1[4]),
+        .O(\dn_activity[4]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \dn_activity[5]_i_1 
+       (.I0(probe_all_int[19]),
+        .I1(data_int_sync2[5]),
+        .I2(data_int_sync1[5]),
+        .O(\dn_activity[5]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \dn_activity[6]_i_1 
+       (.I0(probe_all_int[20]),
+        .I1(data_int_sync2[6]),
+        .I2(data_int_sync1[6]),
+        .O(\dn_activity[6]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \dn_activity_reg[0] 
        (.C(out),
         .CE(1'b1),
-        .D(dn_activity1),
-        .Q(\dn_activity_reg_n_0_[0] ),
+        .D(\dn_activity[0]_i_1_n_0 ),
+        .Q(probe_all_int[14]),
         .R(read_done));
   FDRE #(
     .INIT(1'b0)) 
     \dn_activity_reg[1] 
        (.C(out),
         .CE(1'b1),
-        .D(dn_activity11_out),
-        .Q(\dn_activity_reg_n_0_[1] ),
+        .D(\dn_activity[1]_i_1_n_0 ),
+        .Q(probe_all_int[15]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \dn_activity_reg[2] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\dn_activity[2]_i_1_n_0 ),
+        .Q(probe_all_int[16]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \dn_activity_reg[3] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\dn_activity[3]_i_1_n_0 ),
+        .Q(probe_all_int[17]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \dn_activity_reg[4] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\dn_activity[4]_i_1_n_0 ),
+        .Q(probe_all_int[18]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \dn_activity_reg[5] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\dn_activity[5]_i_1_n_0 ),
+        .Q(probe_all_int[19]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \dn_activity_reg[6] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\dn_activity[6]_i_1_n_0 ),
+        .Q(probe_all_int[20]),
         .R(read_done));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
@@ -2991,49 +3346,175 @@ module vio_0_vio_v3_0_20_probe_in_one
         .D(D[1]),
         .Q(probe_in_reg[1]),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'h02)) 
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \probe_in_reg_reg[2] 
+       (.C(clk),
+        .CE(E),
+        .D(D[2]),
+        .Q(probe_in_reg[2]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \probe_in_reg_reg[3] 
+       (.C(clk),
+        .CE(E),
+        .D(D[3]),
+        .Q(probe_in_reg[3]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \probe_in_reg_reg[4] 
+       (.C(clk),
+        .CE(E),
+        .D(D[4]),
+        .Q(probe_in_reg[4]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \probe_in_reg_reg[5] 
+       (.C(clk),
+        .CE(E),
+        .D(D[5]),
+        .Q(probe_in_reg[5]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \probe_in_reg_reg[6] 
+       (.C(clk),
+        .CE(E),
+        .D(D[6]),
+        .Q(probe_in_reg[6]),
+        .R(1'b0));
+  LUT4 #(
+    .INIT(16'h0040)) 
     read_done_i_1
-       (.I0(Read_int),
-        .I1(read_done),
-        .I2(s_rst_o),
-        .O(read_done_i_1_n_0));
+       (.I0(addr_count[1]),
+        .I1(addr_count[0]),
+        .I2(Read_int),
+        .I3(addr_count[2]),
+        .O(addr_count_reg1));
   (* RTL_MAX_FANOUT = "found" *) 
   FDRE read_done_reg
        (.C(out),
         .CE(1'b1),
-        .D(read_done_i_1_n_0),
+        .D(addr_count_reg1),
         .Q(read_done),
         .R(1'b0));
   LUT3 #(
-    .INIT(8'hBA)) 
+    .INIT(8'hAE)) 
     \up_activity[0]_i_1 
-       (.I0(\up_activity_reg_n_0_[0] ),
-        .I1(data_int_sync2[0]),
-        .I2(data_int_sync1[0]),
+       (.I0(probe_all_int[7]),
+        .I1(data_int_sync1[0]),
+        .I2(data_int_sync2[0]),
         .O(\up_activity[0]_i_1_n_0 ));
   LUT3 #(
-    .INIT(8'hBA)) 
+    .INIT(8'hAE)) 
     \up_activity[1]_i_1 
-       (.I0(\up_activity_reg_n_0_[1] ),
-        .I1(data_int_sync2[1]),
-        .I2(data_int_sync1[1]),
-        .O(up_activity13_out));
+       (.I0(probe_all_int[8]),
+        .I1(data_int_sync1[1]),
+        .I2(data_int_sync2[1]),
+        .O(\up_activity[1]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \up_activity[2]_i_1 
+       (.I0(probe_all_int[9]),
+        .I1(data_int_sync1[2]),
+        .I2(data_int_sync2[2]),
+        .O(\up_activity[2]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \up_activity[3]_i_1 
+       (.I0(probe_all_int[10]),
+        .I1(data_int_sync1[3]),
+        .I2(data_int_sync2[3]),
+        .O(\up_activity[3]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \up_activity[4]_i_1 
+       (.I0(probe_all_int[11]),
+        .I1(data_int_sync1[4]),
+        .I2(data_int_sync2[4]),
+        .O(\up_activity[4]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \up_activity[5]_i_1 
+       (.I0(probe_all_int[12]),
+        .I1(data_int_sync1[5]),
+        .I2(data_int_sync2[5]),
+        .O(\up_activity[5]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hAE)) 
+    \up_activity[6]_i_1 
+       (.I0(probe_all_int[13]),
+        .I1(data_int_sync1[6]),
+        .I2(data_int_sync2[6]),
+        .O(\up_activity[6]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \up_activity_reg[0] 
        (.C(out),
         .CE(1'b1),
         .D(\up_activity[0]_i_1_n_0 ),
-        .Q(\up_activity_reg_n_0_[0] ),
+        .Q(probe_all_int[7]),
         .R(read_done));
   FDRE #(
     .INIT(1'b0)) 
     \up_activity_reg[1] 
        (.C(out),
         .CE(1'b1),
-        .D(up_activity13_out),
-        .Q(\up_activity_reg_n_0_[1] ),
+        .D(\up_activity[1]_i_1_n_0 ),
+        .Q(probe_all_int[8]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \up_activity_reg[2] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\up_activity[2]_i_1_n_0 ),
+        .Q(probe_all_int[9]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \up_activity_reg[3] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\up_activity[3]_i_1_n_0 ),
+        .Q(probe_all_int[10]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \up_activity_reg[4] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\up_activity[4]_i_1_n_0 ),
+        .Q(probe_all_int[11]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \up_activity_reg[5] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\up_activity[5]_i_1_n_0 ),
+        .Q(probe_all_int[12]),
+        .R(read_done));
+  FDRE #(
+    .INIT(1'b0)) 
+    \up_activity_reg[6] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\up_activity[6]_i_1_n_0 ),
+        .Q(probe_all_int[13]),
         .R(read_done));
 endmodule
 
@@ -3042,75 +3523,93 @@ module vio_0_vio_v3_0_20_probe_out_all
    (probe_out0,
     probe_out1,
     probe_out2,
+    probe_out3,
+    probe_out4,
+    probe_out5,
+    probe_out6,
     Read_int_i_3_0,
     Read_int_i_4_0,
     s_den_o_INST_0,
+    \addr_p1_reg[2]_0 ,
     \Probe_out_reg_int_reg[3]_0 ,
     SR,
     in0,
     clk,
-    \G_PROBE_OUT[0].wr_probe_out_reg[0]_0 ,
     out,
     s_daddr_o,
-    s_den_o,
     s_dwe_o,
-    Q,
-    \Probe_out_reg_int_reg[0]_0 );
+    s_den_o,
+    Q);
   output [0:0]probe_out0;
   output [0:0]probe_out1;
   output [3:0]probe_out2;
+  output [0:0]probe_out3;
+  output [0:0]probe_out4;
+  output [0:0]probe_out5;
+  output [0:0]probe_out6;
   output Read_int_i_3_0;
   output Read_int_i_4_0;
   output s_den_o_INST_0;
+  output [2:0]\addr_p1_reg[2]_0 ;
   output [3:0]\Probe_out_reg_int_reg[3]_0 ;
   input [0:0]SR;
   input in0;
   input clk;
-  input \G_PROBE_OUT[0].wr_probe_out_reg[0]_0 ;
   input out;
   input [16:0]s_daddr_o;
-  input s_den_o;
   input s_dwe_o;
+  input s_den_o;
   input [3:0]Q;
-  input [1:0]\Probe_out_reg_int_reg[0]_0 ;
 
   (* async_reg = "true" *) wire Committ_1;
   (* async_reg = "true" *) wire Committ_2;
+  wire \G_PROBE_OUT[0].PROBE_OUT0_INST_n_1 ;
   wire \G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0 ;
-  wire \G_PROBE_OUT[0].wr_probe_out_reg ;
-  wire \G_PROBE_OUT[0].wr_probe_out_reg[0]_0 ;
+  wire \G_PROBE_OUT[0].wr_probe_out[0]_i_2_n_0 ;
   wire \G_PROBE_OUT[1].PROBE_OUT0_INST_n_1 ;
   wire \G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0 ;
-  wire \G_PROBE_OUT[1].wr_probe_out[1]_i_2_n_0 ;
-  wire \G_PROBE_OUT[1].wr_probe_out[1]_i_3_n_0 ;
   wire \G_PROBE_OUT[1].wr_probe_out_reg ;
   wire \G_PROBE_OUT[2].PROBE_OUT0_INST_n_4 ;
   wire \G_PROBE_OUT[2].PROBE_OUT0_INST_n_5 ;
   wire \G_PROBE_OUT[2].PROBE_OUT0_INST_n_6 ;
   wire \G_PROBE_OUT[2].PROBE_OUT0_INST_n_7 ;
   wire \G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0 ;
-  wire \Probe_out_reg_int[0]_i_1_n_0 ;
-  wire \Probe_out_reg_int[1]_i_1_n_0 ;
-  wire \Probe_out_reg_int[2]_i_1_n_0 ;
-  wire \Probe_out_reg_int[3]_i_1_n_0 ;
-  wire [1:0]\Probe_out_reg_int_reg[0]_0 ;
+  wire \G_PROBE_OUT[2].wr_probe_out[2]_i_2_n_0 ;
+  wire \G_PROBE_OUT[2].wr_probe_out_reg ;
+  wire \G_PROBE_OUT[3].PROBE_OUT0_INST_n_1 ;
+  wire \G_PROBE_OUT[3].wr_probe_out[3]_i_1_n_0 ;
+  wire \G_PROBE_OUT[3].wr_probe_out[3]_i_2_n_0 ;
+  wire \G_PROBE_OUT[4].PROBE_OUT0_INST_n_1 ;
+  wire \G_PROBE_OUT[4].wr_probe_out[4]_i_1_n_0 ;
+  wire \G_PROBE_OUT[5].PROBE_OUT0_INST_n_1 ;
+  wire \G_PROBE_OUT[5].wr_probe_out[5]_i_1_n_0 ;
+  wire \G_PROBE_OUT[6].PROBE_OUT0_INST_n_1 ;
+  wire \G_PROBE_OUT[6].wr_probe_out[6]_i_1_n_0 ;
+  wire \G_PROBE_OUT[6].wr_probe_out[6]_i_2_n_0 ;
+  wire \Probe_out_reg_int[0]_i_2_n_0 ;
+  wire \Probe_out_reg_int[0]_i_3_n_0 ;
   wire [3:0]\Probe_out_reg_int_reg[3]_0 ;
   wire [3:0]Q;
   wire Read_int_i_3_0;
   wire Read_int_i_4_0;
   wire [0:0]SR;
+  wire [2:0]\addr_p1_reg[2]_0 ;
   wire clk;
-  wire [0:0]data_int;
   wire in0;
   wire out;
   wire [0:0]probe_out0;
   wire [0:0]probe_out1;
   wire [3:0]probe_out2;
+  wire [0:0]probe_out3;
+  wire [0:0]probe_out4;
+  wire [0:0]probe_out5;
+  wire [0:0]probe_out6;
+  wire [3:0]probe_out_mem;
   wire [16:0]s_daddr_o;
   wire s_den_o;
   wire s_den_o_INST_0;
   wire s_dwe_o;
-  wire [2:2]wr_probe_out;
+  wire [6:0]wr_probe_out;
 
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
@@ -3130,29 +3629,37 @@ module vio_0_vio_v3_0_20_probe_out_all
         .R(1'b0));
   vio_0_vio_v3_0_20_probe_out_one \G_PROBE_OUT[0].PROBE_OUT0_INST 
        (.E(Committ_2),
-        .\G_PROBE_OUT[0].wr_probe_out_reg (\G_PROBE_OUT[0].wr_probe_out_reg ),
         .Q(Q[0]),
         .SR(SR),
         .clk(clk),
-        .data_int(data_int),
+        .\data_int_reg[0]_0 (\G_PROBE_OUT[0].PROBE_OUT0_INST_n_1 ),
         .out(out),
-        .probe_out0(probe_out0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT4 #(
-    .INIT(16'h0400)) 
+        .probe_out0(probe_out0),
+        .wr_probe_out(wr_probe_out[0]));
+  LUT6 #(
+    .INIT(64'hBFFFFFFFFFFFFFFF)) 
     \G_PROBE_OUT[0].wr_probe_out[0]_i_1 
        (.I0(s_daddr_o[1]),
         .I1(s_daddr_o[8]),
-        .I2(s_daddr_o[2]),
-        .I3(s_dwe_o),
+        .I2(Read_int_i_3_0),
+        .I3(Read_int_i_4_0),
+        .I4(s_den_o_INST_0),
+        .I5(s_dwe_o),
         .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \G_PROBE_OUT[0].wr_probe_out[0]_i_2 
+       (.I0(s_daddr_o[0]),
+        .I1(s_daddr_o[2]),
+        .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_2_n_0 ));
   FDRE \G_PROBE_OUT[0].wr_probe_out_reg[0] 
        (.C(out),
         .CE(1'b1),
-        .D(\G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0 ),
-        .Q(\G_PROBE_OUT[0].wr_probe_out_reg ),
-        .R(\G_PROBE_OUT[0].wr_probe_out_reg[0]_0 ));
-  vio_0_vio_v3_0_20_probe_out_one_0 \G_PROBE_OUT[1].PROBE_OUT0_INST 
+        .D(\G_PROBE_OUT[0].wr_probe_out[0]_i_2_n_0 ),
+        .Q(wr_probe_out[0]),
+        .R(\G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0 ));
+  vio_0_vio_v3_0_20_probe_out_one__parameterized0 \G_PROBE_OUT[1].PROBE_OUT0_INST 
        (.E(Committ_2),
         .\G_PROBE_OUT[1].wr_probe_out_reg (\G_PROBE_OUT[1].wr_probe_out_reg ),
         .Q(Q[0]),
@@ -3161,36 +3668,20 @@ module vio_0_vio_v3_0_20_probe_out_all
         .\data_int_reg[0]_0 (\G_PROBE_OUT[1].PROBE_OUT0_INST_n_1 ),
         .out(out),
         .probe_out1(probe_out1));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
+  LUT2 #(
+    .INIT(4'h2)) 
     \G_PROBE_OUT[1].wr_probe_out[1]_i_1 
-       (.I0(\G_PROBE_OUT[1].wr_probe_out[1]_i_2_n_0 ),
-        .I1(\G_PROBE_OUT[1].wr_probe_out[1]_i_3_n_0 ),
-        .I2(s_daddr_o[0]),
-        .I3(Read_int_i_3_0),
-        .I4(Read_int_i_4_0),
-        .I5(s_den_o_INST_0),
-        .O(\G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \G_PROBE_OUT[1].wr_probe_out[1]_i_2 
-       (.I0(s_dwe_o),
+       (.I0(s_daddr_o[0]),
         .I1(s_daddr_o[2]),
-        .O(\G_PROBE_OUT[1].wr_probe_out[1]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \G_PROBE_OUT[1].wr_probe_out[1]_i_3 
-       (.I0(s_daddr_o[8]),
-        .I1(s_daddr_o[1]),
-        .O(\G_PROBE_OUT[1].wr_probe_out[1]_i_3_n_0 ));
+        .O(\G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0 ));
   FDRE \G_PROBE_OUT[1].wr_probe_out_reg[1] 
        (.C(out),
         .CE(1'b1),
         .D(\G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0 ),
         .Q(\G_PROBE_OUT[1].wr_probe_out_reg ),
-        .R(1'b0));
-  vio_0_vio_v3_0_20_probe_out_one__parameterized0 \G_PROBE_OUT[2].PROBE_OUT0_INST 
-       (.E(wr_probe_out),
+        .R(\G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0 ));
+  vio_0_vio_v3_0_20_probe_out_one__parameterized1 \G_PROBE_OUT[2].PROBE_OUT0_INST 
+       (.E(\G_PROBE_OUT[2].wr_probe_out_reg ),
         .\Probe_out_reg[3]_0 (Committ_2),
         .Q({\G_PROBE_OUT[2].PROBE_OUT0_INST_n_4 ,\G_PROBE_OUT[2].PROBE_OUT0_INST_n_5 ,\G_PROBE_OUT[2].PROBE_OUT0_INST_n_6 ,\G_PROBE_OUT[2].PROBE_OUT0_INST_n_7 }),
         .SR(SR),
@@ -3198,75 +3689,216 @@ module vio_0_vio_v3_0_20_probe_out_all
         .\data_int_reg[3]_0 (Q),
         .out(out),
         .probe_out2(probe_out2));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
     \G_PROBE_OUT[2].wr_probe_out[2]_i_1 
-       (.I0(s_daddr_o[8]),
+       (.I0(\G_PROBE_OUT[2].wr_probe_out[2]_i_2_n_0 ),
+        .I1(s_daddr_o[8]),
+        .I2(Read_int_i_3_0),
+        .I3(Read_int_i_4_0),
+        .I4(s_den_o_INST_0),
+        .I5(s_dwe_o),
+        .O(\G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \G_PROBE_OUT[2].wr_probe_out[2]_i_2 
+       (.I0(s_daddr_o[0]),
         .I1(s_daddr_o[1]),
         .I2(s_daddr_o[2]),
-        .I3(s_dwe_o),
-        .O(\G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0 ));
+        .O(\G_PROBE_OUT[2].wr_probe_out[2]_i_2_n_0 ));
   FDRE \G_PROBE_OUT[2].wr_probe_out_reg[2] 
        (.C(out),
         .CE(1'b1),
         .D(\G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0 ),
-        .Q(wr_probe_out),
-        .R(\G_PROBE_OUT[0].wr_probe_out_reg[0]_0 ));
-  LUT5 #(
-    .INIT(32'h0FAC00AC)) 
-    \Probe_out_reg_int[0]_i_1 
-       (.I0(\G_PROBE_OUT[2].PROBE_OUT0_INST_n_7 ),
-        .I1(data_int),
-        .I2(\Probe_out_reg_int_reg[0]_0 [1]),
-        .I3(\Probe_out_reg_int_reg[0]_0 [0]),
-        .I4(\G_PROBE_OUT[1].PROBE_OUT0_INST_n_1 ),
-        .O(\Probe_out_reg_int[0]_i_1_n_0 ));
+        .Q(\G_PROBE_OUT[2].wr_probe_out_reg ),
+        .R(1'b0));
+  vio_0_vio_v3_0_20_probe_out_one_0 \G_PROBE_OUT[3].PROBE_OUT0_INST 
+       (.Q(Q[0]),
+        .SR(SR),
+        .clk(clk),
+        .\data_int_reg[0]_0 (\G_PROBE_OUT[3].PROBE_OUT0_INST_n_1 ),
+        .\data_int_reg[0]_1 (out),
+        .out(Committ_2),
+        .probe_out3(probe_out3),
+        .wr_probe_out(wr_probe_out[3]));
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
+    \G_PROBE_OUT[3].wr_probe_out[3]_i_1 
+       (.I0(\G_PROBE_OUT[3].wr_probe_out[3]_i_2_n_0 ),
+        .I1(s_daddr_o[8]),
+        .I2(Read_int_i_3_0),
+        .I3(Read_int_i_4_0),
+        .I4(s_den_o_INST_0),
+        .I5(s_dwe_o),
+        .O(\G_PROBE_OUT[3].wr_probe_out[3]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
-    .INIT(8'h20)) 
+    .INIT(8'h40)) 
+    \G_PROBE_OUT[3].wr_probe_out[3]_i_2 
+       (.I0(s_daddr_o[2]),
+        .I1(s_daddr_o[1]),
+        .I2(s_daddr_o[0]),
+        .O(\G_PROBE_OUT[3].wr_probe_out[3]_i_2_n_0 ));
+  FDRE \G_PROBE_OUT[3].wr_probe_out_reg[3] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\G_PROBE_OUT[3].wr_probe_out[3]_i_1_n_0 ),
+        .Q(wr_probe_out[3]),
+        .R(1'b0));
+  vio_0_vio_v3_0_20_probe_out_one_1 \G_PROBE_OUT[4].PROBE_OUT0_INST 
+       (.Q(Q[0]),
+        .SR(SR),
+        .clk(clk),
+        .\data_int_reg[0]_0 (\G_PROBE_OUT[4].PROBE_OUT0_INST_n_1 ),
+        .\data_int_reg[0]_1 (out),
+        .out(Committ_2),
+        .probe_out4(probe_out4),
+        .wr_probe_out(wr_probe_out[4]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \G_PROBE_OUT[4].wr_probe_out[4]_i_1 
+       (.I0(s_daddr_o[2]),
+        .I1(s_daddr_o[0]),
+        .O(\G_PROBE_OUT[4].wr_probe_out[4]_i_1_n_0 ));
+  FDRE \G_PROBE_OUT[4].wr_probe_out_reg[4] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\G_PROBE_OUT[4].wr_probe_out[4]_i_1_n_0 ),
+        .Q(wr_probe_out[4]),
+        .R(\G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0 ));
+  vio_0_vio_v3_0_20_probe_out_one_2 \G_PROBE_OUT[5].PROBE_OUT0_INST 
+       (.Q(Q[0]),
+        .SR(SR),
+        .clk(clk),
+        .\data_int_reg[0]_0 (\G_PROBE_OUT[5].PROBE_OUT0_INST_n_1 ),
+        .\data_int_reg[0]_1 (out),
+        .out(Committ_2),
+        .probe_out5(probe_out5),
+        .wr_probe_out(wr_probe_out[5]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \G_PROBE_OUT[5].wr_probe_out[5]_i_1 
+       (.I0(s_daddr_o[0]),
+        .I1(s_daddr_o[2]),
+        .O(\G_PROBE_OUT[5].wr_probe_out[5]_i_1_n_0 ));
+  FDRE \G_PROBE_OUT[5].wr_probe_out_reg[5] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\G_PROBE_OUT[5].wr_probe_out[5]_i_1_n_0 ),
+        .Q(wr_probe_out[5]),
+        .R(\G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0 ));
+  vio_0_vio_v3_0_20_probe_out_one_3 \G_PROBE_OUT[6].PROBE_OUT0_INST 
+       (.Q(Q[0]),
+        .SR(SR),
+        .clk(clk),
+        .\data_int_reg[0]_0 (\G_PROBE_OUT[6].PROBE_OUT0_INST_n_1 ),
+        .\data_int_reg[0]_1 (out),
+        .out(Committ_2),
+        .probe_out6(probe_out6),
+        .wr_probe_out(wr_probe_out[6]));
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
+    \G_PROBE_OUT[6].wr_probe_out[6]_i_1 
+       (.I0(\G_PROBE_OUT[6].wr_probe_out[6]_i_2_n_0 ),
+        .I1(s_daddr_o[8]),
+        .I2(Read_int_i_3_0),
+        .I3(Read_int_i_4_0),
+        .I4(s_den_o_INST_0),
+        .I5(s_dwe_o),
+        .O(\G_PROBE_OUT[6].wr_probe_out[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \G_PROBE_OUT[6].wr_probe_out[6]_i_2 
+       (.I0(s_daddr_o[0]),
+        .I1(s_daddr_o[1]),
+        .I2(s_daddr_o[2]),
+        .O(\G_PROBE_OUT[6].wr_probe_out[6]_i_2_n_0 ));
+  FDRE \G_PROBE_OUT[6].wr_probe_out_reg[6] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\G_PROBE_OUT[6].wr_probe_out[6]_i_1_n_0 ),
+        .Q(wr_probe_out[6]),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'hAFCCA0CC)) 
+    \Probe_out_reg_int[0]_i_1 
+       (.I0(\G_PROBE_OUT[6].PROBE_OUT0_INST_n_1 ),
+        .I1(\Probe_out_reg_int[0]_i_2_n_0 ),
+        .I2(\addr_p1_reg[2]_0 [1]),
+        .I3(\addr_p1_reg[2]_0 [2]),
+        .I4(\Probe_out_reg_int[0]_i_3_n_0 ),
+        .O(probe_out_mem[0]));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \Probe_out_reg_int[0]_i_2 
+       (.I0(\G_PROBE_OUT[3].PROBE_OUT0_INST_n_1 ),
+        .I1(\G_PROBE_OUT[2].PROBE_OUT0_INST_n_7 ),
+        .I2(\addr_p1_reg[2]_0 [1]),
+        .I3(\G_PROBE_OUT[1].PROBE_OUT0_INST_n_1 ),
+        .I4(\addr_p1_reg[2]_0 [0]),
+        .I5(\G_PROBE_OUT[0].PROBE_OUT0_INST_n_1 ),
+        .O(\Probe_out_reg_int[0]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hBFBB8088)) 
+    \Probe_out_reg_int[0]_i_3 
+       (.I0(\G_PROBE_OUT[4].PROBE_OUT0_INST_n_1 ),
+        .I1(\addr_p1_reg[2]_0 [2]),
+        .I2(\addr_p1_reg[2]_0 [1]),
+        .I3(\addr_p1_reg[2]_0 [0]),
+        .I4(\G_PROBE_OUT[5].PROBE_OUT0_INST_n_1 ),
+        .O(\Probe_out_reg_int[0]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'h0020)) 
     \Probe_out_reg_int[1]_i_1 
        (.I0(\G_PROBE_OUT[2].PROBE_OUT0_INST_n_6 ),
-        .I1(\Probe_out_reg_int_reg[0]_0 [0]),
-        .I2(\Probe_out_reg_int_reg[0]_0 [1]),
-        .O(\Probe_out_reg_int[1]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h20)) 
+        .I1(\addr_p1_reg[2]_0 [0]),
+        .I2(\addr_p1_reg[2]_0 [1]),
+        .I3(\addr_p1_reg[2]_0 [2]),
+        .O(probe_out_mem[1]));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'h0020)) 
     \Probe_out_reg_int[2]_i_1 
        (.I0(\G_PROBE_OUT[2].PROBE_OUT0_INST_n_5 ),
-        .I1(\Probe_out_reg_int_reg[0]_0 [0]),
-        .I2(\Probe_out_reg_int_reg[0]_0 [1]),
-        .O(\Probe_out_reg_int[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'h20)) 
+        .I1(\addr_p1_reg[2]_0 [0]),
+        .I2(\addr_p1_reg[2]_0 [1]),
+        .I3(\addr_p1_reg[2]_0 [2]),
+        .O(probe_out_mem[2]));
+  LUT4 #(
+    .INIT(16'h0020)) 
     \Probe_out_reg_int[3]_i_1 
        (.I0(\G_PROBE_OUT[2].PROBE_OUT0_INST_n_4 ),
-        .I1(\Probe_out_reg_int_reg[0]_0 [0]),
-        .I2(\Probe_out_reg_int_reg[0]_0 [1]),
-        .O(\Probe_out_reg_int[3]_i_1_n_0 ));
+        .I1(\addr_p1_reg[2]_0 [0]),
+        .I2(\addr_p1_reg[2]_0 [1]),
+        .I3(\addr_p1_reg[2]_0 [2]),
+        .O(probe_out_mem[3]));
   FDRE \Probe_out_reg_int_reg[0] 
        (.C(out),
         .CE(1'b1),
-        .D(\Probe_out_reg_int[0]_i_1_n_0 ),
+        .D(probe_out_mem[0]),
         .Q(\Probe_out_reg_int_reg[3]_0 [0]),
         .R(1'b0));
   FDRE \Probe_out_reg_int_reg[1] 
        (.C(out),
         .CE(1'b1),
-        .D(\Probe_out_reg_int[1]_i_1_n_0 ),
+        .D(probe_out_mem[1]),
         .Q(\Probe_out_reg_int_reg[3]_0 [1]),
         .R(1'b0));
   FDRE \Probe_out_reg_int_reg[2] 
        (.C(out),
         .CE(1'b1),
-        .D(\Probe_out_reg_int[2]_i_1_n_0 ),
+        .D(probe_out_mem[2]),
         .Q(\Probe_out_reg_int_reg[3]_0 [2]),
         .R(1'b0));
   FDRE \Probe_out_reg_int_reg[3] 
        (.C(out),
         .CE(1'b1),
-        .D(\Probe_out_reg_int[3]_i_1_n_0 ),
+        .D(probe_out_mem[3]),
         .Q(\Probe_out_reg_int_reg[3]_0 [3]),
         .R(1'b0));
   LUT4 #(
@@ -3295,62 +3927,288 @@ module vio_0_vio_v3_0_20_probe_out_all
         .I4(s_daddr_o[4]),
         .I5(s_daddr_o[3]),
         .O(s_den_o_INST_0));
+  FDRE \addr_p1_reg[0] 
+       (.C(out),
+        .CE(1'b1),
+        .D(s_daddr_o[0]),
+        .Q(\addr_p1_reg[2]_0 [0]),
+        .R(1'b0));
+  FDRE \addr_p1_reg[1] 
+       (.C(out),
+        .CE(1'b1),
+        .D(s_daddr_o[1]),
+        .Q(\addr_p1_reg[2]_0 [1]),
+        .R(1'b0));
+  FDRE \addr_p1_reg[2] 
+       (.C(out),
+        .CE(1'b1),
+        .D(s_daddr_o[2]),
+        .Q(\addr_p1_reg[2]_0 [2]),
+        .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "vio_v3_0_20_probe_out_one" *) 
 module vio_0_vio_v3_0_20_probe_out_one
    (probe_out0,
-    data_int,
+    \data_int_reg[0]_0 ,
     SR,
     E,
     clk,
     out,
     Q,
-    \G_PROBE_OUT[0].wr_probe_out_reg );
+    wr_probe_out);
   output [0:0]probe_out0;
-  output [0:0]data_int;
+  output \data_int_reg[0]_0 ;
   input [0:0]SR;
   input [0:0]E;
   input clk;
   input out;
   input [0:0]Q;
-  input \G_PROBE_OUT[0].wr_probe_out_reg ;
+  input [0:0]wr_probe_out;
 
   wire [0:0]E;
-  wire \G_PROBE_OUT[0].wr_probe_out_reg ;
   wire [0:0]Q;
   (* DIRECT_RESET *) wire [0:0]SR;
   wire clk;
-  wire [0:0]data_int;
   wire \data_int[0]_i_1_n_0 ;
+  wire \data_int_reg[0]_0 ;
   wire out;
   (* DONT_TOUCH *) wire [0:0]probe_out0;
+  wire [0:0]wr_probe_out;
 
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
   FDRE \Probe_out_reg[0] 
        (.C(clk),
         .CE(E),
-        .D(data_int),
+        .D(\data_int_reg[0]_0 ),
         .Q(probe_out0),
         .R(SR));
   LUT3 #(
     .INIT(8'hB8)) 
     \data_int[0]_i_1 
        (.I0(Q),
-        .I1(\G_PROBE_OUT[0].wr_probe_out_reg ),
-        .I2(data_int),
+        .I1(wr_probe_out),
+        .I2(\data_int_reg[0]_0 ),
         .O(\data_int[0]_i_1_n_0 ));
   FDRE \data_int_reg[0] 
        (.C(out),
         .CE(1'b1),
         .D(\data_int[0]_i_1_n_0 ),
-        .Q(data_int),
+        .Q(\data_int_reg[0]_0 ),
         .R(SR));
 endmodule
 
 (* ORIG_REF_NAME = "vio_v3_0_20_probe_out_one" *) 
 module vio_0_vio_v3_0_20_probe_out_one_0
+   (probe_out3,
+    \data_int_reg[0]_0 ,
+    SR,
+    out,
+    clk,
+    \data_int_reg[0]_1 ,
+    Q,
+    wr_probe_out);
+  output [0:0]probe_out3;
+  output \data_int_reg[0]_0 ;
+  input [0:0]SR;
+  input out;
+  input clk;
+  input \data_int_reg[0]_1 ;
+  input [0:0]Q;
+  input [0:0]wr_probe_out;
+
+  wire [0:0]Q;
+  (* DIRECT_RESET *) wire [0:0]SR;
+  wire clk;
+  wire \data_int[0]_i_1__0_n_0 ;
+  wire \data_int_reg[0]_0 ;
+  wire \data_int_reg[0]_1 ;
+  wire out;
+  (* DONT_TOUCH *) wire [0:0]probe_out3;
+  wire [0:0]wr_probe_out;
+
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDRE \Probe_out_reg[0] 
+       (.C(clk),
+        .CE(out),
+        .D(\data_int_reg[0]_0 ),
+        .Q(probe_out3),
+        .R(SR));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \data_int[0]_i_1__0 
+       (.I0(Q),
+        .I1(wr_probe_out),
+        .I2(\data_int_reg[0]_0 ),
+        .O(\data_int[0]_i_1__0_n_0 ));
+  FDRE \data_int_reg[0] 
+       (.C(\data_int_reg[0]_1 ),
+        .CE(1'b1),
+        .D(\data_int[0]_i_1__0_n_0 ),
+        .Q(\data_int_reg[0]_0 ),
+        .R(SR));
+endmodule
+
+(* ORIG_REF_NAME = "vio_v3_0_20_probe_out_one" *) 
+module vio_0_vio_v3_0_20_probe_out_one_1
+   (probe_out4,
+    \data_int_reg[0]_0 ,
+    SR,
+    out,
+    clk,
+    \data_int_reg[0]_1 ,
+    Q,
+    wr_probe_out);
+  output [0:0]probe_out4;
+  output \data_int_reg[0]_0 ;
+  input [0:0]SR;
+  input out;
+  input clk;
+  input \data_int_reg[0]_1 ;
+  input [0:0]Q;
+  input [0:0]wr_probe_out;
+
+  wire [0:0]Q;
+  (* DIRECT_RESET *) wire [0:0]SR;
+  wire clk;
+  wire \data_int[0]_i_1__1_n_0 ;
+  wire \data_int_reg[0]_0 ;
+  wire \data_int_reg[0]_1 ;
+  wire out;
+  (* DONT_TOUCH *) wire [0:0]probe_out4;
+  wire [0:0]wr_probe_out;
+
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDRE \Probe_out_reg[0] 
+       (.C(clk),
+        .CE(out),
+        .D(\data_int_reg[0]_0 ),
+        .Q(probe_out4),
+        .R(SR));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \data_int[0]_i_1__1 
+       (.I0(Q),
+        .I1(wr_probe_out),
+        .I2(\data_int_reg[0]_0 ),
+        .O(\data_int[0]_i_1__1_n_0 ));
+  FDRE \data_int_reg[0] 
+       (.C(\data_int_reg[0]_1 ),
+        .CE(1'b1),
+        .D(\data_int[0]_i_1__1_n_0 ),
+        .Q(\data_int_reg[0]_0 ),
+        .R(SR));
+endmodule
+
+(* ORIG_REF_NAME = "vio_v3_0_20_probe_out_one" *) 
+module vio_0_vio_v3_0_20_probe_out_one_2
+   (probe_out5,
+    \data_int_reg[0]_0 ,
+    SR,
+    out,
+    clk,
+    \data_int_reg[0]_1 ,
+    Q,
+    wr_probe_out);
+  output [0:0]probe_out5;
+  output \data_int_reg[0]_0 ;
+  input [0:0]SR;
+  input out;
+  input clk;
+  input \data_int_reg[0]_1 ;
+  input [0:0]Q;
+  input [0:0]wr_probe_out;
+
+  wire [0:0]Q;
+  (* DIRECT_RESET *) wire [0:0]SR;
+  wire clk;
+  wire \data_int[0]_i_1__2_n_0 ;
+  wire \data_int_reg[0]_0 ;
+  wire \data_int_reg[0]_1 ;
+  wire out;
+  (* DONT_TOUCH *) wire [0:0]probe_out5;
+  wire [0:0]wr_probe_out;
+
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDRE \Probe_out_reg[0] 
+       (.C(clk),
+        .CE(out),
+        .D(\data_int_reg[0]_0 ),
+        .Q(probe_out5),
+        .R(SR));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \data_int[0]_i_1__2 
+       (.I0(Q),
+        .I1(wr_probe_out),
+        .I2(\data_int_reg[0]_0 ),
+        .O(\data_int[0]_i_1__2_n_0 ));
+  FDRE \data_int_reg[0] 
+       (.C(\data_int_reg[0]_1 ),
+        .CE(1'b1),
+        .D(\data_int[0]_i_1__2_n_0 ),
+        .Q(\data_int_reg[0]_0 ),
+        .R(SR));
+endmodule
+
+(* ORIG_REF_NAME = "vio_v3_0_20_probe_out_one" *) 
+module vio_0_vio_v3_0_20_probe_out_one_3
+   (probe_out6,
+    \data_int_reg[0]_0 ,
+    SR,
+    out,
+    clk,
+    \data_int_reg[0]_1 ,
+    Q,
+    wr_probe_out);
+  output [0:0]probe_out6;
+  output \data_int_reg[0]_0 ;
+  input [0:0]SR;
+  input out;
+  input clk;
+  input \data_int_reg[0]_1 ;
+  input [0:0]Q;
+  input [0:0]wr_probe_out;
+
+  wire [0:0]Q;
+  (* DIRECT_RESET *) wire [0:0]SR;
+  wire clk;
+  wire \data_int[0]_i_1__3_n_0 ;
+  wire \data_int_reg[0]_0 ;
+  wire \data_int_reg[0]_1 ;
+  wire out;
+  (* DONT_TOUCH *) wire [0:0]probe_out6;
+  wire [0:0]wr_probe_out;
+
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDRE \Probe_out_reg[0] 
+       (.C(clk),
+        .CE(out),
+        .D(\data_int_reg[0]_0 ),
+        .Q(probe_out6),
+        .R(SR));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \data_int[0]_i_1__3 
+       (.I0(Q),
+        .I1(wr_probe_out),
+        .I2(\data_int_reg[0]_0 ),
+        .O(\data_int[0]_i_1__3_n_0 ));
+  FDRE \data_int_reg[0] 
+       (.C(\data_int_reg[0]_1 ),
+        .CE(1'b1),
+        .D(\data_int[0]_i_1__3_n_0 ),
+        .Q(\data_int_reg[0]_0 ),
+        .R(SR));
+endmodule
+
+(* ORIG_REF_NAME = "vio_v3_0_20_probe_out_one" *) 
+module vio_0_vio_v3_0_20_probe_out_one__parameterized0
    (probe_out1,
     \data_int_reg[0]_0 ,
     SR,
@@ -3373,36 +4231,36 @@ module vio_0_vio_v3_0_20_probe_out_one_0
   wire [0:0]Q;
   (* DIRECT_RESET *) wire [0:0]SR;
   wire clk;
-  wire \data_int[0]_i_1__0_n_0 ;
+  wire \data_int[0]_i_1__4_n_0 ;
   wire \data_int_reg[0]_0 ;
   wire out;
   (* DONT_TOUCH *) wire [0:0]probe_out1;
 
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
-  FDRE \Probe_out_reg[0] 
+  FDSE \Probe_out_reg[0] 
        (.C(clk),
         .CE(E),
         .D(\data_int_reg[0]_0 ),
         .Q(probe_out1),
-        .R(SR));
+        .S(SR));
   LUT3 #(
     .INIT(8'hB8)) 
-    \data_int[0]_i_1__0 
+    \data_int[0]_i_1__4 
        (.I0(Q),
         .I1(\G_PROBE_OUT[1].wr_probe_out_reg ),
         .I2(\data_int_reg[0]_0 ),
-        .O(\data_int[0]_i_1__0_n_0 ));
-  FDRE \data_int_reg[0] 
+        .O(\data_int[0]_i_1__4_n_0 ));
+  FDSE \data_int_reg[0] 
        (.C(out),
         .CE(1'b1),
-        .D(\data_int[0]_i_1__0_n_0 ),
+        .D(\data_int[0]_i_1__4_n_0 ),
         .Q(\data_int_reg[0]_0 ),
-        .R(SR));
+        .S(SR));
 endmodule
 
 (* ORIG_REF_NAME = "vio_v3_0_20_probe_out_one" *) 
-module vio_0_vio_v3_0_20_probe_out_one__parameterized0
+module vio_0_vio_v3_0_20_probe_out_one__parameterized1
    (probe_out2,
     Q,
     SR,
@@ -3488,32 +4346,70 @@ module vio_0_vio_v3_0_20_probe_out_one__parameterized0
 endmodule
 
 (* ORIG_REF_NAME = "vio_v3_0_20_probe_width" *) 
-module vio_0_vio_v3_0_20_probe_width
-   (probe_width_int,
-    addr_count,
+module vio_0_vio_v3_0_20_probe_width__parameterized0
+   (\probe_width_int_reg[1]_0 ,
     out,
-    \addr_count_reg[0]_0 );
-  output probe_width_int;
-  output addr_count;
+    rd_probe_out_width,
+    internal_cnt_rst,
+    s_rst_o);
+  output \probe_width_int_reg[1]_0 ;
   input out;
-  input \addr_count_reg[0]_0 ;
+  input rd_probe_out_width;
+  input internal_cnt_rst;
+  input s_rst_o;
 
-  wire addr_count;
-  wire \addr_count_reg[0]_0 ;
+  wire [1:0]addr_count;
+  wire \addr_count[0]_i_1_n_0 ;
+  wire \addr_count[1]_i_1_n_0 ;
+  wire internal_cnt_rst;
   wire out;
-  wire probe_width_int;
+  wire \probe_width_int[1]_i_1_n_0 ;
+  wire \probe_width_int_reg[1]_0 ;
+  wire rd_probe_out_width;
+  wire s_rst_o;
 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT4 #(
+    .INIT(16'h0006)) 
+    \addr_count[0]_i_1 
+       (.I0(rd_probe_out_width),
+        .I1(addr_count[0]),
+        .I2(internal_cnt_rst),
+        .I3(s_rst_o),
+        .O(\addr_count[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT5 #(
+    .INIT(32'h0000006A)) 
+    \addr_count[1]_i_1 
+       (.I0(addr_count[1]),
+        .I1(rd_probe_out_width),
+        .I2(addr_count[0]),
+        .I3(internal_cnt_rst),
+        .I4(s_rst_o),
+        .O(\addr_count[1]_i_1_n_0 ));
   FDRE \addr_count_reg[0] 
        (.C(out),
         .CE(1'b1),
-        .D(\addr_count_reg[0]_0 ),
-        .Q(addr_count),
+        .D(\addr_count[0]_i_1_n_0 ),
+        .Q(addr_count[0]),
         .R(1'b0));
-  FDRE \probe_width_int_reg[0] 
+  FDRE \addr_count_reg[1] 
        (.C(out),
         .CE(1'b1),
-        .D(addr_count),
-        .Q(probe_width_int),
+        .D(\addr_count[1]_i_1_n_0 ),
+        .Q(addr_count[1]),
+        .R(1'b0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \probe_width_int[1]_i_1 
+       (.I0(addr_count[0]),
+        .I1(addr_count[1]),
+        .O(\probe_width_int[1]_i_1_n_0 ));
+  FDRE \probe_width_int_reg[1] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\probe_width_int[1]_i_1_n_0 ),
+        .Q(\probe_width_int_reg[1]_0 ),
         .R(1'b0));
 endmodule
 
@@ -3522,8 +4418,8 @@ endmodule
 (* C_CORE_MINOR_ALPHA_VER = "97" *) (* C_CORE_MINOR_VER = "0" *) (* C_CORE_TYPE = "2" *) 
 (* C_CSE_DRV_VER = "1" *) (* C_EN_PROBE_IN_ACTIVITY = "1" *) (* C_EN_SYNCHRONIZATION = "1" *) 
 (* C_MAJOR_VERSION = "2013" *) (* C_MAX_NUM_PROBE = "256" *) (* C_MAX_WIDTH_PER_PROBE = "256" *) 
-(* C_MINOR_VERSION = "1" *) (* C_NEXT_SLAVE = "0" *) (* C_NUM_PROBE_IN = "2" *) 
-(* C_NUM_PROBE_OUT = "3" *) (* C_PIPE_IFACE = "0" *) (* C_PROBE_IN0_WIDTH = "1" *) 
+(* C_MINOR_VERSION = "1" *) (* C_NEXT_SLAVE = "0" *) (* C_NUM_PROBE_IN = "7" *) 
+(* C_NUM_PROBE_OUT = "7" *) (* C_PIPE_IFACE = "0" *) (* C_PROBE_IN0_WIDTH = "1" *) 
 (* C_PROBE_IN100_WIDTH = "1" *) (* C_PROBE_IN101_WIDTH = "1" *) (* C_PROBE_IN102_WIDTH = "1" *) 
 (* C_PROBE_IN103_WIDTH = "1" *) (* C_PROBE_IN104_WIDTH = "1" *) (* C_PROBE_IN105_WIDTH = "1" *) 
 (* C_PROBE_IN106_WIDTH = "1" *) (* C_PROBE_IN107_WIDTH = "1" *) (* C_PROBE_IN108_WIDTH = "1" *) 
@@ -3683,7 +4579,7 @@ endmodule
 (* C_PROBE_OUT196_WIDTH = "1" *) (* C_PROBE_OUT197_INIT_VAL = "1'b0" *) (* C_PROBE_OUT197_WIDTH = "1" *) 
 (* C_PROBE_OUT198_INIT_VAL = "1'b0" *) (* C_PROBE_OUT198_WIDTH = "1" *) (* C_PROBE_OUT199_INIT_VAL = "1'b0" *) 
 (* C_PROBE_OUT199_WIDTH = "1" *) (* C_PROBE_OUT19_INIT_VAL = "1'b0" *) (* C_PROBE_OUT19_WIDTH = "1" *) 
-(* C_PROBE_OUT1_INIT_VAL = "1'b0" *) (* C_PROBE_OUT1_WIDTH = "1" *) (* C_PROBE_OUT200_INIT_VAL = "1'b0" *) 
+(* C_PROBE_OUT1_INIT_VAL = "1'b1" *) (* C_PROBE_OUT1_WIDTH = "1" *) (* C_PROBE_OUT200_INIT_VAL = "1'b0" *) 
 (* C_PROBE_OUT200_WIDTH = "1" *) (* C_PROBE_OUT201_INIT_VAL = "1'b0" *) (* C_PROBE_OUT201_WIDTH = "1" *) 
 (* C_PROBE_OUT202_INIT_VAL = "1'b0" *) (* C_PROBE_OUT202_WIDTH = "1" *) (* C_PROBE_OUT203_INIT_VAL = "1'b0" *) 
 (* C_PROBE_OUT203_WIDTH = "1" *) (* C_PROBE_OUT204_INIT_VAL = "1'b0" *) (* C_PROBE_OUT204_WIDTH = "1" *) 
@@ -3952,9 +4848,9 @@ endmodule
 (* LC_LOW_BIT_POS_PROBE_OUT91 = "16'b0000000001011110" *) (* LC_LOW_BIT_POS_PROBE_OUT92 = "16'b0000000001011111" *) (* LC_LOW_BIT_POS_PROBE_OUT93 = "16'b0000000001100000" *) 
 (* LC_LOW_BIT_POS_PROBE_OUT94 = "16'b0000000001100001" *) (* LC_LOW_BIT_POS_PROBE_OUT95 = "16'b0000000001100010" *) (* LC_LOW_BIT_POS_PROBE_OUT96 = "16'b0000000001100011" *) 
 (* LC_LOW_BIT_POS_PROBE_OUT97 = "16'b0000000001100100" *) (* LC_LOW_BIT_POS_PROBE_OUT98 = "16'b0000000001100101" *) (* LC_LOW_BIT_POS_PROBE_OUT99 = "16'b0000000001100110" *) 
-(* LC_PROBE_IN_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* LC_PROBE_OUT_HIGH_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000000010000000000000000" *) (* LC_PROBE_OUT_INIT_VAL_STRING = "259'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-(* LC_PROBE_OUT_LOW_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000001000000000000000010000000000000000" *) (* LC_PROBE_OUT_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000000000000" *) (* LC_TOTAL_PROBE_IN_WIDTH = "2" *) 
-(* LC_TOTAL_PROBE_OUT_WIDTH = "6" *) (* ORIG_REF_NAME = "vio_v3_0_20_vio" *) (* dont_touch = "true" *) 
+(* LC_PROBE_IN_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* LC_PROBE_OUT_HIGH_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000000010000000000000000" *) (* LC_PROBE_OUT_INIT_VAL_STRING = "259'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010" *) 
+(* LC_PROBE_OUT_LOW_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000001000000000000000010000000000000000" *) (* LC_PROBE_OUT_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000000000000" *) (* LC_TOTAL_PROBE_IN_WIDTH = "7" *) 
+(* LC_TOTAL_PROBE_OUT_WIDTH = "10" *) (* ORIG_REF_NAME = "vio_v3_0_20_vio" *) (* dont_touch = "true" *) 
 module vio_0_vio_v3_0_20_vio
    (clk,
     probe_in0,
@@ -4988,19 +5884,16 @@ module vio_0_vio_v3_0_20_vio
   output [0:0]probe_out255;
 
   wire \<const0> ;
-  wire [5:0]Bus_Data_out;
-  wire Bus_di;
+  wire [15:0]Bus_Data_out;
   wire DECODER_INST_n_5;
-  wire DECODER_INST_n_6;
-  wire DECODER_INST_n_7;
   wire PROBE_OUT_ALL_INST_n_10;
   wire PROBE_OUT_ALL_INST_n_11;
   wire PROBE_OUT_ALL_INST_n_12;
-  wire PROBE_OUT_ALL_INST_n_6;
-  wire PROBE_OUT_ALL_INST_n_7;
-  wire PROBE_OUT_ALL_INST_n_8;
-  wire PROBE_OUT_ALL_INST_n_9;
-  wire addr_count;
+  wire PROBE_OUT_ALL_INST_n_16;
+  wire PROBE_OUT_ALL_INST_n_17;
+  wire PROBE_OUT_ALL_INST_n_18;
+  wire PROBE_OUT_ALL_INST_n_19;
+  wire PROBE_OUT_WIDTH_INST_n_0;
   wire [16:0]bus_addr;
   (* DONT_TOUCH *) wire bus_clk;
   wire \bus_data_int_reg_n_0_[10] ;
@@ -5026,16 +5919,27 @@ module vio_0_vio_v3_0_20_vio
   wire clear;
   wire clk;
   wire committ;
+  wire internal_cnt_rst;
   wire p_0_in;
+  wire p_2_in;
   wire [0:0]probe_in0;
   wire [0:0]probe_in1;
+  wire [0:0]probe_in2;
+  wire [0:0]probe_in3;
+  wire [0:0]probe_in4;
+  wire [0:0]probe_in5;
+  wire [0:0]probe_in6;
   wire [0:0]probe_out0;
   wire [0:0]probe_out1;
   wire [3:0]probe_out2;
-  wire probe_width_int;
+  wire [0:0]probe_out3;
+  wire [0:0]probe_out4;
+  wire [0:0]probe_out5;
+  wire [0:0]probe_out6;
+  wire rd_probe_out_width;
   (* DONT_TOUCH *) wire [36:0]sl_iport0;
   (* DONT_TOUCH *) wire [16:0]sl_oport0;
-  wire [1:0]xsdb_addr_2_0_p1;
+  wire [2:0]xsdb_addr_2_0_p1;
 
   assign probe_out10[0] = \<const0> ;
   assign probe_out100[0] = \<const0> ;
@@ -5213,7 +6117,6 @@ module vio_0_vio_v3_0_20_vio
   assign probe_out27[0] = \<const0> ;
   assign probe_out28[0] = \<const0> ;
   assign probe_out29[0] = \<const0> ;
-  assign probe_out3[0] = \<const0> ;
   assign probe_out30[0] = \<const0> ;
   assign probe_out31[0] = \<const0> ;
   assign probe_out32[0] = \<const0> ;
@@ -5224,7 +6127,6 @@ module vio_0_vio_v3_0_20_vio
   assign probe_out37[0] = \<const0> ;
   assign probe_out38[0] = \<const0> ;
   assign probe_out39[0] = \<const0> ;
-  assign probe_out4[0] = \<const0> ;
   assign probe_out40[0] = \<const0> ;
   assign probe_out41[0] = \<const0> ;
   assign probe_out42[0] = \<const0> ;
@@ -5235,7 +6137,6 @@ module vio_0_vio_v3_0_20_vio
   assign probe_out47[0] = \<const0> ;
   assign probe_out48[0] = \<const0> ;
   assign probe_out49[0] = \<const0> ;
-  assign probe_out5[0] = \<const0> ;
   assign probe_out50[0] = \<const0> ;
   assign probe_out51[0] = \<const0> ;
   assign probe_out52[0] = \<const0> ;
@@ -5246,7 +6147,6 @@ module vio_0_vio_v3_0_20_vio
   assign probe_out57[0] = \<const0> ;
   assign probe_out58[0] = \<const0> ;
   assign probe_out59[0] = \<const0> ;
-  assign probe_out6[0] = \<const0> ;
   assign probe_out60[0] = \<const0> ;
   assign probe_out61[0] = \<const0> ;
   assign probe_out62[0] = \<const0> ;
@@ -5291,64 +6191,68 @@ module vio_0_vio_v3_0_20_vio
   assign probe_out98[0] = \<const0> ;
   assign probe_out99[0] = \<const0> ;
   vio_0_vio_v3_0_20_decoder DECODER_INST
-       (.\Bus_data_out_reg[15]_0 (bus_do),
-        .\Bus_data_out_reg[3]_0 ({PROBE_OUT_ALL_INST_n_9,PROBE_OUT_ALL_INST_n_10,PROBE_OUT_ALL_INST_n_11,PROBE_OUT_ALL_INST_n_12}),
-        .\Bus_data_out_reg[5]_0 (Bus_Data_out),
-        .E(DECODER_INST_n_7),
-        .Q({\bus_data_int_reg_n_0_[15] ,\bus_data_int_reg_n_0_[14] ,\bus_data_int_reg_n_0_[13] ,\bus_data_int_reg_n_0_[12] ,\bus_data_int_reg_n_0_[11] ,\bus_data_int_reg_n_0_[10] ,\bus_data_int_reg_n_0_[9] ,\bus_data_int_reg_n_0_[8] ,\bus_data_int_reg_n_0_[7] ,\bus_data_int_reg_n_0_[6] ,\bus_data_int_reg_n_0_[5] ,\bus_data_int_reg_n_0_[4] ,\bus_data_int_reg_n_0_[3] ,\bus_data_int_reg_n_0_[2] ,p_0_in,Bus_di}),
-        .Read_int_i_5(DECODER_INST_n_5),
+       (.Bus_Data_out(Bus_Data_out),
+        .\Bus_data_out_reg[0]_0 (PROBE_OUT_WIDTH_INST_n_0),
+        .\Bus_data_out_reg[3]_0 ({PROBE_OUT_ALL_INST_n_16,PROBE_OUT_ALL_INST_n_17,PROBE_OUT_ALL_INST_n_18,PROBE_OUT_ALL_INST_n_19}),
+        .E(DECODER_INST_n_5),
+        .Q({\bus_data_int_reg_n_0_[15] ,\bus_data_int_reg_n_0_[14] ,\bus_data_int_reg_n_0_[13] ,\bus_data_int_reg_n_0_[12] ,\bus_data_int_reg_n_0_[11] ,\bus_data_int_reg_n_0_[10] ,\bus_data_int_reg_n_0_[9] ,\bus_data_int_reg_n_0_[8] ,\bus_data_int_reg_n_0_[7] ,\bus_data_int_reg_n_0_[6] ,\bus_data_int_reg_n_0_[5] ,\bus_data_int_reg_n_0_[4] ,\bus_data_int_reg_n_0_[3] ,\bus_data_int_reg_n_0_[2] ,p_0_in,p_2_in}),
         .SR(clear),
-        .addr_count(addr_count),
         .in0(committ),
+        .internal_cnt_rst(internal_cnt_rst),
         .out(bus_clk),
-        .probe_width_int(probe_width_int),
-        .\rd_en_reg[6]_0 (DECODER_INST_n_6),
-        .\rd_en_reg[6]_1 (PROBE_OUT_ALL_INST_n_6),
-        .\rd_en_reg[6]_2 (PROBE_OUT_ALL_INST_n_7),
-        .\rd_en_reg[6]_3 (PROBE_OUT_ALL_INST_n_8),
+        .\rd_en_reg[6]_0 (PROBE_OUT_ALL_INST_n_10),
+        .\rd_en_reg[6]_1 (PROBE_OUT_ALL_INST_n_11),
+        .\rd_en_reg[6]_2 (PROBE_OUT_ALL_INST_n_12),
+        .rd_probe_out_width(rd_probe_out_width),
         .s_daddr_o({bus_addr[8],bus_addr[2:0]}),
         .s_den_o(bus_den),
+        .s_do_i(bus_do),
         .s_drdy_i(bus_drdy),
         .s_dwe_o(bus_dwe),
         .s_rst_o(bus_rst),
-        .\xsdb_addr_2_0_p1_reg[1]_0 (xsdb_addr_2_0_p1));
+        .\xsdb_addr_2_0_p2_reg[2]_0 (xsdb_addr_2_0_p1));
   GND GND
        (.G(\<const0> ));
   vio_0_vio_v3_0_20_probe_in_one PROBE_IN_INST
-       (.D({probe_in1,probe_in0}),
-        .E(DECODER_INST_n_7),
-        .Q(Bus_Data_out),
-        .Read_int_reg_0(PROBE_OUT_ALL_INST_n_6),
-        .Read_int_reg_1(PROBE_OUT_ALL_INST_n_7),
-        .Read_int_reg_2(PROBE_OUT_ALL_INST_n_8),
+       (.Bus_Data_out(Bus_Data_out),
+        .D({probe_in6,probe_in5,probe_in4,probe_in3,probe_in2,probe_in1,probe_in0}),
+        .E(DECODER_INST_n_5),
+        .Read_int_reg_0(PROBE_OUT_ALL_INST_n_10),
+        .Read_int_reg_1(PROBE_OUT_ALL_INST_n_11),
+        .Read_int_reg_2(PROBE_OUT_ALL_INST_n_12),
         .clk(clk),
+        .internal_cnt_rst(internal_cnt_rst),
         .out(bus_clk),
         .s_daddr_o({bus_addr[8],bus_addr[2:0]}),
         .s_dwe_o(bus_dwe),
         .s_rst_o(bus_rst));
   vio_0_vio_v3_0_20_probe_out_all PROBE_OUT_ALL_INST
-       (.\G_PROBE_OUT[0].wr_probe_out_reg[0]_0 (DECODER_INST_n_5),
-        .\Probe_out_reg_int_reg[0]_0 (xsdb_addr_2_0_p1),
-        .\Probe_out_reg_int_reg[3]_0 ({PROBE_OUT_ALL_INST_n_9,PROBE_OUT_ALL_INST_n_10,PROBE_OUT_ALL_INST_n_11,PROBE_OUT_ALL_INST_n_12}),
-        .Q({\bus_data_int_reg_n_0_[3] ,\bus_data_int_reg_n_0_[2] ,p_0_in,Bus_di}),
-        .Read_int_i_3_0(PROBE_OUT_ALL_INST_n_6),
-        .Read_int_i_4_0(PROBE_OUT_ALL_INST_n_7),
+       (.\Probe_out_reg_int_reg[3]_0 ({PROBE_OUT_ALL_INST_n_16,PROBE_OUT_ALL_INST_n_17,PROBE_OUT_ALL_INST_n_18,PROBE_OUT_ALL_INST_n_19}),
+        .Q({\bus_data_int_reg_n_0_[3] ,\bus_data_int_reg_n_0_[2] ,p_0_in,p_2_in}),
+        .Read_int_i_3_0(PROBE_OUT_ALL_INST_n_10),
+        .Read_int_i_4_0(PROBE_OUT_ALL_INST_n_11),
         .SR(clear),
+        .\addr_p1_reg[2]_0 (xsdb_addr_2_0_p1),
         .clk(clk),
         .in0(committ),
         .out(bus_clk),
         .probe_out0(probe_out0),
         .probe_out1(probe_out1),
         .probe_out2(probe_out2),
+        .probe_out3(probe_out3),
+        .probe_out4(probe_out4),
+        .probe_out5(probe_out5),
+        .probe_out6(probe_out6),
         .s_daddr_o(bus_addr),
         .s_den_o(bus_den),
-        .s_den_o_INST_0(PROBE_OUT_ALL_INST_n_8),
+        .s_den_o_INST_0(PROBE_OUT_ALL_INST_n_12),
         .s_dwe_o(bus_dwe));
-  vio_0_vio_v3_0_20_probe_width PROBE_OUT_WIDTH_INST
-       (.addr_count(addr_count),
-        .\addr_count_reg[0]_0 (DECODER_INST_n_6),
+  vio_0_vio_v3_0_20_probe_width__parameterized0 PROBE_OUT_WIDTH_INST
+       (.internal_cnt_rst(internal_cnt_rst),
         .out(bus_clk),
-        .probe_width_int(probe_width_int));
+        .\probe_width_int_reg[1]_0 (PROBE_OUT_WIDTH_INST_n_0),
+        .rd_probe_out_width(rd_probe_out_width),
+        .s_rst_o(bus_rst));
   (* C_BUILD_REVISION = "0" *) 
   (* C_CORE_INFO1 = "128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
   (* C_CORE_INFO2 = "128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
@@ -5379,7 +6283,7 @@ module vio_0_vio_v3_0_20_vio
        (.C(bus_clk),
         .CE(1'b1),
         .D(bus_di[0]),
-        .Q(Bus_di),
+        .Q(p_2_in),
         .R(1'b0));
   FDRE \bus_data_int_reg[10] 
        (.C(bus_clk),

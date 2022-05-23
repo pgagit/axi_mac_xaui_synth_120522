@@ -23,7 +23,8 @@ ENTITY AXI_CHECKER IS
 		m_axis_clk : IN STD_LOGIC;
 		axi_start : IN STD_LOGIC;
 		axi_reset : IN STD_LOGIC;
-		m_axis_tlast : IN STD_LOGIC
+		m_axis_tlast : IN STD_LOGIC;
+		axi_crc_check_ok : out std_logic
 	);
 END AXI_CHECKER;
 
@@ -108,6 +109,8 @@ ARCHITECTURE Behavioral OF AXI_CHECKER IS
 	SIGNAL prev_prev_CRC_REG_tb : std_logic_vector (31 DOWNTO 0);
 	SIGNAL cnt : unsigned (0 DOWNTO 0) := "0";
 	SIGNAL identic_crc_in_frame_cnt : std_logic_vector (10 DOWNTO 0) := (OTHERS => '0');
+		SIGNAL not_identic_crc_in_frame_cnt : std_logic_vector (10 DOWNTO 0) := (OTHERS => '0');
+
 	SIGNAL testcnt : unsigned (3 DOWNTO 0) := X"0";
 	SIGNAL error_flag_crc : std_logic := '0';
  
@@ -136,6 +139,7 @@ BEGIN
 	);
 	axi_data_intern <= m_axis_tdata;
 	axi_data_intern <= m_axis_tdata;
+	axi_crc_check_ok <=crc_ok; -- status of last crc check ...
 	------------------------------
 	-----FSM: AXI:
 	-- Control state machine implementation
@@ -309,32 +313,7 @@ IF rising_edge(m_axis_clk) THEN
 								       --- crc
 								cnt <= cnt + 1;
 								last_column <= m_axis_tdata;
-								--crc_axi_column_in <=  m_axis_tdata;
-								 crc_axi_column_in <= (others => '0');
-								-- take care on tkeep
-								CASE m_axis_tkeep is
-								when  "00000000" => 
-							---- 0!!
-							     crc_axi_column_in <= (others => '0');
-								when  "00000001" => 
-								crc_axi_column_in(7 downto 0)<=m_axis_tdata(7 downto 0);
-								when  "00000011" => 
-								crc_axi_column_in(15 downto 0)<=m_axis_tdata(15 downto 0);
-								when  "00000111" => 
-								crc_axi_column_in(23 downto 0)<=m_axis_tdata(23 downto 0);
-								when  "00001111" => 
-								crc_axi_column_in(31 downto 0)<=m_axis_tdata(31 downto 0);
-								when  "00011111" => 
-								crc_axi_column_in(39 downto 0)<=m_axis_tdata(39 downto 0);
-								when  "00111111" => 
-								crc_axi_column_in(47 downto 0)<=m_axis_tdata(47 downto 0);
-								when  "01111111" => 
-								crc_axi_column_in(55 downto 0)<=m_axis_tdata(55 downto 0);
-								when  "11111111" => 
-								crc_axi_column_in(63 downto 0)<=m_axis_tdata(63 downto 0);
-								when others =>
-								END CASE;
-								
+								crc_axi_column_in <= m_axis_tdata;
 								crc_calc_enabled <= '1';
 								
 								
@@ -359,6 +338,7 @@ IF rising_edge(m_axis_clk) THEN
 									---- CRC was NOT same!
 										crc_ok <= '0';
 										error_flag_crc <= '1';
+										not_identic_crc_in_frame_cnt <= not_identic_crc_in_frame_cnt + '1'; 
 									END IF;
 								ELSIF m_axis_tlast = '0' THEN
 								    ---- if it was not the last column store it

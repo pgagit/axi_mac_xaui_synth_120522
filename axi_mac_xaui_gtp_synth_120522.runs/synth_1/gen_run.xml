@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tifbv676-1L" LaunchTime="1652778619">
-  <File Type="REPORTS-TCL" Name="xaui_0_example_design_reports.tcl"/>
-  <File Type="PA-TCL" Name="xaui_0_example_design.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a200tifbv676-1L" LaunchTime="1653309157">
+  <File Type="VDS-TIMING-PB" Name="xaui_0_example_design_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="xaui_0_example_design_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="xaui_0_example_design.dcp"/>
-  <File Type="RDS-RDS" Name="xaui_0_example_design.vds"/>
   <File Type="RDS-UTIL-PB" Name="xaui_0_example_design_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="xaui_0_example_design_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="xaui_0_example_design_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="xaui_0_example_design.vds"/>
+  <File Type="REPORTS-TCL" Name="xaui_0_example_design_reports.tcl"/>
+  <File Type="PA-TCL" Name="xaui_0_example_design.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/xaui_0.xci">
@@ -14,6 +17,18 @@
         <Attr Name="ImportTime" Val="1651652827"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MY_AXI_RX_CHECKER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/crc_top.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -80,8 +95,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="ten_gig_eth_mac_0"/>
   <BlockFileSet Type="BlockSrcs" Name="vio_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ten_gig_eth_mac_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>

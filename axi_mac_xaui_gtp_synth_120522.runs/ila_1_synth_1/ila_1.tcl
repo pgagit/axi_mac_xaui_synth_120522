@@ -28,12 +28,12 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.cache/wt [current_project]
-set_property parent.project_path /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.xpr [current_project]
+set_property webtalk.parent_dir /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.cache/wt [current_project]
+set_property parent.project_path /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.cache/ip [current_project]
+set_property ip_output_repo /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1.xci
 set_property used_in_synthesis false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc]
@@ -53,7 +53,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-set cached_ip [config_ip_cache -export -no_bom  -dir /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1 -new_name ila_1 -ip [get_ips ila_1]]
+set cached_ip [config_ip_cache -export -no_bom  -dir /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1 -new_name ila_1 -ip [get_ips ila_1]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -94,7 +94,7 @@ write_checkpoint -force -noxdef ila_1.dcp
 create_report "ila_1_synth_1_synth_report_utilization_0" "report_utilization -file ila_1_utilization_synth.rpt -pb ila_1_utilization_synth.pb"
 
 if { [catch {
-  file copy -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1.dcp /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1.dcp
+  file copy -force /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1.dcp /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
@@ -129,47 +129,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1.dcp /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1.dcp
+  file copy -force /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1.dcp /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1_stub.v /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_stub.v
+  file rename -force /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1_stub.v /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1_stub.vhdl /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_stub.vhdl
+  file rename -force /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1_stub.vhdl /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1_sim_netlist.v /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_sim_netlist.v
+  file rename -force /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1_sim_netlist.v /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1_sim_netlist.vhdl /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_sim_netlist.vhdl
+  file rename -force /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.runs/ila_1_synth_1/ila_1_sim_netlist.vhdl /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.ip_user_files/ip/ila_1]} {
+if {[file isdir /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.ip_user_files/ip/ila_1]} {
   catch { 
-    file copy -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_stub.v /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.ip_user_files/ip/ila_1
+    file copy -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_stub.v /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.ip_user_files/ip/ila_1
   }
 }
 
-if {[file isdir /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.ip_user_files/ip/ila_1]} {
+if {[file isdir /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.ip_user_files/ip/ila_1]} {
   catch { 
-    file copy -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_stub.vhdl /home/alexander.kohn/MYREPO2/axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.ip_user_files/ip/ila_1
+    file copy -force /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_stub.vhdl /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.ip_user_files/ip/ila_1
   }
 }
 file delete __synthesis_is_running__
