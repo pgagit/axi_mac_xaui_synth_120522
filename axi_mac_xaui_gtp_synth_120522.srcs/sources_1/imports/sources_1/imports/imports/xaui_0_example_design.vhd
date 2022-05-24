@@ -52,6 +52,7 @@ architecture wrapper of xaui_0_example_design is
 ----------------------------------------------------------------------------
 -- Component Declaration for the XAUI block level.
 ----------------------------------------------------------------------------
+--vio_core
 COMPONENT vio_0
   PORT (
     clk : IN STD_LOGIC;
@@ -68,7 +69,11 @@ COMPONENT vio_0
     probe_out3 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out4 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out5 : OUT  STD_LOGIC_VECTOR(0 DOWNTO 0);
-    probe_out6 : OUT  STD_LOGIC_VECTOR(0 DOWNTO 0)
+    probe_out6 : OUT  STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe_out7 : OUT STD_LOGIC_VECTOR (79 DOWNTO 0);
+    probe_out8 : OUT STD_LOGIC_VECTOR (79 DOWNTO 0);
+    probe_out9 : OUT STD_LOGIC_VECTOR (0 DOWNTO 0)
+
 
   );
 END COMPONENT;
@@ -497,7 +502,8 @@ end component;
 ----------------------------------------------------------------------------
 -- Signal declarations.
 ----------------------------------------------------------------------------
-
+    signal loopback_mac_near_end : std_logic := '0';
+   signal  loopback_mac_near_end_vio : std_logic_vector (0 downto 0) := "0";
     signal axi_crc_result_ok_vio : std_logic_vector(0 downto 0); 
     signal rx_polarities_vio : std_logic_vector( 3 downto 0);
     signal mac_started_ila : std_logic_vector(0 downto 0);
@@ -533,8 +539,10 @@ end component;
   signal xgmii_rxd_pipe4       : std_logic_vector(63 downto 0) := (others => '0');
   signal xgmii_rxc_pipe4       : std_logic_vector(7 downto 0)  := (others => '0');
 
-  signal xgmii_rxd_int         : std_logic_vector(63 downto 0) := (others => '0');
-  signal xgmii_rxc_int         : std_logic_vector(7 downto 0)  := (others => '0');
+  signal xgmii_rxd_xaui_o        : std_logic_vector(63 downto 0) := (others => '0');
+  signal xgmii_rxc_xaui_o      : std_logic_vector(7 downto 0)  := (others => '0');
+  
+  ---
   signal xgmii_txd_pipe2       : std_logic_vector(63 downto 0) := (others => '0');
   signal xgmii_txd_pipe3       : std_logic_vector(63 downto 0) := (others => '0');
   signal xgmii_txd_pipe4       : std_logic_vector(63 downto 0) := (others => '0');
@@ -577,6 +585,10 @@ signal gt_tx_resetdone_out_ila : std_logic_vector( 3 downto 0);
 signal status_mac_out : std_logic_vector( 2 downto 0);
 signal tx_configuration_vector_mac : STD_LOGIC_VECTOR(79 DOWNTO 0):= X"0605040302da00000022";
 signal rx_configuration_vector_mac : STD_LOGIC_VECTOR(79 DOWNTO 0):= X"0605040302da00000022"; 
+signal rx_configuration_vector_mac_vio : STD_LOGIC_VECTOR(79 DOWNTO 0):= X"0605040302da00000022"; 
+signal tx_configuration_vector_mac_vio : STD_LOGIC_VECTOR(79 DOWNTO 0):= X"0605040302da00000022"; 
+
+
 signal reset_mac_tx : std_logic_vector (0 downto 0);
 signal reset_mac_rx : std_logic_vector (0 downto 0);
 
@@ -620,10 +632,16 @@ signal gt3_rxdisperr_out_ila : std_logic_vector (1 downto 0);
   attribute SHREG_EXTRACT of signal_detect_pipe3 : signal is "no";
     SIGNAL xgmii_txd_simple_gen2 : STD_LOGIC_VECTOR(63 DOWNTO 0) := X"0707070707070707";
     SIGNAL xgmii_txc_simple_gen2 : STD_LOGIC_VECTOR(7 DOWNTO 0) := X"FF";
-
-
+--xaui
+SIGNAL xgmii_txd_xaui_i : STD_LOGIC_VECTOR(63 DOWNTO 0) := X"0707070707070707";
+SIGNAL xgmii_txc_xaui_i : STD_LOGIC_VECTOR(7 DOWNTO 0) := X"FF";
+--mac
 SIGNAL xgmii_txd_mac_o : STD_LOGIC_VECTOR(63 DOWNTO 0) := X"0707070707070707";
 SIGNAL xgmii_txc_mac_o : STD_LOGIC_VECTOR(7 DOWNTO 0) := X"FF";
+---
+SIGNAL xgmii_rxd_mac_i : STD_LOGIC_VECTOR(63 DOWNTO 0) := X"0707070707070707";
+SIGNAL xgmii_rxc_mac_i : STD_LOGIC_VECTOR(7 DOWNTO 0) := X"FF";
+--
 SIGNAL xgmii_txd_simple_gen_o : STD_LOGIC_VECTOR(63 DOWNTO 0) := X"0707070707070707";
 SIGNAL xgmii_txc_simple_gen_o : STD_LOGIC_VECTOR(7 DOWNTO 0) := X"FF";
 signal clk_111m111 : std_logic;
@@ -712,7 +730,10 @@ myvio : vio_0
     probe_out3 => insert_axo_crc_error,
     probe_out4 => vio_MAC_reset,
     probe_out5 => reset_mac_rx,
-    probe_out6 =>  reset_mac_tx
+    probe_out6 =>  reset_mac_tx,
+    probe_out7 => rx_configuration_vector_mac_vio,
+    probe_out8 => tx_configuration_vector_mac_vio,
+    probe_out9 => loopback_mac_near_end_vio
 
     
   );
@@ -730,7 +751,7 @@ PORT MAP (
 	probe6 => std_logic_vector(enable_frame_send),
 	probe7 => std_logic_vector(enable_send_idle),
 	probe8 => std_logic_vector(clk156_counter),
-	probe9 => xgmii_rxd_int,
+	probe9 => xgmii_rxd_xaui_o,
 	probe10 =>reset_ila,
 	probe11 => aresetn_ila, 
 	--gtp
@@ -763,7 +784,7 @@ PORT MAP (
     probe33 => mac_started_ila,
     probe34 => tx_configuration_vector_mac,
     probe35 => rx_configuration_vector_mac,
-    probe36 => xgmii_rxc_int,
+    probe36 => xgmii_rxc_xaui_o,
     probe37 =>gt_commadetect_ila,
     probe38 => axi_crc_result_ok_vio,
     probe39 => tx_axis_fifo_tdata
@@ -844,14 +865,15 @@ mac1 : ten_gig_eth_mac_0
     
     status_vector => mac_status_vector_ila,
     tx_dcm_locked => '1',
-    
+    --mac output
     xgmii_txd => xgmii_txd_mac_o,--, --- goes to xaui input!
     xgmii_txc => xgmii_txc_mac_o,--xgmii_txc_i,
     
     rx_clk0 => clk156_xaui_out,
     rx_dcm_locked => '1',
-    xgmii_rxd => xgmii_rxd_int, -- from xaui
-    xgmii_rxc => xgmii_rxc_int
+    -- mac input
+    xgmii_rxd => xgmii_rxd_mac_i, -- from xaui
+    xgmii_rxc => xgmii_rxc_mac_i
   );
       ------------- Begin Cut here for INSTANTIATION Template ----- INST_TAG
 --clkwiz_SF2_111_to_50MHz : clk_wiz_0
@@ -883,11 +905,11 @@ mac1 : ten_gig_eth_mac_0
       --
       refclk_out                => refclk_out_xaui_o,
       -- xaui input
-      xgmii_txd                 => xgmii_txd_mac_o,
-      xgmii_txc                 => xgmii_txc_mac_o,
+      xgmii_txd                 => xgmii_txd_xaui_i,
+      xgmii_txc                 => xgmii_txc_xaui_i,
       -- xaui output
-      xgmii_rxd                 => xgmii_rxd_int,
-      xgmii_rxc                 => xgmii_rxc_int,
+      xgmii_rxd                 => xgmii_rxd_xaui_o,
+      xgmii_rxc                 => xgmii_rxc_xaui_o,
       --
       xaui_tx_l0_p              => xaui_tx_l0_p,
       xaui_tx_l0_n              => xaui_tx_l0_n,
@@ -1297,6 +1319,9 @@ wizclock156in50out : clk_wiz_0
         
         tx_configuration_vector_mac(0) <=  reset_mac_tx(0);
         rx_configuration_vector_mac(0) <=  reset_mac_rx(0);
+        rx_configuration_vector_mac <=rx_configuration_vector_mac_vio;
+        tx_configuration_vector_mac <=tx_configuration_vector_mac_vio;
+
   end if;
 
 ---- if xaui is initialized and MAC isnt working 
@@ -1357,7 +1382,33 @@ if ( mac_reset_cnt > 0 and mac_reset_cnt < 200 and  status_vector_design = "1111
   
   end process;
   
-  
+  p_loopback_10MAC : process (clk156_xaui_out)
+  begin
+  if rising_edge(clk156_xaui_out) then
+      if( loopback_mac_near_end_vio(0) = '1') then
+      -- loop back 10G data @ 10G MAC
+      --  disconnect xaui
+      xgmii_txd_xaui_i<=X"0000000000000000";
+            xgmii_txc_xaui_i<=X"00";
+
+      -- mac input = mac output
+      xgmii_rxd_mac_i <=xgmii_txd_mac_o;
+      xgmii_rxc_mac_i <=xgmii_txc_mac_o;
+    
+      else
+      --standard case
+      -- mac out to xaui in
+      xgmii_txd_xaui_i <=xgmii_txd_mac_o;
+      xgmii_txc_xaui_i <=xgmii_txc_mac_o;
+      -- xaui out to mac in
+      xgmii_txd_mac_i<=xgmii_rxd_xaui_o;
+      xgmii_txc_mac_i<=xgmii_rxc_xaui_o;
+
+      end if;
+      
+      else 
+  end if;
+   end process p_loopback_10MAC;
   
   
   

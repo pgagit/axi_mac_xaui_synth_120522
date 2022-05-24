@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7a200t_0" gui_info="dashboard1=hw_ila_1[xc7a200t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a200t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_1/Waveform=ILA_WAVE_1;],dashboard2=dashboard_1[xc7a200t_0/hw_vio_2=VIO_PROBES_1;]"/>
+  <device name="xc7a200t_0" gui_info="dashboard1=dashboard_1[xc7a200t_0/hw_vio_2=VIO_PROBES_1;],dashboard2=hw_ila_1[xc7a200t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a200t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_1/Waveform=ILA_WAVE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a200t_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/xaui_0_example_design.ltx"/>
@@ -27,10 +27,13 @@
     <Object name="axi_modus_vio" gui_info="dashboard_1/hw_vio_1=0_exp,dashboard_1/hw_vio_2=0"/>
     <Object name="insert_axo_crc_error" gui_info="dashboard_1/hw_vio_1=3_exp,dashboard_1/hw_vio_2=1"/>
     <Object name="insert_axo_crc_error_1" gui_info=""/>
+    <Object name="loopback_mac_near_end_vio" gui_info="dashboard_1/hw_vio_2=9"/>
     <Object name="probe_in0" gui_info="hw_vios/hw_vio_2=0_exp"/>
     <Object name="reset_mac_rx" gui_info="dashboard_1/hw_vio_2=5"/>
     <Object name="reset_mac_tx" gui_info="dashboard_1/hw_vio_2=6"/>
+    <Object name="rx_configuration_vector_mac_vio[79:0]" gui_info="dashboard_1/hw_vio_2=7"/>
     <Object name="rx_polarities_vio[3:0]" gui_info="dashboard_2/hw_vio_2=1,dashboard_1/hw_vio_1=1,dashboard_1/hw_vio_2=3"/>
+    <Object name="tx_configuration_vector_mac_vio[79:0]" gui_info="dashboard_1/hw_vio_2=8"/>
     <Object name="vio_MAC_reset" gui_info="dashboard_1/hw_vio_2=4"/>
     <Object name="vio_reset" gui_info="hw_vios/hw_vio_1=0,hw_vios/hw_vio_2=1,dashboard_2/hw_vio_2=0,dashboard_2/hw_vio_1=0,dashboard_1/hw_vio_1=2,dashboard_1/hw_vio_2=2"/>
   </ObjectList>
@@ -1218,6 +1221,34 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe36[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="xgmii_rxc_xaui_o[7]"/>
+        <net name="xgmii_rxc_xaui_o[6]"/>
+        <net name="xgmii_rxc_xaui_o[5]"/>
+        <net name="xgmii_rxc_xaui_o[4]"/>
+        <net name="xgmii_rxc_xaui_o[3]"/>
+        <net name="xgmii_rxc_xaui_o[2]"/>
+        <net name="xgmii_rxc_xaui_o[1]"/>
+        <net name="xgmii_rxc_xaui_o[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
@@ -1298,6 +1329,90 @@
         <net name="xgmii_rxd_int[2]"/>
         <net name="xgmii_rxd_int[1]"/>
         <net name="xgmii_rxd_int[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="xgmii_rxd_xaui_o[63]"/>
+        <net name="xgmii_rxd_xaui_o[62]"/>
+        <net name="xgmii_rxd_xaui_o[61]"/>
+        <net name="xgmii_rxd_xaui_o[60]"/>
+        <net name="xgmii_rxd_xaui_o[59]"/>
+        <net name="xgmii_rxd_xaui_o[58]"/>
+        <net name="xgmii_rxd_xaui_o[57]"/>
+        <net name="xgmii_rxd_xaui_o[56]"/>
+        <net name="xgmii_rxd_xaui_o[55]"/>
+        <net name="xgmii_rxd_xaui_o[54]"/>
+        <net name="xgmii_rxd_xaui_o[53]"/>
+        <net name="xgmii_rxd_xaui_o[52]"/>
+        <net name="xgmii_rxd_xaui_o[51]"/>
+        <net name="xgmii_rxd_xaui_o[50]"/>
+        <net name="xgmii_rxd_xaui_o[49]"/>
+        <net name="xgmii_rxd_xaui_o[48]"/>
+        <net name="xgmii_rxd_xaui_o[47]"/>
+        <net name="xgmii_rxd_xaui_o[46]"/>
+        <net name="xgmii_rxd_xaui_o[45]"/>
+        <net name="xgmii_rxd_xaui_o[44]"/>
+        <net name="xgmii_rxd_xaui_o[43]"/>
+        <net name="xgmii_rxd_xaui_o[42]"/>
+        <net name="xgmii_rxd_xaui_o[41]"/>
+        <net name="xgmii_rxd_xaui_o[40]"/>
+        <net name="xgmii_rxd_xaui_o[39]"/>
+        <net name="xgmii_rxd_xaui_o[38]"/>
+        <net name="xgmii_rxd_xaui_o[37]"/>
+        <net name="xgmii_rxd_xaui_o[36]"/>
+        <net name="xgmii_rxd_xaui_o[35]"/>
+        <net name="xgmii_rxd_xaui_o[34]"/>
+        <net name="xgmii_rxd_xaui_o[33]"/>
+        <net name="xgmii_rxd_xaui_o[32]"/>
+        <net name="xgmii_rxd_xaui_o[31]"/>
+        <net name="xgmii_rxd_xaui_o[30]"/>
+        <net name="xgmii_rxd_xaui_o[29]"/>
+        <net name="xgmii_rxd_xaui_o[28]"/>
+        <net name="xgmii_rxd_xaui_o[27]"/>
+        <net name="xgmii_rxd_xaui_o[26]"/>
+        <net name="xgmii_rxd_xaui_o[25]"/>
+        <net name="xgmii_rxd_xaui_o[24]"/>
+        <net name="xgmii_rxd_xaui_o[23]"/>
+        <net name="xgmii_rxd_xaui_o[22]"/>
+        <net name="xgmii_rxd_xaui_o[21]"/>
+        <net name="xgmii_rxd_xaui_o[20]"/>
+        <net name="xgmii_rxd_xaui_o[19]"/>
+        <net name="xgmii_rxd_xaui_o[18]"/>
+        <net name="xgmii_rxd_xaui_o[17]"/>
+        <net name="xgmii_rxd_xaui_o[16]"/>
+        <net name="xgmii_rxd_xaui_o[15]"/>
+        <net name="xgmii_rxd_xaui_o[14]"/>
+        <net name="xgmii_rxd_xaui_o[13]"/>
+        <net name="xgmii_rxd_xaui_o[12]"/>
+        <net name="xgmii_rxd_xaui_o[11]"/>
+        <net name="xgmii_rxd_xaui_o[10]"/>
+        <net name="xgmii_rxd_xaui_o[9]"/>
+        <net name="xgmii_rxd_xaui_o[8]"/>
+        <net name="xgmii_rxd_xaui_o[7]"/>
+        <net name="xgmii_rxd_xaui_o[6]"/>
+        <net name="xgmii_rxd_xaui_o[5]"/>
+        <net name="xgmii_rxd_xaui_o[4]"/>
+        <net name="xgmii_rxd_xaui_o[3]"/>
+        <net name="xgmii_rxd_xaui_o[2]"/>
+        <net name="xgmii_rxd_xaui_o[1]"/>
+        <net name="xgmii_rxd_xaui_o[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -1648,6 +1763,21 @@
     </probe>
     <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value="OutputDisplay:Toggle;"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="loopback_mac_near_end_vio"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_VIO" value="hw_vio_2"/>
@@ -1693,6 +1823,100 @@
     </probe>
     <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="0605040302DA00000020"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="HEX"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="rx_configuration_vector_mac_vio[79]"/>
+        <net name="rx_configuration_vector_mac_vio[78]"/>
+        <net name="rx_configuration_vector_mac_vio[77]"/>
+        <net name="rx_configuration_vector_mac_vio[76]"/>
+        <net name="rx_configuration_vector_mac_vio[75]"/>
+        <net name="rx_configuration_vector_mac_vio[74]"/>
+        <net name="rx_configuration_vector_mac_vio[73]"/>
+        <net name="rx_configuration_vector_mac_vio[72]"/>
+        <net name="rx_configuration_vector_mac_vio[71]"/>
+        <net name="rx_configuration_vector_mac_vio[70]"/>
+        <net name="rx_configuration_vector_mac_vio[69]"/>
+        <net name="rx_configuration_vector_mac_vio[68]"/>
+        <net name="rx_configuration_vector_mac_vio[67]"/>
+        <net name="rx_configuration_vector_mac_vio[66]"/>
+        <net name="rx_configuration_vector_mac_vio[65]"/>
+        <net name="rx_configuration_vector_mac_vio[64]"/>
+        <net name="rx_configuration_vector_mac_vio[63]"/>
+        <net name="rx_configuration_vector_mac_vio[62]"/>
+        <net name="rx_configuration_vector_mac_vio[61]"/>
+        <net name="rx_configuration_vector_mac_vio[60]"/>
+        <net name="rx_configuration_vector_mac_vio[59]"/>
+        <net name="rx_configuration_vector_mac_vio[58]"/>
+        <net name="rx_configuration_vector_mac_vio[57]"/>
+        <net name="rx_configuration_vector_mac_vio[56]"/>
+        <net name="rx_configuration_vector_mac_vio[55]"/>
+        <net name="rx_configuration_vector_mac_vio[54]"/>
+        <net name="rx_configuration_vector_mac_vio[53]"/>
+        <net name="rx_configuration_vector_mac_vio[52]"/>
+        <net name="rx_configuration_vector_mac_vio[51]"/>
+        <net name="rx_configuration_vector_mac_vio[50]"/>
+        <net name="rx_configuration_vector_mac_vio[49]"/>
+        <net name="rx_configuration_vector_mac_vio[48]"/>
+        <net name="rx_configuration_vector_mac_vio[47]"/>
+        <net name="rx_configuration_vector_mac_vio[46]"/>
+        <net name="rx_configuration_vector_mac_vio[45]"/>
+        <net name="rx_configuration_vector_mac_vio[44]"/>
+        <net name="rx_configuration_vector_mac_vio[43]"/>
+        <net name="rx_configuration_vector_mac_vio[42]"/>
+        <net name="rx_configuration_vector_mac_vio[41]"/>
+        <net name="rx_configuration_vector_mac_vio[40]"/>
+        <net name="rx_configuration_vector_mac_vio[39]"/>
+        <net name="rx_configuration_vector_mac_vio[38]"/>
+        <net name="rx_configuration_vector_mac_vio[37]"/>
+        <net name="rx_configuration_vector_mac_vio[36]"/>
+        <net name="rx_configuration_vector_mac_vio[35]"/>
+        <net name="rx_configuration_vector_mac_vio[34]"/>
+        <net name="rx_configuration_vector_mac_vio[33]"/>
+        <net name="rx_configuration_vector_mac_vio[32]"/>
+        <net name="rx_configuration_vector_mac_vio[31]"/>
+        <net name="rx_configuration_vector_mac_vio[30]"/>
+        <net name="rx_configuration_vector_mac_vio[29]"/>
+        <net name="rx_configuration_vector_mac_vio[28]"/>
+        <net name="rx_configuration_vector_mac_vio[27]"/>
+        <net name="rx_configuration_vector_mac_vio[26]"/>
+        <net name="rx_configuration_vector_mac_vio[25]"/>
+        <net name="rx_configuration_vector_mac_vio[24]"/>
+        <net name="rx_configuration_vector_mac_vio[23]"/>
+        <net name="rx_configuration_vector_mac_vio[22]"/>
+        <net name="rx_configuration_vector_mac_vio[21]"/>
+        <net name="rx_configuration_vector_mac_vio[20]"/>
+        <net name="rx_configuration_vector_mac_vio[19]"/>
+        <net name="rx_configuration_vector_mac_vio[18]"/>
+        <net name="rx_configuration_vector_mac_vio[17]"/>
+        <net name="rx_configuration_vector_mac_vio[16]"/>
+        <net name="rx_configuration_vector_mac_vio[15]"/>
+        <net name="rx_configuration_vector_mac_vio[14]"/>
+        <net name="rx_configuration_vector_mac_vio[13]"/>
+        <net name="rx_configuration_vector_mac_vio[12]"/>
+        <net name="rx_configuration_vector_mac_vio[11]"/>
+        <net name="rx_configuration_vector_mac_vio[10]"/>
+        <net name="rx_configuration_vector_mac_vio[9]"/>
+        <net name="rx_configuration_vector_mac_vio[8]"/>
+        <net name="rx_configuration_vector_mac_vio[7]"/>
+        <net name="rx_configuration_vector_mac_vio[6]"/>
+        <net name="rx_configuration_vector_mac_vio[5]"/>
+        <net name="rx_configuration_vector_mac_vio[4]"/>
+        <net name="rx_configuration_vector_mac_vio[3]"/>
+        <net name="rx_configuration_vector_mac_vio[2]"/>
+        <net name="rx_configuration_vector_mac_vio[1]"/>
+        <net name="rx_configuration_vector_mac_vio[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_HINT" value="0.OutputDisplay:OutputText;|1.OutputDisplay:OutputText;|2.OutputDisplay:OutputText;|3.OutputDisplay:OutputText;"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_VIO" value="hw_vio_2"/>
@@ -1707,6 +1931,100 @@
         <net name="rx_polarities_vio[2]"/>
         <net name="rx_polarities_vio[1]"/>
         <net name="rx_polarities_vio[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="0605040302DA00000020"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="HEX"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="tx_configuration_vector_mac_vio[79]"/>
+        <net name="tx_configuration_vector_mac_vio[78]"/>
+        <net name="tx_configuration_vector_mac_vio[77]"/>
+        <net name="tx_configuration_vector_mac_vio[76]"/>
+        <net name="tx_configuration_vector_mac_vio[75]"/>
+        <net name="tx_configuration_vector_mac_vio[74]"/>
+        <net name="tx_configuration_vector_mac_vio[73]"/>
+        <net name="tx_configuration_vector_mac_vio[72]"/>
+        <net name="tx_configuration_vector_mac_vio[71]"/>
+        <net name="tx_configuration_vector_mac_vio[70]"/>
+        <net name="tx_configuration_vector_mac_vio[69]"/>
+        <net name="tx_configuration_vector_mac_vio[68]"/>
+        <net name="tx_configuration_vector_mac_vio[67]"/>
+        <net name="tx_configuration_vector_mac_vio[66]"/>
+        <net name="tx_configuration_vector_mac_vio[65]"/>
+        <net name="tx_configuration_vector_mac_vio[64]"/>
+        <net name="tx_configuration_vector_mac_vio[63]"/>
+        <net name="tx_configuration_vector_mac_vio[62]"/>
+        <net name="tx_configuration_vector_mac_vio[61]"/>
+        <net name="tx_configuration_vector_mac_vio[60]"/>
+        <net name="tx_configuration_vector_mac_vio[59]"/>
+        <net name="tx_configuration_vector_mac_vio[58]"/>
+        <net name="tx_configuration_vector_mac_vio[57]"/>
+        <net name="tx_configuration_vector_mac_vio[56]"/>
+        <net name="tx_configuration_vector_mac_vio[55]"/>
+        <net name="tx_configuration_vector_mac_vio[54]"/>
+        <net name="tx_configuration_vector_mac_vio[53]"/>
+        <net name="tx_configuration_vector_mac_vio[52]"/>
+        <net name="tx_configuration_vector_mac_vio[51]"/>
+        <net name="tx_configuration_vector_mac_vio[50]"/>
+        <net name="tx_configuration_vector_mac_vio[49]"/>
+        <net name="tx_configuration_vector_mac_vio[48]"/>
+        <net name="tx_configuration_vector_mac_vio[47]"/>
+        <net name="tx_configuration_vector_mac_vio[46]"/>
+        <net name="tx_configuration_vector_mac_vio[45]"/>
+        <net name="tx_configuration_vector_mac_vio[44]"/>
+        <net name="tx_configuration_vector_mac_vio[43]"/>
+        <net name="tx_configuration_vector_mac_vio[42]"/>
+        <net name="tx_configuration_vector_mac_vio[41]"/>
+        <net name="tx_configuration_vector_mac_vio[40]"/>
+        <net name="tx_configuration_vector_mac_vio[39]"/>
+        <net name="tx_configuration_vector_mac_vio[38]"/>
+        <net name="tx_configuration_vector_mac_vio[37]"/>
+        <net name="tx_configuration_vector_mac_vio[36]"/>
+        <net name="tx_configuration_vector_mac_vio[35]"/>
+        <net name="tx_configuration_vector_mac_vio[34]"/>
+        <net name="tx_configuration_vector_mac_vio[33]"/>
+        <net name="tx_configuration_vector_mac_vio[32]"/>
+        <net name="tx_configuration_vector_mac_vio[31]"/>
+        <net name="tx_configuration_vector_mac_vio[30]"/>
+        <net name="tx_configuration_vector_mac_vio[29]"/>
+        <net name="tx_configuration_vector_mac_vio[28]"/>
+        <net name="tx_configuration_vector_mac_vio[27]"/>
+        <net name="tx_configuration_vector_mac_vio[26]"/>
+        <net name="tx_configuration_vector_mac_vio[25]"/>
+        <net name="tx_configuration_vector_mac_vio[24]"/>
+        <net name="tx_configuration_vector_mac_vio[23]"/>
+        <net name="tx_configuration_vector_mac_vio[22]"/>
+        <net name="tx_configuration_vector_mac_vio[21]"/>
+        <net name="tx_configuration_vector_mac_vio[20]"/>
+        <net name="tx_configuration_vector_mac_vio[19]"/>
+        <net name="tx_configuration_vector_mac_vio[18]"/>
+        <net name="tx_configuration_vector_mac_vio[17]"/>
+        <net name="tx_configuration_vector_mac_vio[16]"/>
+        <net name="tx_configuration_vector_mac_vio[15]"/>
+        <net name="tx_configuration_vector_mac_vio[14]"/>
+        <net name="tx_configuration_vector_mac_vio[13]"/>
+        <net name="tx_configuration_vector_mac_vio[12]"/>
+        <net name="tx_configuration_vector_mac_vio[11]"/>
+        <net name="tx_configuration_vector_mac_vio[10]"/>
+        <net name="tx_configuration_vector_mac_vio[9]"/>
+        <net name="tx_configuration_vector_mac_vio[8]"/>
+        <net name="tx_configuration_vector_mac_vio[7]"/>
+        <net name="tx_configuration_vector_mac_vio[6]"/>
+        <net name="tx_configuration_vector_mac_vio[5]"/>
+        <net name="tx_configuration_vector_mac_vio[4]"/>
+        <net name="tx_configuration_vector_mac_vio[3]"/>
+        <net name="tx_configuration_vector_mac_vio[2]"/>
+        <net name="tx_configuration_vector_mac_vio[1]"/>
+        <net name="tx_configuration_vector_mac_vio[0]"/>
       </nets>
     </probe>
     <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
