@@ -7,9 +7,9 @@
   <device name="xc7a200t_0" gui_info="dashboard1=hw_ila_1[xc7a200t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a200t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_1/Waveform=ILA_WAVE_1;],dashboard2=dashboard_1[xc7a200t_0/hw_vio_2=VIO_PROBES_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a200t_0" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/xaui_0_example_design.ltx"/>
-      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/xaui_0_example_design.ltx"/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/xaui_0_example_design.bit"/>
+      <Properties Property="FULL_PROBES.FILE" value="/home/alexander.kohn/Documents/alex/5-1_mac_to_xaui_phy/bitsstreamRX/23-05/rxV3/xaui_0_example_design.ltx"/>
+      <Properties Property="PROBES.FILE" value="/home/alexander.kohn/Documents/alex/5-1_mac_to_xaui_phy/bitsstreamRX/23-05/rxV3/xaui_0_example_design.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="/home/alexander.kohn/Documents/alex/5-1_mac_to_xaui_phy/bitsstreamRX/23-05/rxV3/xaui_0_example_design.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
@@ -920,8 +920,8 @@
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe2[7:0]"/>
-        <Option Id="NAME.CUSTOM" value=""/>
-        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="NAME.CUSTOM" value="xaui status_vector[7:0]"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
@@ -935,6 +935,90 @@
         <net name="status_vector[2]"/>
         <net name="status_vector[1]"/>
         <net name="status_vector[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="ilacore2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe39[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="tx_axis_fifo_tdata[63]"/>
+        <net name="tx_axis_fifo_tdata[62]"/>
+        <net name="tx_axis_fifo_tdata[61]"/>
+        <net name="tx_axis_fifo_tdata[60]"/>
+        <net name="tx_axis_fifo_tdata[59]"/>
+        <net name="tx_axis_fifo_tdata[58]"/>
+        <net name="tx_axis_fifo_tdata[57]"/>
+        <net name="tx_axis_fifo_tdata[56]"/>
+        <net name="tx_axis_fifo_tdata[55]"/>
+        <net name="tx_axis_fifo_tdata[54]"/>
+        <net name="tx_axis_fifo_tdata[53]"/>
+        <net name="tx_axis_fifo_tdata[52]"/>
+        <net name="tx_axis_fifo_tdata[51]"/>
+        <net name="tx_axis_fifo_tdata[50]"/>
+        <net name="tx_axis_fifo_tdata[49]"/>
+        <net name="tx_axis_fifo_tdata[48]"/>
+        <net name="tx_axis_fifo_tdata[47]"/>
+        <net name="tx_axis_fifo_tdata[46]"/>
+        <net name="tx_axis_fifo_tdata[45]"/>
+        <net name="tx_axis_fifo_tdata[44]"/>
+        <net name="tx_axis_fifo_tdata[43]"/>
+        <net name="tx_axis_fifo_tdata[42]"/>
+        <net name="tx_axis_fifo_tdata[41]"/>
+        <net name="tx_axis_fifo_tdata[40]"/>
+        <net name="tx_axis_fifo_tdata[39]"/>
+        <net name="tx_axis_fifo_tdata[38]"/>
+        <net name="tx_axis_fifo_tdata[37]"/>
+        <net name="tx_axis_fifo_tdata[36]"/>
+        <net name="tx_axis_fifo_tdata[35]"/>
+        <net name="tx_axis_fifo_tdata[34]"/>
+        <net name="tx_axis_fifo_tdata[33]"/>
+        <net name="tx_axis_fifo_tdata[32]"/>
+        <net name="tx_axis_fifo_tdata[31]"/>
+        <net name="tx_axis_fifo_tdata[30]"/>
+        <net name="tx_axis_fifo_tdata[29]"/>
+        <net name="tx_axis_fifo_tdata[28]"/>
+        <net name="tx_axis_fifo_tdata[27]"/>
+        <net name="tx_axis_fifo_tdata[26]"/>
+        <net name="tx_axis_fifo_tdata[25]"/>
+        <net name="tx_axis_fifo_tdata[24]"/>
+        <net name="tx_axis_fifo_tdata[23]"/>
+        <net name="tx_axis_fifo_tdata[22]"/>
+        <net name="tx_axis_fifo_tdata[21]"/>
+        <net name="tx_axis_fifo_tdata[20]"/>
+        <net name="tx_axis_fifo_tdata[19]"/>
+        <net name="tx_axis_fifo_tdata[18]"/>
+        <net name="tx_axis_fifo_tdata[17]"/>
+        <net name="tx_axis_fifo_tdata[16]"/>
+        <net name="tx_axis_fifo_tdata[15]"/>
+        <net name="tx_axis_fifo_tdata[14]"/>
+        <net name="tx_axis_fifo_tdata[13]"/>
+        <net name="tx_axis_fifo_tdata[12]"/>
+        <net name="tx_axis_fifo_tdata[11]"/>
+        <net name="tx_axis_fifo_tdata[10]"/>
+        <net name="tx_axis_fifo_tdata[9]"/>
+        <net name="tx_axis_fifo_tdata[8]"/>
+        <net name="tx_axis_fifo_tdata[7]"/>
+        <net name="tx_axis_fifo_tdata[6]"/>
+        <net name="tx_axis_fifo_tdata[5]"/>
+        <net name="tx_axis_fifo_tdata[4]"/>
+        <net name="tx_axis_fifo_tdata[3]"/>
+        <net name="tx_axis_fifo_tdata[2]"/>
+        <net name="tx_axis_fifo_tdata[1]"/>
+        <net name="tx_axis_fifo_tdata[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -1579,7 +1663,7 @@
     </probe>
     <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="DISPLAY_HINT" value="OutputDisplay:Active_High;"/>
+        <Option Id="DISPLAY_HINT" value="OutputDisplay:Toggle;"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_VIO" value="hw_vio_2"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -1594,7 +1678,7 @@
     </probe>
     <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="DISPLAY_HINT" value="OutputDisplay:Active_High;"/>
+        <Option Id="DISPLAY_HINT" value="OutputDisplay:Toggle;"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_VIO" value="hw_vio_2"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -1614,7 +1698,7 @@
         <Option Id="HW_VIO" value="hw_vio_2"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="OUTPUT_VALUE" value="7"/>
+        <Option Id="OUTPUT_VALUE" value="5"/>
         <Option Id="OUTPUT_VALUE_RADIX" value="HEX"/>
         <Option Id="SOURCE" value="netlist"/>
       </probeOptions>

@@ -9,15 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="498500fs"></ZoomStartTime>
-      <ZoomEndTime time="777501fs"></ZoomEndTime>
-      <Cursor1Time time="545000fs"></Cursor1Time>
+      <ZoomStartTime time="36083fs"></ZoomStartTime>
+      <ZoomEndTime time="64784fs"></ZoomEndTime>
+      <Cursor1Time time="60000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="328"></NameColumnWidth>
-      <ValueColumnWidth column_width="258"></ValueColumnWidth>
+      <ValueColumnWidth column_width="250"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="22" />
+   <WVObjectSize size="23" />
    <wave_markers>
    </wave_markers>
    <wvobject type="logic" fp_name="aresetn_ila">
@@ -36,12 +36,13 @@
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="status_vector">
-      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">status_vector[7:0]</obj_property>
       <obj_property name="ObjectShortName">status_vector[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">xaui status_vector[7:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="ila_idle">
       <obj_property name="DisplayName">FullPathName</obj_property>
@@ -146,6 +147,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="tx_statistics_mac_out">
+      <obj_property name="ElementShortName">tx_statistics_mac_out[25:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_statistics_mac_out[25:0]</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="rx_axis_tkeep_mac_out">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">rx_axis_tkeep_mac_out[7:0]</obj_property>
@@ -163,6 +168,7 @@
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="xgmii_rxd_int">
       <obj_property name="DisplayName">FullPathName</obj_property>

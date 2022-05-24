@@ -1,0 +1,2090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="726666667fs"></ZoomStartTime>
+      <ZoomEndTime time="2366666668fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="241"></NameColumnWidth>
+      <ValueColumnWidth column_width="179"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject type="group" fp_name="group370">
+      <obj_property name="label">10GMAC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/tx_clk0">
+         <obj_property name="ElementShortName">tx_clk0</obj_property>
+         <obj_property name="ObjectShortName">tx_clk0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/tx_axis_aresetn">
+         <obj_property name="ElementShortName">tx_axis_aresetn</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_aresetn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/tx_axis_tdata">
+         <obj_property name="ElementShortName">tx_axis_tdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/tx_axis_tkeep">
+         <obj_property name="ElementShortName">tx_axis_tkeep[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tkeep[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/tx_axis_tready">
+         <obj_property name="ElementShortName">tx_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/tx_axis_tvalid">
+         <obj_property name="ElementShortName">tx_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/tx_axis_tlast">
+         <obj_property name="ElementShortName">tx_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/tx_axis_tuser">
+         <obj_property name="ElementShortName">tx_axis_tuser[0:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_tuser[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/tx_ifg_delay">
+         <obj_property name="ElementShortName">tx_ifg_delay[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_ifg_delay[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/tx_statistics_vector">
+         <obj_property name="ElementShortName">tx_statistics_vector[25:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_statistics_vector[25:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/tx_statistics_valid">
+         <obj_property name="ElementShortName">tx_statistics_valid</obj_property>
+         <obj_property name="ObjectShortName">tx_statistics_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/pause_val">
+         <obj_property name="ElementShortName">pause_val[15:0]</obj_property>
+         <obj_property name="ObjectShortName">pause_val[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/pause_req">
+         <obj_property name="ElementShortName">pause_req</obj_property>
+         <obj_property name="ObjectShortName">pause_req</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/rx_axis_aresetn">
+         <obj_property name="ElementShortName">rx_axis_aresetn</obj_property>
+         <obj_property name="ObjectShortName">rx_axis_aresetn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/rx_axis_tdata">
+         <obj_property name="ElementShortName">rx_axis_tdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_axis_tdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/rx_axis_tkeep">
+         <obj_property name="ElementShortName">rx_axis_tkeep[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_axis_tkeep[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/rx_axis_tvalid">
+         <obj_property name="ElementShortName">rx_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">rx_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/rx_axis_tuser">
+         <obj_property name="ElementShortName">rx_axis_tuser</obj_property>
+         <obj_property name="ObjectShortName">rx_axis_tuser</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/rx_axis_tlast">
+         <obj_property name="ElementShortName">rx_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">rx_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/rx_statistics_vector">
+         <obj_property name="ElementShortName">rx_statistics_vector[29:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_statistics_vector[29:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/rx_statistics_valid">
+         <obj_property name="ElementShortName">rx_statistics_valid</obj_property>
+         <obj_property name="ObjectShortName">rx_statistics_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/tx_configuration_vector">
+         <obj_property name="ElementShortName">tx_configuration_vector[79:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_configuration_vector[79:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/rx_configuration_vector">
+         <obj_property name="ElementShortName">rx_configuration_vector[79:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_configuration_vector[79:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/mac1/status_vector">
+         <obj_property name="ElementShortName">status_vector[2:0]</obj_property>
+         <obj_property name="ObjectShortName">status_vector[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/tx_dcm_locked">
+         <obj_property name="ElementShortName">tx_dcm_locked</obj_property>
+         <obj_property name="ObjectShortName">tx_dcm_locked</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group455">
+         <obj_property name="label">XGMII</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/testbench/dut/mac1/xgmii_txd">
+            <obj_property name="ElementShortName">xgmii_txd[63:0]</obj_property>
+            <obj_property name="ObjectShortName">xgmii_txd[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/testbench/dut/mac1/xgmii_txc">
+            <obj_property name="ElementShortName">xgmii_txc[7:0]</obj_property>
+            <obj_property name="ObjectShortName">xgmii_txc[7:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/testbench/dut/mac1/xgmii_rxd">
+            <obj_property name="ElementShortName">xgmii_rxd[63:0]</obj_property>
+            <obj_property name="ObjectShortName">xgmii_rxd[63:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/testbench/dut/mac1/xgmii_rxc">
+            <obj_property name="ElementShortName">xgmii_rxc[7:0]</obj_property>
+            <obj_property name="ObjectShortName">xgmii_rxc[7:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/rx_clk0">
+         <obj_property name="ElementShortName">rx_clk0</obj_property>
+         <obj_property name="ObjectShortName">rx_clk0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/mac1/rx_dcm_locked">
+         <obj_property name="ElementShortName">rx_dcm_locked</obj_property>
+         <obj_property name="ObjectShortName">rx_dcm_locked</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/tx_axis_fifo_tdata">
+         <obj_property name="ElementShortName">tx_axis_fifo_tdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_fifo_tdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/tx_axis_fifo_tkeep">
+         <obj_property name="ElementShortName">tx_axis_fifo_tkeep[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_axis_fifo_tkeep[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group738">
+      <obj_property name="label">XAUI</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk">
+         <obj_property name="ElementShortName">dclk</obj_property>
+         <obj_property name="ObjectShortName">dclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/clk156_out">
+         <obj_property name="ElementShortName">clk156_out</obj_property>
+         <obj_property name="ObjectShortName">clk156_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/clk156_lock">
+         <obj_property name="ElementShortName">clk156_lock</obj_property>
+         <obj_property name="ObjectShortName">clk156_lock</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/refclk">
+         <obj_property name="ElementShortName">refclk</obj_property>
+         <obj_property name="ObjectShortName">refclk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xgmii_txd">
+         <obj_property name="ElementShortName">xgmii_txd[63:0]</obj_property>
+         <obj_property name="ObjectShortName">xgmii_txd[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xgmii_txc">
+         <obj_property name="ElementShortName">xgmii_txc[7:0]</obj_property>
+         <obj_property name="ObjectShortName">xgmii_txc[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xgmii_rxd">
+         <obj_property name="ElementShortName">xgmii_rxd[63:0]</obj_property>
+         <obj_property name="ObjectShortName">xgmii_rxd[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xgmii_rxc">
+         <obj_property name="ElementShortName">xgmii_rxc[7:0]</obj_property>
+         <obj_property name="ObjectShortName">xgmii_rxc[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_tx_l0_p">
+         <obj_property name="ElementShortName">xaui_tx_l0_p</obj_property>
+         <obj_property name="ObjectShortName">xaui_tx_l0_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_tx_l0_n">
+         <obj_property name="ElementShortName">xaui_tx_l0_n</obj_property>
+         <obj_property name="ObjectShortName">xaui_tx_l0_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_tx_l1_p">
+         <obj_property name="ElementShortName">xaui_tx_l1_p</obj_property>
+         <obj_property name="ObjectShortName">xaui_tx_l1_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_tx_l1_n">
+         <obj_property name="ElementShortName">xaui_tx_l1_n</obj_property>
+         <obj_property name="ObjectShortName">xaui_tx_l1_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_tx_l2_p">
+         <obj_property name="ElementShortName">xaui_tx_l2_p</obj_property>
+         <obj_property name="ObjectShortName">xaui_tx_l2_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_tx_l2_n">
+         <obj_property name="ElementShortName">xaui_tx_l2_n</obj_property>
+         <obj_property name="ObjectShortName">xaui_tx_l2_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_tx_l3_p">
+         <obj_property name="ElementShortName">xaui_tx_l3_p</obj_property>
+         <obj_property name="ObjectShortName">xaui_tx_l3_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_tx_l3_n">
+         <obj_property name="ElementShortName">xaui_tx_l3_n</obj_property>
+         <obj_property name="ObjectShortName">xaui_tx_l3_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_rx_l0_p">
+         <obj_property name="ElementShortName">xaui_rx_l0_p</obj_property>
+         <obj_property name="ObjectShortName">xaui_rx_l0_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_rx_l0_n">
+         <obj_property name="ElementShortName">xaui_rx_l0_n</obj_property>
+         <obj_property name="ObjectShortName">xaui_rx_l0_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_rx_l1_p">
+         <obj_property name="ElementShortName">xaui_rx_l1_p</obj_property>
+         <obj_property name="ObjectShortName">xaui_rx_l1_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_rx_l1_n">
+         <obj_property name="ElementShortName">xaui_rx_l1_n</obj_property>
+         <obj_property name="ObjectShortName">xaui_rx_l1_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_rx_l2_p">
+         <obj_property name="ElementShortName">xaui_rx_l2_p</obj_property>
+         <obj_property name="ObjectShortName">xaui_rx_l2_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_rx_l2_n">
+         <obj_property name="ElementShortName">xaui_rx_l2_n</obj_property>
+         <obj_property name="ObjectShortName">xaui_rx_l2_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_rx_l3_p">
+         <obj_property name="ElementShortName">xaui_rx_l3_p</obj_property>
+         <obj_property name="ObjectShortName">xaui_rx_l3_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/xaui_rx_l3_n">
+         <obj_property name="ElementShortName">xaui_rx_l3_n</obj_property>
+         <obj_property name="ObjectShortName">xaui_rx_l3_n</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/signal_detect">
+         <obj_property name="ElementShortName">signal_detect[3:0]</obj_property>
+         <obj_property name="ObjectShortName">signal_detect[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/debug">
+         <obj_property name="ElementShortName">debug[5:0]</obj_property>
+         <obj_property name="ObjectShortName">debug[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_drpaddr">
+         <obj_property name="ElementShortName">gt0_drpaddr[8:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_drpaddr[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_drpen">
+         <obj_property name="ElementShortName">gt0_drpen</obj_property>
+         <obj_property name="ObjectShortName">gt0_drpen</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_drpdi">
+         <obj_property name="ElementShortName">gt0_drpdi[15:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_drpdi[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_drpdo">
+         <obj_property name="ElementShortName">gt0_drpdo[15:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_drpdo[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_drprdy">
+         <obj_property name="ElementShortName">gt0_drprdy</obj_property>
+         <obj_property name="ObjectShortName">gt0_drprdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_drpwe">
+         <obj_property name="ElementShortName">gt0_drpwe</obj_property>
+         <obj_property name="ObjectShortName">gt0_drpwe</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_drp_busy">
+         <obj_property name="ElementShortName">gt0_drp_busy</obj_property>
+         <obj_property name="ObjectShortName">gt0_drp_busy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txpmareset_in">
+         <obj_property name="ElementShortName">gt0_txpmareset_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_txpmareset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txpcsreset_in">
+         <obj_property name="ElementShortName">gt0_txpcsreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_txpcsreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txresetdone_out">
+         <obj_property name="ElementShortName">gt0_txresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt0_txresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxpmareset_in">
+         <obj_property name="ElementShortName">gt0_rxpmareset_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxpmareset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxpcsreset_in">
+         <obj_property name="ElementShortName">gt0_rxpcsreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxpcsreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxpmaresetdone_out">
+         <obj_property name="ElementShortName">gt0_rxpmaresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxpmaresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxresetdone_out">
+         <obj_property name="ElementShortName">gt0_rxresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxbufstatus_out">
+         <obj_property name="ElementShortName">gt0_rxbufstatus_out[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxbufstatus_out[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txphaligndone_out">
+         <obj_property name="ElementShortName">gt0_txphaligndone_out</obj_property>
+         <obj_property name="ObjectShortName">gt0_txphaligndone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txphinitdone_out">
+         <obj_property name="ElementShortName">gt0_txphinitdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt0_txphinitdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txdlysresetdone_out">
+         <obj_property name="ElementShortName">gt0_txdlysresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt0_txdlysresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt_qplllock_out">
+         <obj_property name="ElementShortName">gt_qplllock_out</obj_property>
+         <obj_property name="ObjectShortName">gt_qplllock_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_eyescantrigger_in">
+         <obj_property name="ElementShortName">gt0_eyescantrigger_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_eyescantrigger_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_eyescanreset_in">
+         <obj_property name="ElementShortName">gt0_eyescanreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_eyescanreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_eyescandataerror_out">
+         <obj_property name="ElementShortName">gt0_eyescandataerror_out</obj_property>
+         <obj_property name="ObjectShortName">gt0_eyescandataerror_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxrate_in">
+         <obj_property name="ElementShortName">gt0_rxrate_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxrate_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_loopback_in">
+         <obj_property name="ElementShortName">gt0_loopback_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_loopback_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxpolarity_in">
+         <obj_property name="ElementShortName">gt0_rxpolarity_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxpolarity_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txpolarity_in">
+         <obj_property name="ElementShortName">gt0_txpolarity_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_txpolarity_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxlpmreset_in">
+         <obj_property name="ElementShortName">gt0_rxlpmreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxlpmreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxlpmhfhold_in">
+         <obj_property name="ElementShortName">gt0_rxlpmhfhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxlpmhfhold_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxlpmhfovrden_in">
+         <obj_property name="ElementShortName">gt0_rxlpmhfovrden_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxlpmhfovrden_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxlpmlfhold_in">
+         <obj_property name="ElementShortName">gt0_rxlpmlfhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxlpmlfhold_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxlpmlfovrden_in">
+         <obj_property name="ElementShortName">gt0_rxlpmlfovrden_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxlpmlfovrden_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txpostcursor_in">
+         <obj_property name="ElementShortName">gt0_txpostcursor_in[4:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_txpostcursor_in[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txprecursor_in">
+         <obj_property name="ElementShortName">gt0_txprecursor_in[4:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_txprecursor_in[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txdiffctrl_in">
+         <obj_property name="ElementShortName">gt0_txdiffctrl_in[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_txdiffctrl_in[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txinhibit_in">
+         <obj_property name="ElementShortName">gt0_txinhibit_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_txinhibit_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxprbscntreset_in">
+         <obj_property name="ElementShortName">gt0_rxprbscntreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxprbscntreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxprbserr_out">
+         <obj_property name="ElementShortName">gt0_rxprbserr_out</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxprbserr_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxprbssel_in">
+         <obj_property name="ElementShortName">gt0_rxprbssel_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxprbssel_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txprbssel_in">
+         <obj_property name="ElementShortName">gt0_txprbssel_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_txprbssel_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txprbsforceerr_in">
+         <obj_property name="ElementShortName">gt0_txprbsforceerr_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_txprbsforceerr_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxcdrhold_in">
+         <obj_property name="ElementShortName">gt0_rxcdrhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxcdrhold_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_dmonitorout_out">
+         <obj_property name="ElementShortName">gt0_dmonitorout_out[14:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_dmonitorout_out[14:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxdisperr_out">
+         <obj_property name="ElementShortName">gt0_rxdisperr_out[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxdisperr_out[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxnotintable_out">
+         <obj_property name="ElementShortName">gt0_rxnotintable_out[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxnotintable_out[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxcommadet_out">
+         <obj_property name="ElementShortName">gt0_rxcommadet_out</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxcommadet_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_drpaddr">
+         <obj_property name="ElementShortName">gt1_drpaddr[8:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_drpaddr[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_drpen">
+         <obj_property name="ElementShortName">gt1_drpen</obj_property>
+         <obj_property name="ObjectShortName">gt1_drpen</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_drpdi">
+         <obj_property name="ElementShortName">gt1_drpdi[15:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_drpdi[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_drpdo">
+         <obj_property name="ElementShortName">gt1_drpdo[15:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_drpdo[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_drprdy">
+         <obj_property name="ElementShortName">gt1_drprdy</obj_property>
+         <obj_property name="ObjectShortName">gt1_drprdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_drpwe">
+         <obj_property name="ElementShortName">gt1_drpwe</obj_property>
+         <obj_property name="ObjectShortName">gt1_drpwe</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_drp_busy">
+         <obj_property name="ElementShortName">gt1_drp_busy</obj_property>
+         <obj_property name="ObjectShortName">gt1_drp_busy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txpmareset_in">
+         <obj_property name="ElementShortName">gt1_txpmareset_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_txpmareset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txpcsreset_in">
+         <obj_property name="ElementShortName">gt1_txpcsreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_txpcsreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txresetdone_out">
+         <obj_property name="ElementShortName">gt1_txresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt1_txresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxpmareset_in">
+         <obj_property name="ElementShortName">gt1_rxpmareset_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxpmareset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxpcsreset_in">
+         <obj_property name="ElementShortName">gt1_rxpcsreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxpcsreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxpmaresetdone_out">
+         <obj_property name="ElementShortName">gt1_rxpmaresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxpmaresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxresetdone_out">
+         <obj_property name="ElementShortName">gt1_rxresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxbufstatus_out">
+         <obj_property name="ElementShortName">gt1_rxbufstatus_out[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxbufstatus_out[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txphaligndone_out">
+         <obj_property name="ElementShortName">gt1_txphaligndone_out</obj_property>
+         <obj_property name="ObjectShortName">gt1_txphaligndone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txphinitdone_out">
+         <obj_property name="ElementShortName">gt1_txphinitdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt1_txphinitdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txdlysresetdone_out">
+         <obj_property name="ElementShortName">gt1_txdlysresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt1_txdlysresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_eyescantrigger_in">
+         <obj_property name="ElementShortName">gt1_eyescantrigger_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_eyescantrigger_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_eyescanreset_in">
+         <obj_property name="ElementShortName">gt1_eyescanreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_eyescanreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_eyescandataerror_out">
+         <obj_property name="ElementShortName">gt1_eyescandataerror_out</obj_property>
+         <obj_property name="ObjectShortName">gt1_eyescandataerror_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxrate_in">
+         <obj_property name="ElementShortName">gt1_rxrate_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxrate_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_loopback_in">
+         <obj_property name="ElementShortName">gt1_loopback_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_loopback_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxpolarity_in">
+         <obj_property name="ElementShortName">gt1_rxpolarity_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxpolarity_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txpolarity_in">
+         <obj_property name="ElementShortName">gt1_txpolarity_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_txpolarity_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxlpmreset_in">
+         <obj_property name="ElementShortName">gt1_rxlpmreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxlpmreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxlpmhfhold_in">
+         <obj_property name="ElementShortName">gt1_rxlpmhfhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxlpmhfhold_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxlpmhfovrden_in">
+         <obj_property name="ElementShortName">gt1_rxlpmhfovrden_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxlpmhfovrden_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxlpmlfhold_in">
+         <obj_property name="ElementShortName">gt1_rxlpmlfhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxlpmlfhold_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxlpmlfovrden_in">
+         <obj_property name="ElementShortName">gt1_rxlpmlfovrden_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxlpmlfovrden_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txpostcursor_in">
+         <obj_property name="ElementShortName">gt1_txpostcursor_in[4:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_txpostcursor_in[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txprecursor_in">
+         <obj_property name="ElementShortName">gt1_txprecursor_in[4:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_txprecursor_in[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txdiffctrl_in">
+         <obj_property name="ElementShortName">gt1_txdiffctrl_in[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_txdiffctrl_in[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txinhibit_in">
+         <obj_property name="ElementShortName">gt1_txinhibit_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_txinhibit_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxprbscntreset_in">
+         <obj_property name="ElementShortName">gt1_rxprbscntreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxprbscntreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxprbserr_out">
+         <obj_property name="ElementShortName">gt1_rxprbserr_out</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxprbserr_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxprbssel_in">
+         <obj_property name="ElementShortName">gt1_rxprbssel_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxprbssel_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txprbssel_in">
+         <obj_property name="ElementShortName">gt1_txprbssel_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_txprbssel_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txprbsforceerr_in">
+         <obj_property name="ElementShortName">gt1_txprbsforceerr_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_txprbsforceerr_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxcdrhold_in">
+         <obj_property name="ElementShortName">gt1_rxcdrhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxcdrhold_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_dmonitorout_out">
+         <obj_property name="ElementShortName">gt1_dmonitorout_out[14:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_dmonitorout_out[14:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxdisperr_out">
+         <obj_property name="ElementShortName">gt1_rxdisperr_out[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxdisperr_out[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxnotintable_out">
+         <obj_property name="ElementShortName">gt1_rxnotintable_out[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxnotintable_out[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxcommadet_out">
+         <obj_property name="ElementShortName">gt1_rxcommadet_out</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxcommadet_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_drpaddr">
+         <obj_property name="ElementShortName">gt2_drpaddr[8:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_drpaddr[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_drpen">
+         <obj_property name="ElementShortName">gt2_drpen</obj_property>
+         <obj_property name="ObjectShortName">gt2_drpen</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_drpdi">
+         <obj_property name="ElementShortName">gt2_drpdi[15:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_drpdi[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_drpdo">
+         <obj_property name="ElementShortName">gt2_drpdo[15:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_drpdo[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_drprdy">
+         <obj_property name="ElementShortName">gt2_drprdy</obj_property>
+         <obj_property name="ObjectShortName">gt2_drprdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_drpwe">
+         <obj_property name="ElementShortName">gt2_drpwe</obj_property>
+         <obj_property name="ObjectShortName">gt2_drpwe</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_drp_busy">
+         <obj_property name="ElementShortName">gt2_drp_busy</obj_property>
+         <obj_property name="ObjectShortName">gt2_drp_busy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txpmareset_in">
+         <obj_property name="ElementShortName">gt2_txpmareset_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_txpmareset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txpcsreset_in">
+         <obj_property name="ElementShortName">gt2_txpcsreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_txpcsreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txresetdone_out">
+         <obj_property name="ElementShortName">gt2_txresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt2_txresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxpmareset_in">
+         <obj_property name="ElementShortName">gt2_rxpmareset_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxpmareset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxpcsreset_in">
+         <obj_property name="ElementShortName">gt2_rxpcsreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxpcsreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxpmaresetdone_out">
+         <obj_property name="ElementShortName">gt2_rxpmaresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxpmaresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxresetdone_out">
+         <obj_property name="ElementShortName">gt2_rxresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxbufstatus_out">
+         <obj_property name="ElementShortName">gt2_rxbufstatus_out[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxbufstatus_out[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txphaligndone_out">
+         <obj_property name="ElementShortName">gt2_txphaligndone_out</obj_property>
+         <obj_property name="ObjectShortName">gt2_txphaligndone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txphinitdone_out">
+         <obj_property name="ElementShortName">gt2_txphinitdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt2_txphinitdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txdlysresetdone_out">
+         <obj_property name="ElementShortName">gt2_txdlysresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt2_txdlysresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_eyescantrigger_in">
+         <obj_property name="ElementShortName">gt2_eyescantrigger_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_eyescantrigger_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_eyescanreset_in">
+         <obj_property name="ElementShortName">gt2_eyescanreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_eyescanreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_eyescandataerror_out">
+         <obj_property name="ElementShortName">gt2_eyescandataerror_out</obj_property>
+         <obj_property name="ObjectShortName">gt2_eyescandataerror_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxrate_in">
+         <obj_property name="ElementShortName">gt2_rxrate_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxrate_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_loopback_in">
+         <obj_property name="ElementShortName">gt2_loopback_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_loopback_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxpolarity_in">
+         <obj_property name="ElementShortName">gt2_rxpolarity_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxpolarity_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txpolarity_in">
+         <obj_property name="ElementShortName">gt2_txpolarity_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_txpolarity_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxlpmreset_in">
+         <obj_property name="ElementShortName">gt2_rxlpmreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxlpmreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxlpmhfhold_in">
+         <obj_property name="ElementShortName">gt2_rxlpmhfhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxlpmhfhold_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxlpmhfovrden_in">
+         <obj_property name="ElementShortName">gt2_rxlpmhfovrden_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxlpmhfovrden_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxlpmlfhold_in">
+         <obj_property name="ElementShortName">gt2_rxlpmlfhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxlpmlfhold_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxlpmlfovrden_in">
+         <obj_property name="ElementShortName">gt2_rxlpmlfovrden_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxlpmlfovrden_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txpostcursor_in">
+         <obj_property name="ElementShortName">gt2_txpostcursor_in[4:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_txpostcursor_in[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txprecursor_in">
+         <obj_property name="ElementShortName">gt2_txprecursor_in[4:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_txprecursor_in[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txdiffctrl_in">
+         <obj_property name="ElementShortName">gt2_txdiffctrl_in[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_txdiffctrl_in[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txinhibit_in">
+         <obj_property name="ElementShortName">gt2_txinhibit_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_txinhibit_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxprbscntreset_in">
+         <obj_property name="ElementShortName">gt2_rxprbscntreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxprbscntreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxprbserr_out">
+         <obj_property name="ElementShortName">gt2_rxprbserr_out</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxprbserr_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxprbssel_in">
+         <obj_property name="ElementShortName">gt2_rxprbssel_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxprbssel_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txprbssel_in">
+         <obj_property name="ElementShortName">gt2_txprbssel_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_txprbssel_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txprbsforceerr_in">
+         <obj_property name="ElementShortName">gt2_txprbsforceerr_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_txprbsforceerr_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxcdrhold_in">
+         <obj_property name="ElementShortName">gt2_rxcdrhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxcdrhold_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_dmonitorout_out">
+         <obj_property name="ElementShortName">gt2_dmonitorout_out[14:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_dmonitorout_out[14:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxdisperr_out">
+         <obj_property name="ElementShortName">gt2_rxdisperr_out[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxdisperr_out[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxnotintable_out">
+         <obj_property name="ElementShortName">gt2_rxnotintable_out[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxnotintable_out[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxcommadet_out">
+         <obj_property name="ElementShortName">gt2_rxcommadet_out</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxcommadet_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_drpaddr">
+         <obj_property name="ElementShortName">gt3_drpaddr[8:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_drpaddr[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_drpen">
+         <obj_property name="ElementShortName">gt3_drpen</obj_property>
+         <obj_property name="ObjectShortName">gt3_drpen</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_drpdi">
+         <obj_property name="ElementShortName">gt3_drpdi[15:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_drpdi[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_drpdo">
+         <obj_property name="ElementShortName">gt3_drpdo[15:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_drpdo[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_drprdy">
+         <obj_property name="ElementShortName">gt3_drprdy</obj_property>
+         <obj_property name="ObjectShortName">gt3_drprdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_drpwe">
+         <obj_property name="ElementShortName">gt3_drpwe</obj_property>
+         <obj_property name="ObjectShortName">gt3_drpwe</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_drp_busy">
+         <obj_property name="ElementShortName">gt3_drp_busy</obj_property>
+         <obj_property name="ObjectShortName">gt3_drp_busy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txpmareset_in">
+         <obj_property name="ElementShortName">gt3_txpmareset_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_txpmareset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txpcsreset_in">
+         <obj_property name="ElementShortName">gt3_txpcsreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_txpcsreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txresetdone_out">
+         <obj_property name="ElementShortName">gt3_txresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt3_txresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxpmareset_in">
+         <obj_property name="ElementShortName">gt3_rxpmareset_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxpmareset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxpcsreset_in">
+         <obj_property name="ElementShortName">gt3_rxpcsreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxpcsreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxpmaresetdone_out">
+         <obj_property name="ElementShortName">gt3_rxpmaresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxpmaresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxresetdone_out">
+         <obj_property name="ElementShortName">gt3_rxresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxbufstatus_out">
+         <obj_property name="ElementShortName">gt3_rxbufstatus_out[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxbufstatus_out[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txphaligndone_out">
+         <obj_property name="ElementShortName">gt3_txphaligndone_out</obj_property>
+         <obj_property name="ObjectShortName">gt3_txphaligndone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txphinitdone_out">
+         <obj_property name="ElementShortName">gt3_txphinitdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt3_txphinitdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txdlysresetdone_out">
+         <obj_property name="ElementShortName">gt3_txdlysresetdone_out</obj_property>
+         <obj_property name="ObjectShortName">gt3_txdlysresetdone_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_eyescantrigger_in">
+         <obj_property name="ElementShortName">gt3_eyescantrigger_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_eyescantrigger_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_eyescanreset_in">
+         <obj_property name="ElementShortName">gt3_eyescanreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_eyescanreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_eyescandataerror_out">
+         <obj_property name="ElementShortName">gt3_eyescandataerror_out</obj_property>
+         <obj_property name="ObjectShortName">gt3_eyescandataerror_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxrate_in">
+         <obj_property name="ElementShortName">gt3_rxrate_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxrate_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_loopback_in">
+         <obj_property name="ElementShortName">gt3_loopback_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_loopback_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxpolarity_in">
+         <obj_property name="ElementShortName">gt3_rxpolarity_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxpolarity_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txpolarity_in">
+         <obj_property name="ElementShortName">gt3_txpolarity_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_txpolarity_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxlpmreset_in">
+         <obj_property name="ElementShortName">gt3_rxlpmreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxlpmreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxlpmhfhold_in">
+         <obj_property name="ElementShortName">gt3_rxlpmhfhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxlpmhfhold_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxlpmhfovrden_in">
+         <obj_property name="ElementShortName">gt3_rxlpmhfovrden_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxlpmhfovrden_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxlpmlfhold_in">
+         <obj_property name="ElementShortName">gt3_rxlpmlfhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxlpmlfhold_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxlpmlfovrden_in">
+         <obj_property name="ElementShortName">gt3_rxlpmlfovrden_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxlpmlfovrden_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txpostcursor_in">
+         <obj_property name="ElementShortName">gt3_txpostcursor_in[4:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_txpostcursor_in[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txprecursor_in">
+         <obj_property name="ElementShortName">gt3_txprecursor_in[4:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_txprecursor_in[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txdiffctrl_in">
+         <obj_property name="ElementShortName">gt3_txdiffctrl_in[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_txdiffctrl_in[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txinhibit_in">
+         <obj_property name="ElementShortName">gt3_txinhibit_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_txinhibit_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxprbscntreset_in">
+         <obj_property name="ElementShortName">gt3_rxprbscntreset_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxprbscntreset_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxprbserr_out">
+         <obj_property name="ElementShortName">gt3_rxprbserr_out</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxprbserr_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxprbssel_in">
+         <obj_property name="ElementShortName">gt3_rxprbssel_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxprbssel_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txprbssel_in">
+         <obj_property name="ElementShortName">gt3_txprbssel_in[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_txprbssel_in[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txprbsforceerr_in">
+         <obj_property name="ElementShortName">gt3_txprbsforceerr_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_txprbsforceerr_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxcdrhold_in">
+         <obj_property name="ElementShortName">gt3_rxcdrhold_in</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxcdrhold_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_dmonitorout_out">
+         <obj_property name="ElementShortName">gt3_dmonitorout_out[14:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_dmonitorout_out[14:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxdisperr_out">
+         <obj_property name="ElementShortName">gt3_rxdisperr_out[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxdisperr_out[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxnotintable_out">
+         <obj_property name="ElementShortName">gt3_rxnotintable_out[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxnotintable_out[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxcommadet_out">
+         <obj_property name="ElementShortName">gt3_rxcommadet_out</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxcommadet_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/configuration_vector">
+         <obj_property name="ElementShortName">configuration_vector[6:0]</obj_property>
+         <obj_property name="ObjectShortName">configuration_vector[6:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/status_vector">
+         <obj_property name="ElementShortName">status_vector[7:0]</obj_property>
+         <obj_property name="ObjectShortName">status_vector[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_signal_detect">
+         <obj_property name="ElementShortName">uclk_signal_detect[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_signal_detect[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_signal_detect_reord">
+         <obj_property name="ElementShortName">uclk_signal_detect_reord[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_signal_detect_reord[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/core_mgt_rx_reset">
+         <obj_property name="ElementShortName">core_mgt_rx_reset[3:0]</obj_property>
+         <obj_property name="ObjectShortName">core_mgt_rx_reset[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/core_mgt_rx_reset_reord">
+         <obj_property name="ElementShortName">core_mgt_rx_reset_reord[3:0]</obj_property>
+         <obj_property name="ObjectShortName">core_mgt_rx_reset_reord[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_txdata">
+         <obj_property name="ElementShortName">mgt_txdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_txdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_txdata_reord">
+         <obj_property name="ElementShortName">mgt_txdata_reord[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_txdata_reord[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_txcharisk">
+         <obj_property name="ElementShortName">mgt_txcharisk[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_txcharisk[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_txcharisk_reord">
+         <obj_property name="ElementShortName">mgt_txcharisk_reord[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_txcharisk_reord[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxdata">
+         <obj_property name="ElementShortName">mgt_rxdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxcharisk">
+         <obj_property name="ElementShortName">mgt_rxcharisk[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxcharisk[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_enable_align">
+         <obj_property name="ElementShortName">mgt_enable_align[3:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_enable_align[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_enable_align_reord">
+         <obj_property name="ElementShortName">mgt_enable_align_reord[3:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_enable_align_reord[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_enchansync">
+         <obj_property name="ElementShortName">uclk_mgt_enchansync</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_enchansync</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_enchansync_reg">
+         <obj_property name="ElementShortName">uclk_mgt_enchansync_reg</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_enchansync_reg</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxdisperr">
+         <obj_property name="ElementShortName">mgt_rxdisperr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxdisperr[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxnotintable">
+         <obj_property name="ElementShortName">mgt_rxnotintable[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxnotintable[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_rx_reset">
+         <obj_property name="ElementShortName">uclk_mgt_rx_reset</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_rx_reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_tx_reset">
+         <obj_property name="ElementShortName">uclk_mgt_tx_reset</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_tx_reset</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_codevalid">
+         <obj_property name="ElementShortName">mgt_codevalid[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_codevalid[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxchariscomma">
+         <obj_property name="ElementShortName">mgt_rxchariscomma[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxchariscomma[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxdata_reg">
+         <obj_property name="ElementShortName">mgt_rxdata_reg[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxdata_reg[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxcharisk_reg">
+         <obj_property name="ElementShortName">mgt_rxcharisk_reg[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxcharisk_reg[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxnotintable_reg">
+         <obj_property name="ElementShortName">mgt_rxnotintable_reg[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxnotintable_reg[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxdisperr_reg">
+         <obj_property name="ElementShortName">mgt_rxdisperr_reg[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxdisperr_reg[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_codecomma_reg">
+         <obj_property name="ElementShortName">mgt_codecomma_reg[7:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_codecomma_reg[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_rxbuf_reset">
+         <obj_property name="ElementShortName">uclk_mgt_rxbuf_reset[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_rxbuf_reset[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_tx_fault">
+         <obj_property name="ElementShortName">mgt_tx_fault[3:0]</obj_property>
+         <obj_property name="ObjectShortName">mgt_tx_fault[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_loopback">
+         <obj_property name="ElementShortName">uclk_mgt_loopback</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_loopback</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_loopback_reg">
+         <obj_property name="ElementShortName">uclk_mgt_loopback_reg</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_loopback_reg</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_loopback_reset">
+         <obj_property name="ElementShortName">uclk_loopback_reset</obj_property>
+         <obj_property name="ObjectShortName">uclk_loopback_reset</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_loopback_int">
+         <obj_property name="ElementShortName">uclk_loopback_int[2:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_loopback_int[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_powerdown">
+         <obj_property name="ElementShortName">uclk_mgt_powerdown</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_powerdown</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_powerdown_r">
+         <obj_property name="ElementShortName">uclk_mgt_powerdown_r</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_powerdown_r</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_powerdown_r2">
+         <obj_property name="ElementShortName">uclk_mgt_powerdown_r2[1:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_powerdown_r2[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_powerdown_falling">
+         <obj_property name="ElementShortName">uclk_mgt_powerdown_falling</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_powerdown_falling</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_plllocked">
+         <obj_property name="ElementShortName">mgt_plllocked</obj_property>
+         <obj_property name="ObjectShortName">mgt_plllocked</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_txlock">
+         <obj_property name="ElementShortName">uclk_txlock</obj_property>
+         <obj_property name="ObjectShortName">uclk_txlock</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_rxlock">
+         <obj_property name="ElementShortName">uclk_rxlock[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_rxlock[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_rxbuferr">
+         <obj_property name="ElementShortName">uclk_mgt_rxbuferr[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_rxbuferr[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_rxbufstatus">
+         <obj_property name="ElementShortName">uclk_mgt_rxbufstatus[11:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_rxbufstatus[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_rxbufstatus_reg">
+         <obj_property name="ElementShortName">uclk_mgt_rxbufstatus_reg[11:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_rxbufstatus_reg[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_txresetdone_reg">
+         <obj_property name="ElementShortName">uclk_mgt_txresetdone_reg[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_txresetdone_reg[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_mgt_txresetdone_wire">
+         <obj_property name="ElementShortName">uclk_mgt_txresetdone_wire[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_mgt_txresetdone_wire[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_cbm_rx_reset">
+         <obj_property name="ElementShortName">uclk_cbm_rx_reset</obj_property>
+         <obj_property name="ObjectShortName">uclk_cbm_rx_reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_txuserrdy">
+         <obj_property name="ElementShortName">mgt_txuserrdy</obj_property>
+         <obj_property name="ObjectShortName">mgt_txuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/mgt_rxuserrdy">
+         <obj_property name="ElementShortName">mgt_rxuserrdy</obj_property>
+         <obj_property name="ObjectShortName">mgt_rxuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txoutclk_i">
+         <obj_property name="ElementShortName">gt0_txoutclk_i</obj_property>
+         <obj_property name="ObjectShortName">gt0_txoutclk_i</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_loopback">
+         <obj_property name="ElementShortName">gt0_loopback[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_loopback[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_gt0_rxresetdone">
+         <obj_property name="ElementShortName">uclk_gt0_rxresetdone</obj_property>
+         <obj_property name="ObjectShortName">uclk_gt0_rxresetdone</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_gt0_txresetdone">
+         <obj_property name="ElementShortName">uclk_gt0_txresetdone</obj_property>
+         <obj_property name="ObjectShortName">uclk_gt0_txresetdone</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_gttxreset">
+         <obj_property name="ElementShortName">gt0_gttxreset</obj_property>
+         <obj_property name="ObjectShortName">gt0_gttxreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txpmareset">
+         <obj_property name="ElementShortName">gt0_txpmareset</obj_property>
+         <obj_property name="ObjectShortName">gt0_txpmareset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txpcsreset">
+         <obj_property name="ElementShortName">gt0_txpcsreset</obj_property>
+         <obj_property name="ObjectShortName">gt0_txpcsreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_txuserrdy">
+         <obj_property name="ElementShortName">gt0_txuserrdy</obj_property>
+         <obj_property name="ObjectShortName">gt0_txuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_gtrxreset">
+         <obj_property name="ElementShortName">gt0_gtrxreset</obj_property>
+         <obj_property name="ObjectShortName">gt0_gtrxreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxpmareset">
+         <obj_property name="ElementShortName">gt0_rxpmareset</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxpmareset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxpcsreset">
+         <obj_property name="ElementShortName">gt0_rxpcsreset</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxpcsreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxbufreset">
+         <obj_property name="ElementShortName">gt0_rxbufreset</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxbufreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxuserrdy">
+         <obj_property name="ElementShortName">gt0_rxuserrdy</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxchanbondseq">
+         <obj_property name="ElementShortName">gt0_rxchanbondseq</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxchanbondseq</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxchanisaligned">
+         <obj_property name="ElementShortName">gt0_rxchanisaligned</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxchanisaligned</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxchanrealign">
+         <obj_property name="ElementShortName">gt0_rxchanrealign</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxchanrealign</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxclkcorcnt">
+         <obj_property name="ElementShortName">gt0_rxclkcorcnt[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxclkcorcnt[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxbyteisaligned">
+         <obj_property name="ElementShortName">gt0_rxbyteisaligned</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxbyteisaligned</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxbyterealign">
+         <obj_property name="ElementShortName">gt0_rxbyterealign</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxbyterealign</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxcommadet">
+         <obj_property name="ElementShortName">gt0_rxcommadet</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxcommadet</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxprbserr">
+         <obj_property name="ElementShortName">gt0_rxprbserr</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxprbserr</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt0_rxchbondo_i">
+         <obj_property name="ElementShortName">gt0_rxchbondo_i[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt0_rxchbondo_i[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_loopback">
+         <obj_property name="ElementShortName">gt1_loopback[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_loopback[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_gt1_rxresetdone">
+         <obj_property name="ElementShortName">uclk_gt1_rxresetdone</obj_property>
+         <obj_property name="ObjectShortName">uclk_gt1_rxresetdone</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_gt1_txresetdone">
+         <obj_property name="ElementShortName">uclk_gt1_txresetdone</obj_property>
+         <obj_property name="ObjectShortName">uclk_gt1_txresetdone</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_gttxreset">
+         <obj_property name="ElementShortName">gt1_gttxreset</obj_property>
+         <obj_property name="ObjectShortName">gt1_gttxreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txpmareset">
+         <obj_property name="ElementShortName">gt1_txpmareset</obj_property>
+         <obj_property name="ObjectShortName">gt1_txpmareset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txpcsreset">
+         <obj_property name="ElementShortName">gt1_txpcsreset</obj_property>
+         <obj_property name="ObjectShortName">gt1_txpcsreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_txuserrdy">
+         <obj_property name="ElementShortName">gt1_txuserrdy</obj_property>
+         <obj_property name="ObjectShortName">gt1_txuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_gtrxreset">
+         <obj_property name="ElementShortName">gt1_gtrxreset</obj_property>
+         <obj_property name="ObjectShortName">gt1_gtrxreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxpmareset">
+         <obj_property name="ElementShortName">gt1_rxpmareset</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxpmareset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxpcsreset">
+         <obj_property name="ElementShortName">gt1_rxpcsreset</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxpcsreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxbufreset">
+         <obj_property name="ElementShortName">gt1_rxbufreset</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxbufreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxuserrdy">
+         <obj_property name="ElementShortName">gt1_rxuserrdy</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxchanbondseq">
+         <obj_property name="ElementShortName">gt1_rxchanbondseq</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxchanbondseq</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxchanisaligned">
+         <obj_property name="ElementShortName">gt1_rxchanisaligned</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxchanisaligned</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxchanrealign">
+         <obj_property name="ElementShortName">gt1_rxchanrealign</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxchanrealign</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxclkcorcnt">
+         <obj_property name="ElementShortName">gt1_rxclkcorcnt[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxclkcorcnt[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxbyteisaligned">
+         <obj_property name="ElementShortName">gt1_rxbyteisaligned</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxbyteisaligned</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxbyterealign">
+         <obj_property name="ElementShortName">gt1_rxbyterealign</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxbyterealign</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxcommadet">
+         <obj_property name="ElementShortName">gt1_rxcommadet</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxcommadet</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxprbserr">
+         <obj_property name="ElementShortName">gt1_rxprbserr</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxprbserr</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt1_rxchbondo_i">
+         <obj_property name="ElementShortName">gt1_rxchbondo_i[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt1_rxchbondo_i[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_loopback">
+         <obj_property name="ElementShortName">gt2_loopback[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_loopback[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_gt2_rxresetdone">
+         <obj_property name="ElementShortName">uclk_gt2_rxresetdone</obj_property>
+         <obj_property name="ObjectShortName">uclk_gt2_rxresetdone</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_gt2_txresetdone">
+         <obj_property name="ElementShortName">uclk_gt2_txresetdone</obj_property>
+         <obj_property name="ObjectShortName">uclk_gt2_txresetdone</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_gttxreset">
+         <obj_property name="ElementShortName">gt2_gttxreset</obj_property>
+         <obj_property name="ObjectShortName">gt2_gttxreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txpmareset">
+         <obj_property name="ElementShortName">gt2_txpmareset</obj_property>
+         <obj_property name="ObjectShortName">gt2_txpmareset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txpcsreset">
+         <obj_property name="ElementShortName">gt2_txpcsreset</obj_property>
+         <obj_property name="ObjectShortName">gt2_txpcsreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_txuserrdy">
+         <obj_property name="ElementShortName">gt2_txuserrdy</obj_property>
+         <obj_property name="ObjectShortName">gt2_txuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_gtrxreset">
+         <obj_property name="ElementShortName">gt2_gtrxreset</obj_property>
+         <obj_property name="ObjectShortName">gt2_gtrxreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxpmareset">
+         <obj_property name="ElementShortName">gt2_rxpmareset</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxpmareset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxpcsreset">
+         <obj_property name="ElementShortName">gt2_rxpcsreset</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxpcsreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxbufreset">
+         <obj_property name="ElementShortName">gt2_rxbufreset</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxbufreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxuserrdy">
+         <obj_property name="ElementShortName">gt2_rxuserrdy</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxchanbondseq">
+         <obj_property name="ElementShortName">gt2_rxchanbondseq</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxchanbondseq</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxchanisaligned">
+         <obj_property name="ElementShortName">gt2_rxchanisaligned</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxchanisaligned</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxchanrealign">
+         <obj_property name="ElementShortName">gt2_rxchanrealign</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxchanrealign</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxclkcorcnt">
+         <obj_property name="ElementShortName">gt2_rxclkcorcnt[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxclkcorcnt[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxbyteisaligned">
+         <obj_property name="ElementShortName">gt2_rxbyteisaligned</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxbyteisaligned</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxbyterealign">
+         <obj_property name="ElementShortName">gt2_rxbyterealign</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxbyterealign</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxcommadet">
+         <obj_property name="ElementShortName">gt2_rxcommadet</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxcommadet</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxprbserr">
+         <obj_property name="ElementShortName">gt2_rxprbserr</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxprbserr</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt2_rxchbondo_i">
+         <obj_property name="ElementShortName">gt2_rxchbondo_i[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt2_rxchbondo_i[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_loopback">
+         <obj_property name="ElementShortName">gt3_loopback[2:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_loopback[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_gt3_rxresetdone">
+         <obj_property name="ElementShortName">uclk_gt3_rxresetdone</obj_property>
+         <obj_property name="ObjectShortName">uclk_gt3_rxresetdone</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_gt3_txresetdone">
+         <obj_property name="ElementShortName">uclk_gt3_txresetdone</obj_property>
+         <obj_property name="ObjectShortName">uclk_gt3_txresetdone</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_gttxreset">
+         <obj_property name="ElementShortName">gt3_gttxreset</obj_property>
+         <obj_property name="ObjectShortName">gt3_gttxreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txpmareset">
+         <obj_property name="ElementShortName">gt3_txpmareset</obj_property>
+         <obj_property name="ObjectShortName">gt3_txpmareset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txpcsreset">
+         <obj_property name="ElementShortName">gt3_txpcsreset</obj_property>
+         <obj_property name="ObjectShortName">gt3_txpcsreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_txuserrdy">
+         <obj_property name="ElementShortName">gt3_txuserrdy</obj_property>
+         <obj_property name="ObjectShortName">gt3_txuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_gtrxreset">
+         <obj_property name="ElementShortName">gt3_gtrxreset</obj_property>
+         <obj_property name="ObjectShortName">gt3_gtrxreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxpmareset">
+         <obj_property name="ElementShortName">gt3_rxpmareset</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxpmareset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxpcsreset">
+         <obj_property name="ElementShortName">gt3_rxpcsreset</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxpcsreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxbufreset">
+         <obj_property name="ElementShortName">gt3_rxbufreset</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxbufreset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxuserrdy">
+         <obj_property name="ElementShortName">gt3_rxuserrdy</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxuserrdy</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxchanbondseq">
+         <obj_property name="ElementShortName">gt3_rxchanbondseq</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxchanbondseq</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxchanisaligned">
+         <obj_property name="ElementShortName">gt3_rxchanisaligned</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxchanisaligned</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxchanrealign">
+         <obj_property name="ElementShortName">gt3_rxchanrealign</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxchanrealign</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxclkcorcnt">
+         <obj_property name="ElementShortName">gt3_rxclkcorcnt[1:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxclkcorcnt[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxbyteisaligned">
+         <obj_property name="ElementShortName">gt3_rxbyteisaligned</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxbyteisaligned</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxbyterealign">
+         <obj_property name="ElementShortName">gt3_rxbyterealign</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxbyterealign</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxcommadet">
+         <obj_property name="ElementShortName">gt3_rxcommadet</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxcommadet</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxprbserr">
+         <obj_property name="ElementShortName">gt3_rxprbserr</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxprbserr</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt3_rxchbondo_i">
+         <obj_property name="ElementShortName">gt3_rxchbondo_i[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt3_rxchbondo_i[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_sync_status">
+         <obj_property name="ElementShortName">uclk_sync_status[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_sync_status[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_sync_status_reord">
+         <obj_property name="ElementShortName">uclk_sync_status_reord[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_sync_status_reord[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_align_status">
+         <obj_property name="ElementShortName">uclk_align_status</obj_property>
+         <obj_property name="ObjectShortName">uclk_align_status</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt_txdlysreset">
+         <obj_property name="ElementShortName">gt_txdlysreset[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_txdlysreset[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt_txphaligndone">
+         <obj_property name="ElementShortName">gt_txphaligndone[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_txphaligndone[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt_txdlysresetdone">
+         <obj_property name="ElementShortName">gt_txdlysresetdone[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_txdlysresetdone[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt_txphinit">
+         <obj_property name="ElementShortName">gt_txphinit[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_txphinit[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt_txphinitdone">
+         <obj_property name="ElementShortName">gt_txphinitdone[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_txphinitdone[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt_txphalign">
+         <obj_property name="ElementShortName">gt_txphalign[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_txphalign[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/gt_txdlyen">
+         <obj_property name="ElementShortName">gt_txdlyen[3:0]</obj_property>
+         <obj_property name="ObjectShortName">gt_txdlyen[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_txsync_start_phase_align">
+         <obj_property name="ElementShortName">uclk_txsync_start_phase_align</obj_property>
+         <obj_property name="ObjectShortName">uclk_txsync_start_phase_align</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_phase_align_complete">
+         <obj_property name="ElementShortName">uclk_phase_align_complete</obj_property>
+         <obj_property name="ObjectShortName">uclk_phase_align_complete</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_chbond_counter">
+         <obj_property name="ElementShortName">uclk_chbond_counter[15:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_chbond_counter[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_sync_counter">
+         <obj_property name="ElementShortName">uclk_sync_counter[15:0]</obj_property>
+         <obj_property name="ObjectShortName">uclk_sync_counter[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk_reset_count_done">
+         <obj_property name="ElementShortName">dclk_reset_count_done</obj_property>
+         <obj_property name="ObjectShortName">dclk_reset_count_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/uclk_reset_count_done">
+         <obj_property name="ElementShortName">uclk_reset_count_done</obj_property>
+         <obj_property name="ObjectShortName">uclk_reset_count_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk_initial_reset">
+         <obj_property name="ElementShortName">dclk_initial_reset</obj_property>
+         <obj_property name="ObjectShortName">dclk_initial_reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk_pll_reset">
+         <obj_property name="ElementShortName">dclk_pll_reset</obj_property>
+         <obj_property name="ObjectShortName">dclk_pll_reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/reset156">
+         <obj_property name="ElementShortName">reset156</obj_property>
+         <obj_property name="ObjectShortName">reset156</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk_reset">
+         <obj_property name="ElementShortName">dclk_reset</obj_property>
+         <obj_property name="ObjectShortName">dclk_reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/clk156">
+         <obj_property name="ElementShortName">clk156</obj_property>
+         <obj_property name="ObjectShortName">clk156</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk_mgt_rxresetdone">
+         <obj_property name="ElementShortName">dclk_mgt_rxresetdone[3:0]</obj_property>
+         <obj_property name="ObjectShortName">dclk_mgt_rxresetdone[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk_mgt_rx_reset_stretched">
+         <obj_property name="ElementShortName">dclk_mgt_rx_reset_stretched</obj_property>
+         <obj_property name="ObjectShortName">dclk_mgt_rx_reset_stretched</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk_mgt_rx_reset_inprocess">
+         <obj_property name="ElementShortName">dclk_mgt_rx_reset_inprocess</obj_property>
+         <obj_property name="ObjectShortName">dclk_mgt_rx_reset_inprocess</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk_mgt_rx_reset_stretched_unique">
+         <obj_property name="ElementShortName">dclk_mgt_rx_reset_stretched_unique</obj_property>
+         <obj_property name="ObjectShortName">dclk_mgt_rx_reset_stretched_unique</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/dclk_mgt_rx_reset_waiting_resetdone">
+         <obj_property name="ElementShortName">dclk_mgt_rx_reset_waiting_resetdone</obj_property>
+         <obj_property name="ObjectShortName">dclk_mgt_rx_reset_waiting_resetdone</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/rxprbs_in_use">
+         <obj_property name="ElementShortName">rxprbs_in_use</obj_property>
+         <obj_property name="ObjectShortName">rxprbs_in_use</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/SYNC_COUNT_LENGTH">
+         <obj_property name="ElementShortName">SYNC_COUNT_LENGTH</obj_property>
+         <obj_property name="ObjectShortName">SYNC_COUNT_LENGTH</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/RESET_COUNT_LENGTH">
+         <obj_property name="ElementShortName">RESET_COUNT_LENGTH</obj_property>
+         <obj_property name="ObjectShortName">RESET_COUNT_LENGTH</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/xaui_support_i/xaui_i/U0/CHBOND_COUNT_LENGTH">
+         <obj_property name="ElementShortName">CHBOND_COUNT_LENGTH</obj_property>
+         <obj_property name="ObjectShortName">CHBOND_COUNT_LENGTH</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/dut/counter_idle">
+      <obj_property name="ElementShortName">counter_idle[30:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_idle[30:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/dut/counter_frame_send">
+      <obj_property name="ElementShortName">counter_frame_send[6:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_frame_send[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group787">
+      <obj_property name="label">AXI_GENERATOR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/m_axis_tkeep">
+         <obj_property name="ElementShortName">m_axis_tkeep[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tkeep[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/m_axis_clk">
+         <obj_property name="ElementShortName">m_axis_clk</obj_property>
+         <obj_property name="ObjectShortName">m_axis_clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/axi_start">
+         <obj_property name="ElementShortName">axi_start</obj_property>
+         <obj_property name="ObjectShortName">axi_start</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/axi_reset">
+         <obj_property name="ElementShortName">axi_reset</obj_property>
+         <obj_property name="ObjectShortName">axi_reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/m_axis_tlast">
+         <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/axi_generator/testinteger">
+         <obj_property name="ElementShortName">testinteger</obj_property>
+         <obj_property name="ObjectShortName">testinteger</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/AXI_GEN_MODUS">
+         <obj_property name="ElementShortName">AXI_GEN_MODUS</obj_property>
+         <obj_property name="ObjectShortName">AXI_GEN_MODUS</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/axi_generator/current_state">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/axi_generator/next_state">
+         <obj_property name="ElementShortName">next_state</obj_property>
+         <obj_property name="ObjectShortName">next_state</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/data">
+         <obj_property name="ElementShortName">data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/axi_data">
+         <obj_property name="ElementShortName">axi_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/axi_data_content">
+         <obj_property name="ElementShortName">axi_data_content[63:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_data_content[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/sent_column_total_cnt">
+         <obj_property name="ElementShortName">sent_column_total_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sent_column_total_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/sent_cur_column_cnt">
+         <obj_property name="ElementShortName">sent_cur_column_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sent_cur_column_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/interframe_gap_delay">
+         <obj_property name="ElementShortName">interframe_gap_delay[15:0]</obj_property>
+         <obj_property name="ObjectShortName">interframe_gap_delay[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/sent_frame_cnt">
+         <obj_property name="ElementShortName">sent_frame_cnt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">sent_frame_cnt[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/total_data_bytes_for_cur_frame">
+         <obj_property name="ElementShortName">total_data_bytes_for_cur_frame[31:0]</obj_property>
+         <obj_property name="ObjectShortName">total_data_bytes_for_cur_frame[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/left_frame_data_bytes_to_send">
+         <obj_property name="ElementShortName">left_frame_data_bytes_to_send[31:0]</obj_property>
+         <obj_property name="ObjectShortName">left_frame_data_bytes_to_send[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/CRC_CHECK_ENABLE">
+         <obj_property name="ElementShortName">CRC_CHECK_ENABLE</obj_property>
+         <obj_property name="ObjectShortName">CRC_CHECK_ENABLE</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/crc_sent">
+         <obj_property name="ElementShortName">crc_sent</obj_property>
+         <obj_property name="ObjectShortName">crc_sent</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/r_Shift1">
+         <obj_property name="ElementShortName">r_Shift1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">r_Shift1[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/special_crc_flag">
+         <obj_property name="ElementShortName">special_crc_flag</obj_property>
+         <obj_property name="ObjectShortName">special_crc_flag</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/clk_tb">
+         <obj_property name="ElementShortName">clk_tb</obj_property>
+         <obj_property name="ObjectShortName">clk_tb</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/data_tb">
+         <obj_property name="ElementShortName">data_tb[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_tb[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/LOAD_INIT_tb">
+         <obj_property name="ElementShortName">LOAD_INIT_tb</obj_property>
+         <obj_property name="ObjectShortName">LOAD_INIT_tb</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/calc_tb">
+         <obj_property name="ElementShortName">calc_tb</obj_property>
+         <obj_property name="ObjectShortName">calc_tb</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/d_valid_tb">
+         <obj_property name="ElementShortName">d_valid_tb</obj_property>
+         <obj_property name="ObjectShortName">d_valid_tb</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/reset_tb">
+         <obj_property name="ElementShortName">reset_tb</obj_property>
+         <obj_property name="ObjectShortName">reset_tb</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/byte_crc_cnt">
+         <obj_property name="ElementShortName">byte_crc_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_crc_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/enable_test">
+         <obj_property name="ElementShortName">enable_test</obj_property>
+         <obj_property name="ObjectShortName">enable_test</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/CRC_REG_tb">
+         <obj_property name="ElementShortName">CRC_REG_tb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CRC_REG_tb[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/NUMBER_4">
+         <obj_property name="ElementShortName">NUMBER_4[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_4[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/NUMBER_3">
+         <obj_property name="ElementShortName">NUMBER_3[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_3[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/NUMBER_2">
+         <obj_property name="ElementShortName">NUMBER_2[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_2[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/NUMBER_1">
+         <obj_property name="ElementShortName">NUMBER_1[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_1[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/NUMBER_0">
+         <obj_property name="ElementShortName">NUMBER_0[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_0[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/axi_generator/PACKET_LEN_8">
+         <obj_property name="ElementShortName">PACKET_LEN_8</obj_property>
+         <obj_property name="ObjectShortName">PACKET_LEN_8</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/axi_generator/PACKET_W_4">
+         <obj_property name="ElementShortName">PACKET_W_4</obj_property>
+         <obj_property name="ObjectShortName">PACKET_W_4</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/DEST_MAC_ADD">
+         <obj_property name="ElementShortName">DEST_MAC_ADD[47:0]</obj_property>
+         <obj_property name="ObjectShortName">DEST_MAC_ADD[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/SRC_MAC_ADD">
+         <obj_property name="ElementShortName">SRC_MAC_ADD[47:0]</obj_property>
+         <obj_property name="ObjectShortName">SRC_MAC_ADD[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/MIN_DATA_BYTES_TO_SEND">
+         <obj_property name="ElementShortName">MIN_DATA_BYTES_TO_SEND[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MIN_DATA_BYTES_TO_SEND[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/axi_generator/MAX_FRAMES_TO_SEND">
+         <obj_property name="ElementShortName">MAX_FRAMES_TO_SEND</obj_property>
+         <obj_property name="ObjectShortName">MAX_FRAMES_TO_SEND</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/MIN_FRAMES_TO_SEND">
+         <obj_property name="ElementShortName">MIN_FRAMES_TO_SEND[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MIN_FRAMES_TO_SEND[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group909">
+      <obj_property name="label">AXI_CHECKER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/m_axis_tkeep">
+         <obj_property name="ElementShortName">m_axis_tkeep[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tkeep[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/m_axis_clk">
+         <obj_property name="ElementShortName">m_axis_clk</obj_property>
+         <obj_property name="ObjectShortName">m_axis_clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/axi_start">
+         <obj_property name="ElementShortName">axi_start</obj_property>
+         <obj_property name="ObjectShortName">axi_start</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/axi_reset">
+         <obj_property name="ElementShortName">axi_reset</obj_property>
+         <obj_property name="ObjectShortName">axi_reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/m_axis_tlast">
+         <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/my_axi_checker/current_state">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/my_axi_checker/current_state2">
+         <obj_property name="ElementShortName">current_state2</obj_property>
+         <obj_property name="ObjectShortName">current_state2</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/my_axi_checker/next_state">
+         <obj_property name="ElementShortName">next_state</obj_property>
+         <obj_property name="ObjectShortName">next_state</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/axi_data_intern">
+         <obj_property name="ElementShortName">axi_data_intern[63:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_data_intern[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/received_column_all_cnt">
+         <obj_property name="ElementShortName">received_column_all_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">received_column_all_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/received_cur_framecolumn_cnt">
+         <obj_property name="ElementShortName">received_cur_framecolumn_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">received_cur_framecolumn_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/column_data_correct_cnt">
+         <obj_property name="ElementShortName">column_data_correct_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">column_data_correct_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/column_data_correct_cnt2">
+         <obj_property name="ElementShortName">column_data_correct_cnt2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">column_data_correct_cnt2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/received_frame_cnt">
+         <obj_property name="ElementShortName">received_frame_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">received_frame_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/received_frame_cnt2">
+         <obj_property name="ElementShortName">received_frame_cnt2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">received_frame_cnt2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/received_correct_frames_cnt">
+         <obj_property name="ElementShortName">received_correct_frames_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">received_correct_frames_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/expected_total_cur_framebytes">
+         <obj_property name="ElementShortName">expected_total_cur_framebytes[31:0]</obj_property>
+         <obj_property name="ObjectShortName">expected_total_cur_framebytes[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/expected_left_cur_framebytes">
+         <obj_property name="ElementShortName">expected_left_cur_framebytes[31:0]</obj_property>
+         <obj_property name="ObjectShortName">expected_left_cur_framebytes[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/expected_col_data">
+         <obj_property name="ElementShortName">expected_col_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">expected_col_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/expected_col_data2">
+         <obj_property name="ElementShortName">expected_col_data2[63:0]</obj_property>
+         <obj_property name="ObjectShortName">expected_col_data2[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/DETECTED_ADR1">
+         <obj_property name="ElementShortName">DETECTED_ADR1</obj_property>
+         <obj_property name="ObjectShortName">DETECTED_ADR1</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/DETECTED_ADR2">
+         <obj_property name="ElementShortName">DETECTED_ADR2</obj_property>
+         <obj_property name="ObjectShortName">DETECTED_ADR2</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/checkByte">
+         <obj_property name="ElementShortName">checkByte</obj_property>
+         <obj_property name="ObjectShortName">checkByte</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/byteCheckResult">
+         <obj_property name="ElementShortName">byteCheckResult[7:0]</obj_property>
+         <obj_property name="ObjectShortName">byteCheckResult[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/frame_data_correct">
+         <obj_property name="ElementShortName">frame_data_correct</obj_property>
+         <obj_property name="ObjectShortName">frame_data_correct</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/column_data_correct">
+         <obj_property name="ElementShortName">column_data_correct</obj_property>
+         <obj_property name="ObjectShortName">column_data_correct</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/column_data_correct_fsm">
+         <obj_property name="ElementShortName">column_data_correct_fsm</obj_property>
+         <obj_property name="ObjectShortName">column_data_correct_fsm</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/error_flag">
+         <obj_property name="ElementShortName">error_flag</obj_property>
+         <obj_property name="ObjectShortName">error_flag</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/error_flag_otherfsm">
+         <obj_property name="ElementShortName">error_flag_otherfsm</obj_property>
+         <obj_property name="ObjectShortName">error_flag_otherfsm</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/check_flag_otherfsm">
+         <obj_property name="ElementShortName">check_flag_otherfsm</obj_property>
+         <obj_property name="ObjectShortName">check_flag_otherfsm</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/getOldStatus">
+         <obj_property name="ElementShortName">getOldStatus</obj_property>
+         <obj_property name="ObjectShortName">getOldStatus</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/m_axis_tvalid_crc_in">
+         <obj_property name="ElementShortName">m_axis_tvalid_crc_in</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid_crc_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/CRC_REG_tb">
+         <obj_property name="ElementShortName">CRC_REG_tb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CRC_REG_tb[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/CRC_CHECK_OUT">
+         <obj_property name="ElementShortName">CRC_CHECK_OUT[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CRC_CHECK_OUT[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/crc_calc_enabled">
+         <obj_property name="ElementShortName">crc_calc_enabled</obj_property>
+         <obj_property name="ObjectShortName">crc_calc_enabled</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/crc_reset">
+         <obj_property name="ElementShortName">crc_reset</obj_property>
+         <obj_property name="ObjectShortName">crc_reset</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/last_column">
+         <obj_property name="ElementShortName">last_column[63:0]</obj_property>
+         <obj_property name="ObjectShortName">last_column[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/crc_axi_column_in">
+         <obj_property name="ElementShortName">crc_axi_column_in[63:0]</obj_property>
+         <obj_property name="ObjectShortName">crc_axi_column_in[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/crc_ok">
+         <obj_property name="ElementShortName">crc_ok</obj_property>
+         <obj_property name="ObjectShortName">crc_ok</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/prev_CRC_REG_tb">
+         <obj_property name="ElementShortName">prev_CRC_REG_tb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">prev_CRC_REG_tb[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/prev_prev_CRC_REG_tb">
+         <obj_property name="ElementShortName">prev_prev_CRC_REG_tb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">prev_prev_CRC_REG_tb[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/cnt">
+         <obj_property name="ElementShortName">cnt[0:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/identic_crc_in_frame_cnt">
+         <obj_property name="ElementShortName">identic_crc_in_frame_cnt[10:0]</obj_property>
+         <obj_property name="ObjectShortName">identic_crc_in_frame_cnt[10:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/testcnt">
+         <obj_property name="ElementShortName">testcnt[3:0]</obj_property>
+         <obj_property name="ObjectShortName">testcnt[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/my_axi_checker/error_flag_crc">
+         <obj_property name="ElementShortName">error_flag_crc</obj_property>
+         <obj_property name="ObjectShortName">error_flag_crc</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/NUMBER_4">
+         <obj_property name="ElementShortName">NUMBER_4[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_4[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/NUMBER_3">
+         <obj_property name="ElementShortName">NUMBER_3[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_3[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/NUMBER_2">
+         <obj_property name="ElementShortName">NUMBER_2[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_2[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/NUMBER_1">
+         <obj_property name="ElementShortName">NUMBER_1[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_1[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/NUMBER_0">
+         <obj_property name="ElementShortName">NUMBER_0[3:0]</obj_property>
+         <obj_property name="ObjectShortName">NUMBER_0[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/my_axi_checker/PACKET_LEN_8">
+         <obj_property name="ElementShortName">PACKET_LEN_8</obj_property>
+         <obj_property name="ObjectShortName">PACKET_LEN_8</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/my_axi_checker/PACKET_W_4">
+         <obj_property name="ElementShortName">PACKET_W_4</obj_property>
+         <obj_property name="ObjectShortName">PACKET_W_4</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/DEST_MAC_ADD">
+         <obj_property name="ElementShortName">DEST_MAC_ADD[47:0]</obj_property>
+         <obj_property name="ObjectShortName">DEST_MAC_ADD[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/SRC_MAC_ADD">
+         <obj_property name="ElementShortName">SRC_MAC_ADD[47:0]</obj_property>
+         <obj_property name="ObjectShortName">SRC_MAC_ADD[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/FRAME_PART1">
+         <obj_property name="ElementShortName">FRAME_PART1[63:0]</obj_property>
+         <obj_property name="ObjectShortName">FRAME_PART1[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/FRAME_PART2">
+         <obj_property name="ElementShortName">FRAME_PART2[63:0]</obj_property>
+         <obj_property name="ObjectShortName">FRAME_PART2[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/MIN_DATA_BYTES_TO_SEND">
+         <obj_property name="ElementShortName">MIN_DATA_BYTES_TO_SEND[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MIN_DATA_BYTES_TO_SEND[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/testbench/dut/my_axi_checker/MAX_FRAMES_TO_SEND">
+         <obj_property name="ElementShortName">MAX_FRAMES_TO_SEND</obj_property>
+         <obj_property name="ObjectShortName">MAX_FRAMES_TO_SEND</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/my_axi_checker/MIN_FRAMES_TO_SEND">
+         <obj_property name="ElementShortName">MIN_FRAMES_TO_SEND[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MIN_FRAMES_TO_SEND[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
