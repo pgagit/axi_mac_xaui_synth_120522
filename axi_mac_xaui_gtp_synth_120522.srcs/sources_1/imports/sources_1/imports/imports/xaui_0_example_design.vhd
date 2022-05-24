@@ -72,7 +72,9 @@ COMPONENT vio_0
     probe_out6 : OUT  STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out7 : OUT STD_LOGIC_VECTOR (79 DOWNTO 0);
     probe_out8 : OUT STD_LOGIC_VECTOR (79 DOWNTO 0);
-    probe_out9 : OUT STD_LOGIC_VECTOR (0 DOWNTO 0)
+    probe_out9 : OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
+    probe_out10 : OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
+    probe_out11 : OUT STD_LOGIC_VECTOR (0 DOWNTO 0)
 
 
   );
@@ -502,8 +504,12 @@ end component;
 ----------------------------------------------------------------------------
 -- Signal declarations.
 ----------------------------------------------------------------------------
+    signal loopback_xaui_gtp : std_logic_vector  (0 downto 0) := "0";
+    signal xaui_config_vector_test_enable : std_logic_vector  (0 downto 0) := "0";
+
+    
     signal loopback_mac_near_end : std_logic := '0';
-   signal  loopback_mac_near_end_vio : std_logic_vector (0 downto 0) := "0";
+    signal  loopback_mac_near_end_vio : std_logic_vector (0 downto 0) := "0";
     signal axi_crc_result_ok_vio : std_logic_vector(0 downto 0); 
     signal rx_polarities_vio : std_logic_vector( 3 downto 0);
     signal mac_started_ila : std_logic_vector(0 downto 0);
@@ -733,8 +739,11 @@ myvio : vio_0
     probe_out6 =>  reset_mac_tx,
     probe_out7 => rx_configuration_vector_mac_vio,
     probe_out8 => tx_configuration_vector_mac_vio,
-    probe_out9 => loopback_mac_near_end_vio
+    probe_out9 => loopback_mac_near_end_vio,
+        probe_out10 => loopback_xaui_gtp,
+    probe_out11 => xaui_config_vector_test_enable
 
+    
     
   );
   
@@ -796,6 +805,7 @@ PORT MAP (
   
   axi_generator : MY_AXI_GEN_MASTER_TOP
 port map(
+---
     m_axis_tkeep => tx_axis_fifo_tkeep,
     m_axis_tvalid_o => tx_axis_fifo_tvalid,
     m_axis_tdata => tx_axis_fifo_tdata,
@@ -1264,6 +1274,8 @@ wizclock156in50out : clk_wiz_0
                                                               toggle <= '1';
                                                             ELSIF toggle = '1' THEN
                                                             configuration_vector <= (others => '0');
+                                                            configuration_vector(0)<=  loopback_xaui_gtp(0);
+                                                            configuration_vector(4)<=xaui_config_vector_test_enable(0);
                                                                -- configuration_vector(2) <= '0';
                                                               --configuration_vector(3) <= '0';
                                                               toggle <= '0';
@@ -1314,11 +1326,11 @@ wizclock156in50out : clk_wiz_0
       tx_configuration_vector_mac <= X"0605040302da00000023";
       mac_started <= '0';
   else
-        rx_configuration_vector_mac <= X"0605040302da00000022";
-        tx_configuration_vector_mac <= X"0605040302da00000022";
+      --  rx_configuration_vector_mac <= X"0605040302da00000022";
+       -- tx_configuration_vector_mac <= X"0605040302da00000022";
         
-        tx_configuration_vector_mac(0) <=  reset_mac_tx(0);
-        rx_configuration_vector_mac(0) <=  reset_mac_rx(0);
+       -- tx_configuration_vector_mac(0) <=  reset_mac_tx(0);
+       -- rx_configuration_vector_mac(0) <=  reset_mac_rx(0);
         rx_configuration_vector_mac <=rx_configuration_vector_mac_vio;
         tx_configuration_vector_mac <=tx_configuration_vector_mac_vio;
 
@@ -1328,19 +1340,19 @@ wizclock156in50out : clk_wiz_0
 -- if previous transmitted frame was bad: underrun or not error
 mac_reset_cnt <= mac_reset_cnt + 1;
 
-if ( mac_reset_cnt > 0 and mac_reset_cnt < 200 and  status_vector_design = "11111100" and (tx_statistics_mac_out(0) = '0' or tx_statistics_mac_out(3)= '1')) then
+--if ( mac_reset_cnt > 0 and mac_reset_cnt < 200 and  status_vector_design = "11111100" and (tx_statistics_mac_out(0) = '0' or tx_statistics_mac_out(3)= '1')) then
 
--- assert a reset!
-    tx_configuration_vector_mac(0) <= '1';
-    rx_configuration_vector_mac(0) <= '1';
- else
- -- stay low 
-    tx_configuration_vector_mac(0) <= '0';
-    rx_configuration_vector_mac(0) <= '0';
- end if;
+---- assert a reset!
+--    tx_configuration_vector_mac(0) <= '1';
+--    rx_configuration_vector_mac(0) <= '1';
+-- else
+-- -- stay low 
+--    tx_configuration_vector_mac(0) <= '0';
+--    rx_configuration_vector_mac(0) <= '0';
+-- end if;
     
   
-  else   
+  else   --clk
   end if;
   
   end process p_mac_reset_logic;
@@ -1388,7 +1400,7 @@ if ( mac_reset_cnt > 0 and mac_reset_cnt < 200 and  status_vector_design = "1111
       if( loopback_mac_near_end_vio(0) = '1') then
       -- loop back 10G data @ 10G MAC
       --  disconnect xaui
-      xgmii_txd_xaui_i<=X"0000000000000000";
+            xgmii_txd_xaui_i<=X"0000000000000000";
             xgmii_txc_xaui_i<=X"00";
 
       -- mac input = mac output

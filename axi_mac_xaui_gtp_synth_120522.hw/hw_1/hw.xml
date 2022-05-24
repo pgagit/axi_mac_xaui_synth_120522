@@ -26,15 +26,15 @@
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="axi_modus_vio" gui_info="dashboard_1/hw_vio_1=0_exp,dashboard_1/hw_vio_2=0"/>
     <Object name="insert_axo_crc_error" gui_info="dashboard_1/hw_vio_1=3_exp,dashboard_1/hw_vio_2=1"/>
-    <Object name="insert_axo_crc_error_1" gui_info=""/>
-    <Object name="loopback_mac_near_end_vio" gui_info="dashboard_1/hw_vio_2=9"/>
+    <Object name="insert_axo_crc_error_1" gui_info="dashboard_1/hw_vio_2=6_exp"/>
+    <Object name="loopback_mac_near_end_vio" gui_info="dashboard_1/hw_vio_2=3"/>
     <Object name="probe_in0" gui_info="hw_vios/hw_vio_2=0_exp"/>
-    <Object name="reset_mac_rx" gui_info="dashboard_1/hw_vio_2=5"/>
-    <Object name="reset_mac_tx" gui_info="dashboard_1/hw_vio_2=6"/>
-    <Object name="rx_configuration_vector_mac_vio[79:0]" gui_info="dashboard_1/hw_vio_2=7"/>
-    <Object name="rx_polarities_vio[3:0]" gui_info="dashboard_2/hw_vio_2=1,dashboard_1/hw_vio_1=1,dashboard_1/hw_vio_2=3"/>
-    <Object name="tx_configuration_vector_mac_vio[79:0]" gui_info="dashboard_1/hw_vio_2=8"/>
-    <Object name="vio_MAC_reset" gui_info="dashboard_1/hw_vio_2=4"/>
+    <Object name="reset_mac_rx" gui_info="dashboard_1/hw_vio_2=7"/>
+    <Object name="reset_mac_tx" gui_info="dashboard_1/hw_vio_2=8"/>
+    <Object name="rx_configuration_vector_mac_vio[79:0]" gui_info="dashboard_1/hw_vio_2=9"/>
+    <Object name="rx_polarities_vio[3:0]" gui_info="dashboard_2/hw_vio_2=1,dashboard_1/hw_vio_1=1,dashboard_1/hw_vio_2=4"/>
+    <Object name="tx_configuration_vector_mac_vio[79:0]" gui_info="dashboard_1/hw_vio_2=10"/>
+    <Object name="vio_MAC_reset" gui_info="dashboard_1/hw_vio_2=5"/>
     <Object name="vio_reset" gui_info="hw_vios/hw_vio_1=0,hw_vios/hw_vio_2=1,dashboard_2/hw_vio_2=0,dashboard_2/hw_vio_1=0,dashboard_1/hw_vio_1=2,dashboard_1/hw_vio_2=2"/>
   </ObjectList>
   <ObjectList object_type="hw_sysmon" gui_info="">
@@ -1738,7 +1738,7 @@
         <Option Id="HW_VIO" value="hw_vio_2"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE" value="1"/>
         <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
         <Option Id="SOURCE" value="netlist"/>
       </probeOptions>
@@ -1774,6 +1774,21 @@
       </probeOptions>
       <nets>
         <net name="loopback_mac_near_end_vio"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="loopback_xaui_gtp"/>
       </nets>
     </probe>
     <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
@@ -1828,7 +1843,7 @@
         <Option Id="HW_VIO" value="hw_vio_2"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="OUTPUT_VALUE" value="0605040302DA00000020"/>
+        <Option Id="OUTPUT_VALUE" value="0605040302DA00000022"/>
         <Option Id="OUTPUT_VALUE_RADIX" value="HEX"/>
         <Option Id="SOURCE" value="netlist"/>
       </probeOptions>
@@ -1922,7 +1937,7 @@
         <Option Id="HW_VIO" value="hw_vio_2"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="OUTPUT_VALUE" value="7"/>
+        <Option Id="OUTPUT_VALUE" value="F"/>
         <Option Id="OUTPUT_VALUE_RADIX" value="HEX"/>
         <Option Id="SOURCE" value="netlist"/>
       </probeOptions>
@@ -2055,6 +2070,21 @@
       </probeOptions>
       <nets>
         <net name="vio_reset"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="xaui_config_vector_test_enable"/>
       </nets>
     </probe>
   </probeset>

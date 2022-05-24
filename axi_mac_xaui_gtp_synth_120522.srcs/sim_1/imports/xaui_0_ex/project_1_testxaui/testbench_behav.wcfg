@@ -11,19 +11,27 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="9283333667fs"></ZoomStartTime>
-      <ZoomEndTime time="31233333668fs"></ZoomEndTime>
-      <Cursor1Time time="12941667000fs"></Cursor1Time>
+      <ZoomStartTime time="78048328000fs"></ZoomStartTime>
+      <ZoomEndTime time="82468328001fs"></ZoomEndTime>
+      <Cursor1Time time="78938728000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="241"></NameColumnWidth>
-      <ValueColumnWidth column_width="175"></ValueColumnWidth>
+      <NameColumnWidth column_width="190"></NameColumnWidth>
+      <ValueColumnWidth column_width="147"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="6" />
    <wvobject type="group" fp_name="group370">
       <obj_property name="label">10GMAC</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/testbench/dut/axi_modus_vio">
+         <obj_property name="ElementShortName">axi_modus_vio[0:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_modus_vio[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/dut/axi_modus">
+         <obj_property name="ElementShortName">axi_modus</obj_property>
+         <obj_property name="ObjectShortName">axi_modus</obj_property>
+      </wvobject>
       <wvobject type="logic" fp_name="/testbench/dut/mac1/tx_clk0">
          <obj_property name="ElementShortName">tx_clk0</obj_property>
          <obj_property name="ObjectShortName">tx_clk0</obj_property>
@@ -139,6 +147,8 @@
          <wvobject type="array" fp_name="/testbench/dut/mac1/xgmii_txd">
             <obj_property name="ElementShortName">xgmii_txd[63:0]</obj_property>
             <obj_property name="ObjectShortName">xgmii_txd[63:0]</obj_property>
+            <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/testbench/dut/mac1/xgmii_txc">
             <obj_property name="ElementShortName">xgmii_txc[7:0]</obj_property>
@@ -164,6 +174,8 @@
       <wvobject type="array" fp_name="/testbench/dut/tx_axis_fifo_tdata">
          <obj_property name="ElementShortName">tx_axis_fifo_tdata[63:0]</obj_property>
          <obj_property name="ObjectShortName">tx_axis_fifo_tdata[63:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/testbench/dut/tx_axis_fifo_tkeep">
          <obj_property name="ElementShortName">tx_axis_fifo_tkeep[7:0]</obj_property>

@@ -10,14 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1024001fs"></ZoomEndTime>
-      <Cursor1Time time="950000fs"></Cursor1Time>
+      <ZoomEndTime time="7600001fs"></ZoomEndTime>
+      <Cursor1Time time="708000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="328"></NameColumnWidth>
-      <ValueColumnWidth column_width="337"></ValueColumnWidth>
+      <ValueColumnWidth column_width="333"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="27" />
+   <WVObjectSize size="40" />
    <wave_markers>
    </wave_markers>
    <wvobject type="logic" fp_name="aresetn_ila">
@@ -108,14 +108,6 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="mac_status_vector_ila">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">mac_status_vector_ila[2:0]</obj_property>
-      <obj_property name="ObjectShortName">mac_status_vector_ila[2:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="mac_started_ila">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">mac_started_ila</obj_property>
@@ -139,6 +131,16 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="mac_status_vector_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">mac_status_vector_ila[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_status_vector_ila[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="rx_statistics_mac_out">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">rx_statistics_mac_out[29:0]</obj_property>
@@ -157,6 +159,8 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       <obj_property name="label">tx_statistic_mac</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="vbus" fp_name="vbus443">
       <obj_property name="label">bytes_Valid</obj_property>
@@ -260,7 +264,6 @@
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="xgmii_txd_mac_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
@@ -269,6 +272,8 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="xgmii_txc_mac_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
@@ -277,6 +282,8 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="tx_axis_fifo_tdata">
       <obj_property name="DisplayName">FullPathName</obj_property>
@@ -285,13 +292,18 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="axi_crc_result_ok_vio">
+   <wvobject type="array" fp_name="xgmii_rxd_xaui_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">axi_crc_result_ok_vio</obj_property>
-      <obj_property name="ObjectShortName">axi_crc_result_ok_vio</obj_property>
+      <obj_property name="ElementShortName">xgmii_rxd_xaui_o[63:0]</obj_property>
+      <obj_property name="ObjectShortName">xgmii_rxd_xaui_o[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="xgmii_rxc_xaui_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
@@ -300,12 +312,113 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="xgmii_rxd_xaui_o">
+   <wvobject type="logic" fp_name="axi_crc_result_ok_vio">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">xgmii_rxd_xaui_o[63:0]</obj_property>
-      <obj_property name="ObjectShortName">xgmii_rxd_xaui_o[63:0]</obj_property>
+      <obj_property name="ElementShortName">axi_crc_result_ok_vio</obj_property>
+      <obj_property name="ObjectShortName">axi_crc_result_ok_vio</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="gt0_rxdisperr_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt0_rxdisperr_out_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxdisperr_out_ila[1:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="gt0_rxnotintable_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt0_rxnotintable_out_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxnotintable_out_ila[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="gt0_txresetdone_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt0_txresetdone_out_ila</obj_property>
+      <obj_property name="ObjectShortName">gt0_txresetdone_out_ila</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="gt1_rxdisperr_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt1_rxdisperr_out_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxdisperr_out_ila[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="gt1_txresetdone_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt1_txresetdone_out_ila</obj_property>
+      <obj_property name="ObjectShortName">gt1_txresetdone_out_ila</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="gt2_rxnotintable_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt2_rxnotintable_out_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt2_rxnotintable_out_ila[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="gt2_txresetdone_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt2_txresetdone_out_ila</obj_property>
+      <obj_property name="ObjectShortName">gt2_txresetdone_out_ila</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="gt_commadetect_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt_commadetect_ila[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gt_commadetect_ila[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="gt1_rxnotintable_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt1_rxnotintable_out_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxnotintable_out_ila[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="gt2_rxdisperr_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt2_rxdisperr_out_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt2_rxdisperr_out_ila[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="gt3_rxdisperr_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt3_rxdisperr_out_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt3_rxdisperr_out_ila[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="gt3_rxnotintable_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt3_rxnotintable_out_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt3_rxnotintable_out_ila[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="gt3_txresetdone_out_ila">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">gt3_txresetdone_out_ila</obj_property>
+      <obj_property name="ObjectShortName">gt3_txresetdone_out_ila</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
