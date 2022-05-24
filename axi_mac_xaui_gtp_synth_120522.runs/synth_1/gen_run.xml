@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tifbv676-1L" LaunchTime="1653309157">
+<GenRun Id="synth_1" LaunchPart="xc7a200tifbv676-1L" LaunchTime="1653373907">
   <File Type="VDS-TIMING-PB" Name="xaui_0_example_design_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="xaui_0_example_design_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="xaui_0_example_design.dcp"/>
@@ -11,7 +11,7 @@
   <File Type="PA-TCL" Name="xaui_0_example_design.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/xaui_0.xci">
+    <File Path="$PSRCDIR/sources_1/ip/xaui_0/xaui_0.xci">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../xaui_config/xaui_config.srcs/sources_1/ip/xaui_0/xaui_0.xci"/>
         <Attr Name="ImportTime" Val="1651652827"/>
@@ -32,7 +32,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/new/my_axi_generator.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/new/my_axi_generator.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../xaui_0_ex/project_1_testxaui/project_1_testxaui.srcs/sources_1/new/my_axi_generator.vhd"/>
         <Attr Name="ImportTime" Val="1651818496"/>
@@ -40,7 +40,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/imports/imports/xaui_0_support.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/xaui_0_support.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../xaui_0_ex/imports/xaui_0_support.vhd"/>
         <Attr Name="ImportTime" Val="1651666803"/>
@@ -48,7 +48,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/imports/imports/xaui_0_support_clocking.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/xaui_0_support_clocking.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../xaui_0_ex/imports/xaui_0_support_clocking.vhd"/>
         <Attr Name="ImportTime" Val="1651663178"/>
@@ -56,7 +56,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/imports/imports/xaui_0_example_design.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/xaui_0_example_design.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../xaui_0_ex/imports/xaui_0_example_design.vhd"/>
         <Attr Name="ImportTime" Val="1651829907"/>
@@ -72,7 +72,7 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/imports/xaui_0_example_design.xdc">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../xaui_0_ex/imports/xaui_0_example_design.xdc"/>
         <Attr Name="ImportTime" Val="1651751017"/>
@@ -81,7 +81,7 @@
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PPRDIR/../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/imports/xaui_0_example_design.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

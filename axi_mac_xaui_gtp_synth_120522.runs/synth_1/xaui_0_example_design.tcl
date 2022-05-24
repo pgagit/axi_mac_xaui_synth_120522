@@ -36,29 +36,29 @@ set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/new/MY_AXI_RX_CHECKER.vhd
   /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/new/crc_top.vhd
-  /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/new/my_axi_generator.vhd
-  /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/imports/imports/xaui_0_support.vhd
-  /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/imports/imports/xaui_0_support_clocking.vhd
-  /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/imports/imports/xaui_0_example_design.vhd
+  /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/imports/sources_1/new/my_axi_generator.vhd
+  /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/imports/sources_1/imports/imports/xaui_0_support.vhd
+  /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/imports/sources_1/imports/imports/xaui_0_support_clocking.vhd
+  /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/imports/sources_1/imports/imports/xaui_0_example_design.vhd
 }
-read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/xaui_0.xci
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/synth/xaui_0.xdc]
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/xaui_0/synth/xaui_0_ooc.xdc]
+read_ip -quiet /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/xaui_0/xaui_0.xci
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/xaui_0/synth/xaui_0.xdc]
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/xaui_0/synth/xaui_0_ooc.xdc]
 
-read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1.xci
-set_property used_in_synthesis false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_ooc.xdc]
+read_ip -quiet /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/ila_1/ip/ila_1/ila_1.xci
+set_property used_in_synthesis false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/ila_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/ila_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/ila_1/ip/ila_1/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/ila_1/ip/ila_1/ila_1_ooc.xdc]
 
-read_ip -quiet /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ten_gig_eth_mac_0/ten_gig_eth_mac_0.xci
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ten_gig_eth_mac_0/synth/ten_gig_eth_mac_0.xdc]
-set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ten_gig_eth_mac_0/synth/ten_gig_eth_mac_0_ooc.xdc]
+read_ip -quiet /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/ten_gig_eth_mac_0/ip/ten_gig_eth_mac_0/ten_gig_eth_mac_0.xci
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/ten_gig_eth_mac_0/ip/ten_gig_eth_mac_0/synth/ten_gig_eth_mac_0.xdc]
+set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/ten_gig_eth_mac_0/ip/ten_gig_eth_mac_0/synth/ten_gig_eth_mac_0_ooc.xdc]
 
 read_ip -quiet /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0.xci
 set_property used_in_implementation false [get_files -all /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0.xdc]
@@ -72,8 +72,8 @@ set_property used_in_implementation false [get_files -all /home/alexander.kohn/M
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc
-set_property used_in_implementation false [get_files /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc]
+read_xdc /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc
+set_property used_in_implementation false [get_files /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/constrs_1/imports/imports/xaui_0_example_design.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

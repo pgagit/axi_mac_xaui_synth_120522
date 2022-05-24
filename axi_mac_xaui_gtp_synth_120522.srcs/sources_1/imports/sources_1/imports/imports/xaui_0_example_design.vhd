@@ -505,6 +505,7 @@ end component;
     signal status_notaligned : std_logic := '1'; 
     signal status_aligned : std_logic:='0';
     signal dclk_counter : unsigned (7 downto 0) := (others =>  '0');
+    signal mac_reset_cnt : unsigned (20 downto 0) := (others =>  '0');
 
   SIGNAL pattern_generator_enable : STD_LOGIC := '1'; -- for enabling the pattern generator..
 
@@ -1263,52 +1264,7 @@ wizclock156in50out : clk_wiz_0
   ----
   p_reset : process ( refclk_out_xaui_o, reset)
    begin
---   if ( rising_edge(refclk_out_xaui_o) ) then
---   ---case 1 -- not aligned
---       if ( status_vector_design /= "11111100")  then
---           status_notaligned <= '1';
---           status_aligned <= '0';
---       else 
---          status_aligned <= '1';
---          status_notaligned <= '0';
-    
---       end if;
---   ----
---   if ( status_notaligned = '1')then
---     --- if it waited about 2 ms and after this status is not valid ask for reset by a setting a flag
---     -- attention this reset_cnt counts really long and doesnt work in simulatio
---     -- u would wait like 2 hours for >another<  toggle
-     
---        if to_integer(reset_cnt) >= 0  and to_integer(reset_cnt) <=700  then
---         reset <= '1' xor  vio_reset(0);
---         reset_cnt2 <= (others => '0'); -- reset reset counter2        
 
---         else  -- after 700 ns
---          reset <= '0' xor  vio_reset(0);
---            reset_cnt2 <= reset_cnt2 +1;
-
---         end if;
---   else
-   
---   end if;
-   
-   
-   
-   --- if it is aligned then just use this configuration:
---   if status_aligned = '1' then
---      reset <= '0' xor  vio_reset(0);
-
---   else
---   end if;
---        reset_cnt <= reset_cnt +1 ;
-
-   
-   
-       
-     -- after 700 ns reset to 0
-     -- or if reset flag = 1 to 1
-  
---   end if;
 
    if ( rising_edge(refclk_out_xaui_o) ) then
    
@@ -1330,6 +1286,7 @@ wizclock156in50out : clk_wiz_0
   
   p_mac_reset_logic : process ( refclk_out_xaui_o)
   begin 
+  if ( rising_edge(refclk_out_xaui_o)) then
     if ( reset = '1')then
       rx_configuration_vector_mac <= X"0605040302da00000023";
       tx_configuration_vector_mac <= X"0605040302da00000023";
@@ -1338,47 +1295,30 @@ wizclock156in50out : clk_wiz_0
         rx_configuration_vector_mac <= X"0605040302da00000022";
         tx_configuration_vector_mac <= X"0605040302da00000022";
         
- tx_configuration_vector_mac(0) <=  reset_mac_tx(0);
-rx_configuration_vector_mac(0) <=  reset_mac_rx(0);
+        tx_configuration_vector_mac(0) <=  reset_mac_tx(0);
+        rx_configuration_vector_mac(0) <=  reset_mac_rx(0);
   end if;
---  ---- if resetted   
---  if ( reset = '1')then
---   rx_configuration_vector_mac <= X"0605040302da00000023";
---      tx_configuration_vector_mac <= X"0605040302da00000023";
---      mac_started <= '0';
---  else
 
---  end if;
---  --- 
---  -- if reset is realed toggle one bit for some time
---if (reset = '0' ) then   
---    if (mac_started = '0' and  to_integer (reset_cnt2) <= 700  )then
---    rx_configuration_vector_mac <= X"0605040302da00000022";
---    tx_configuration_vector_mac <= X"0605040302da00000022";
---    else
---    --..
---    end if;
-     
---     if ( mac_started = '0' and to_integer (reset_cnt2) > 700 and  to_integer (reset_cnt2) <=1000 )then
---            rx_configuration_vector_mac <= X"0605040302da00000023";
---            tx_configuration_vector_mac <= X"0605040302da00000023";
---     else
---     end if;
-        
---    if ( mac_started = '0' and ( to_integer (reset_cnt2)  > 1000)) then
---        mac_started <= '1';
---        rx_configuration_vector_mac <= X"0605040302da00000022";
---        tx_configuration_vector_mac <= X"0605040302da00000022";
---     else
---     end if;
-    
--- end if;---- reset 0
+---- if xaui is initialized and MAC isnt working 
+-- if previous transmitted frame was bad: underrun or not error
+mac_reset_cnt <= mac_reset_cnt + 1;
 
- 
+if ( mac_reset_cnt > 0 and mac_reset_cnt < 200 and  status_vector_design = "11111100" and (tx_statistics_mac_out(0) = '0' or tx_statistics_mac_out(3)= '1')) then
+
+-- assert a reset!
+    tx_configuration_vector_mac(0) <= '1';
+    rx_configuration_vector_mac(0) <= '1';
+ else
+ -- stay low 
+    tx_configuration_vector_mac(0) <= '0';
+    rx_configuration_vector_mac(0) <= '0';
+ end if;
     
   
-
-  end process;
+  else   
+  end if;
+  
+  end process p_mac_reset_logic;
   
   
   
@@ -1388,6 +1328,9 @@ rx_configuration_vector_mac(0) <=  reset_mac_rx(0);
   clk156_counter <= clk156_counter +1;
   else
   end if; 
+  
+
+  
   end process;
   
   
@@ -1397,6 +1340,11 @@ rx_configuration_vector_mac(0) <=  reset_mac_rx(0);
   dclk_counter <= dclk_counter +1;
   else
   end if; 
+  
+  
+  
+  
+  
   end process;
   
   
