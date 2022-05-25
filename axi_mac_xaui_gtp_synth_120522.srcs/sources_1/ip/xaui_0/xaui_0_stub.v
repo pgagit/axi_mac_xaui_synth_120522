@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Tue May 17 07:22:43 2022
+// Date        : Fri May 13 11:12:11 2022
 // Host        : pc-140-151-2 running 64-bit Ubuntu 20.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top xaui_0 -prefix
 //               xaui_0_ xaui_0_stub.v

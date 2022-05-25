@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="78048328000fs"></ZoomStartTime>
-      <ZoomEndTime time="82468328001fs"></ZoomEndTime>
-      <Cursor1Time time="78938728000fs"></Cursor1Time>
+      <ZoomStartTime time="19551778000fs"></ZoomStartTime>
+      <ZoomEndTime time="20854778001fs"></ZoomEndTime>
+      <Cursor1Time time="20636778000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="190"></NameColumnWidth>
-      <ValueColumnWidth column_width="147"></ValueColumnWidth>
+      <ValueColumnWidth column_width="143"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="6" />
    <wvobject type="group" fp_name="group370">
@@ -1666,41 +1666,14 @@
    <wvobject type="group" fp_name="group787">
       <obj_property name="label">AXI_GENERATOR</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/testbench/dut/axi_generator/m_axis_tkeep">
-         <obj_property name="ElementShortName">m_axis_tkeep[7:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axis_tkeep[7:0]</obj_property>
-      </wvobject>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/testbench/dut/axi_generator/m_axis_tvalid">
          <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
          <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/testbench/dut/axi_generator/m_axis_tdata">
-         <obj_property name="ElementShortName">m_axis_tdata[63:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axis_tdata[63:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/m_axis_tready">
-         <obj_property name="ElementShortName">m_axis_tready</obj_property>
-         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/m_axis_clk">
-         <obj_property name="ElementShortName">m_axis_clk</obj_property>
-         <obj_property name="ObjectShortName">m_axis_clk</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/axi_start">
-         <obj_property name="ElementShortName">axi_start</obj_property>
-         <obj_property name="ObjectShortName">axi_start</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/testbench/dut/axi_generator/axi_reset">
-         <obj_property name="ElementShortName">axi_reset</obj_property>
-         <obj_property name="ObjectShortName">axi_reset</obj_property>
-      </wvobject>
       <wvobject type="logic" fp_name="/testbench/dut/axi_generator/m_axis_tlast">
          <obj_property name="ElementShortName">m_axis_tlast</obj_property>
          <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/testbench/dut/axi_generator/testinteger">
-         <obj_property name="ElementShortName">testinteger</obj_property>
-         <obj_property name="ObjectShortName">testinteger</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/testbench/dut/axi_generator/AXI_GEN_MODUS">
          <obj_property name="ElementShortName">AXI_GEN_MODUS</obj_property>
@@ -1714,13 +1687,13 @@
          <obj_property name="ElementShortName">next_state</obj_property>
          <obj_property name="ObjectShortName">next_state</obj_property>
       </wvobject>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/axi_gen_state">
+         <obj_property name="ElementShortName">axi_gen_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_gen_state[2:0]</obj_property>
+      </wvobject>
       <wvobject type="array" fp_name="/testbench/dut/axi_generator/data">
          <obj_property name="ElementShortName">data[31:0]</obj_property>
          <obj_property name="ObjectShortName">data[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/testbench/dut/axi_generator/axi_data">
-         <obj_property name="ElementShortName">axi_data[63:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_data[63:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/testbench/dut/axi_generator/axi_data_content">
          <obj_property name="ElementShortName">axi_data_content[63:0]</obj_property>
@@ -1745,10 +1718,6 @@
       <wvobject type="array" fp_name="/testbench/dut/axi_generator/total_data_bytes_for_cur_frame">
          <obj_property name="ElementShortName">total_data_bytes_for_cur_frame[31:0]</obj_property>
          <obj_property name="ObjectShortName">total_data_bytes_for_cur_frame[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/testbench/dut/axi_generator/left_frame_data_bytes_to_send">
-         <obj_property name="ElementShortName">left_frame_data_bytes_to_send[31:0]</obj_property>
-         <obj_property name="ObjectShortName">left_frame_data_bytes_to_send[31:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/testbench/dut/axi_generator/CRC_CHECK_ENABLE">
          <obj_property name="ElementShortName">CRC_CHECK_ENABLE</obj_property>
@@ -1838,13 +1807,9 @@
          <obj_property name="ElementShortName">SRC_MAC_ADD[47:0]</obj_property>
          <obj_property name="ObjectShortName">SRC_MAC_ADD[47:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/testbench/dut/axi_generator/MIN_DATA_BYTES_TO_SEND">
-         <obj_property name="ElementShortName">MIN_DATA_BYTES_TO_SEND[31:0]</obj_property>
-         <obj_property name="ObjectShortName">MIN_DATA_BYTES_TO_SEND[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/testbench/dut/axi_generator/MAX_FRAMES_TO_SEND">
-         <obj_property name="ElementShortName">MAX_FRAMES_TO_SEND</obj_property>
-         <obj_property name="ObjectShortName">MAX_FRAMES_TO_SEND</obj_property>
+      <wvobject type="array" fp_name="/testbench/dut/axi_generator/MAX_FRAMES_TO_SEND">
+         <obj_property name="ElementShortName">MAX_FRAMES_TO_SEND[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MAX_FRAMES_TO_SEND[31:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/testbench/dut/axi_generator/MIN_FRAMES_TO_SEND">
          <obj_property name="ElementShortName">MIN_FRAMES_TO_SEND[31:0]</obj_property>

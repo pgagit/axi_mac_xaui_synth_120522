@@ -1308,25 +1308,25 @@ begin
      data_out              => uclk_signal_detect(3)
     );
 
- uclk_signal_detect_reord(0) <= uclk_signal_detect(2);
- uclk_signal_detect_reord(1) <= uclk_signal_detect(3);
- uclk_signal_detect_reord(2) <= uclk_signal_detect(1);
- uclk_signal_detect_reord(3) <= uclk_signal_detect(0);
+ uclk_signal_detect_reord(0) <= uclk_signal_detect(0);
+ uclk_signal_detect_reord(1) <= uclk_signal_detect(1);
+ uclk_signal_detect_reord(2) <= uclk_signal_detect(2);
+ uclk_signal_detect_reord(3) <= uclk_signal_detect(3);
 
- uclk_sync_status_reord(2) <= uclk_sync_status(0);
- uclk_sync_status_reord(3) <= uclk_sync_status(1);
- uclk_sync_status_reord(1) <= uclk_sync_status(2);
- uclk_sync_status_reord(0) <= uclk_sync_status(3);
+ uclk_sync_status_reord(0) <= uclk_sync_status(0);
+ uclk_sync_status_reord(1) <= uclk_sync_status(1);
+ uclk_sync_status_reord(2) <= uclk_sync_status(2);
+ uclk_sync_status_reord(3) <= uclk_sync_status(3);
 
- mgt_enable_align_reord(2) <= mgt_enable_align(0);
- mgt_enable_align_reord(3) <= mgt_enable_align(1);
- mgt_enable_align_reord(1) <= mgt_enable_align(2);
- mgt_enable_align_reord(0) <= mgt_enable_align(3);
+ mgt_enable_align_reord(0) <= mgt_enable_align(0);
+ mgt_enable_align_reord(1) <= mgt_enable_align(1);
+ mgt_enable_align_reord(2) <= mgt_enable_align(2);
+ mgt_enable_align_reord(3) <= mgt_enable_align(3);
 
- core_mgt_rx_reset_reord(0) <= core_mgt_rx_reset(2);
- core_mgt_rx_reset_reord(1) <= core_mgt_rx_reset(3);
- core_mgt_rx_reset_reord(2) <= core_mgt_rx_reset(1);
- core_mgt_rx_reset_reord(3) <= core_mgt_rx_reset(0);
+ core_mgt_rx_reset_reord(0) <= core_mgt_rx_reset(0);
+ core_mgt_rx_reset_reord(1) <= core_mgt_rx_reset(1);
+ core_mgt_rx_reset_reord(2) <= core_mgt_rx_reset(2);
+ core_mgt_rx_reset_reord(3) <= core_mgt_rx_reset(3);
 
 
   xaui_0_core : xaui_v12_3_6_top
@@ -1372,15 +1372,15 @@ begin
       configuration_vector => configuration_vector,
       status_vector        => status_vector );
 
-  mgt_txdata_reord(2*16+15 downto 2*16) <= mgt_txdata(15 downto 0);
-  mgt_txdata_reord(3*16+15 downto 3*16) <= mgt_txdata(31 downto 16);
-  mgt_txdata_reord(1*16+15 downto 1*16) <= mgt_txdata(47 downto 32);
-  mgt_txdata_reord(0*16+15 downto 0*16) <= mgt_txdata(63 downto 48);
+  mgt_txdata_reord(0*16+15 downto 0*16) <= mgt_txdata(15 downto 0);
+  mgt_txdata_reord(1*16+15 downto 1*16) <= mgt_txdata(31 downto 16);
+  mgt_txdata_reord(2*16+15 downto 2*16) <= mgt_txdata(47 downto 32);
+  mgt_txdata_reord(3*16+15 downto 3*16) <= mgt_txdata(63 downto 48);
 
-  mgt_txcharisk_reord(2*2+1 downto 2*2) <= mgt_txcharisk(1 downto 0);
-  mgt_txcharisk_reord(3*2+1 downto 3*2) <= mgt_txcharisk(3 downto 2);
-  mgt_txcharisk_reord(1*2+1 downto 1*2) <= mgt_txcharisk(5 downto 4);
-  mgt_txcharisk_reord(0*2+1 downto 0*2) <= mgt_txcharisk(7 downto 6);
+  mgt_txcharisk_reord(0*2+1 downto 0*2) <= mgt_txcharisk(1 downto 0);
+  mgt_txcharisk_reord(1*2+1 downto 1*2) <= mgt_txcharisk(3 downto 2);
+  mgt_txcharisk_reord(2*2+1 downto 2*2) <= mgt_txcharisk(5 downto 4);
+  mgt_txcharisk_reord(3*2+1 downto 3*2) <= mgt_txcharisk(7 downto 6);
 
   -- Detect a falling edge in loopback and issues a reset so that GTs lose sync and alignment.
   p_loopback_reset : process (clk156)
@@ -2237,14 +2237,14 @@ begin
   p_mgt_reg : process(clk156)
   begin
     if rising_edge(clk156) then
-        mgt_rxdata_reg             <= mgt_rxdata(0*16+15 downto 0*16) & mgt_rxdata(1*16+15 downto 1*16) & mgt_rxdata(3*16+15 downto 3*16) & mgt_rxdata(2*16+15 downto 2*16);
-        mgt_rxcharisk_reg          <= mgt_rxcharisk(0*2+1 downto 0*2) & mgt_rxcharisk(1*2+1 downto 1*2) & mgt_rxcharisk(3*2+1 downto 3*2) & mgt_rxcharisk(2*2+1 downto 2*2);
-        mgt_rxnotintable_reg       <= mgt_rxnotintable(0*2+1 downto 0*2) & mgt_rxnotintable(1*2+1 downto 1*2) & mgt_rxnotintable(3*2+1 downto 3*2) & mgt_rxnotintable(2*2+1 downto 2*2);
-        mgt_rxdisperr_reg          <= mgt_rxdisperr(0*2+1 downto 0*2) & mgt_rxdisperr(1*2+1 downto 1*2) & mgt_rxdisperr(3*2+1 downto 3*2) & mgt_rxdisperr(2*2+1 downto 2*2);
-        mgt_codecomma_reg          <= mgt_rxchariscomma(0*2+1 downto 0*2) & mgt_rxchariscomma(1*2+1 downto 1*2) & mgt_rxchariscomma(3*2+1 downto 3*2) & mgt_rxchariscomma(2*2+1 downto 2*2);
+        mgt_rxdata_reg             <= mgt_rxdata(3*16+15 downto 3*16) & mgt_rxdata(2*16+15 downto 2*16) & mgt_rxdata(1*16+15 downto 1*16) & mgt_rxdata(0*16+15 downto 0*16);
+        mgt_rxcharisk_reg          <= mgt_rxcharisk(3*2+1 downto 3*2) & mgt_rxcharisk(2*2+1 downto 2*2) & mgt_rxcharisk(1*2+1 downto 1*2) & mgt_rxcharisk(0*2+1 downto 0*2);
+        mgt_rxnotintable_reg       <= mgt_rxnotintable(3*2+1 downto 3*2) & mgt_rxnotintable(2*2+1 downto 2*2) & mgt_rxnotintable(1*2+1 downto 1*2) & mgt_rxnotintable(0*2+1 downto 0*2);
+        mgt_rxdisperr_reg          <= mgt_rxdisperr(3*2+1 downto 3*2) & mgt_rxdisperr(2*2+1 downto 2*2) & mgt_rxdisperr(1*2+1 downto 1*2) & mgt_rxdisperr(0*2+1 downto 0*2);
+        mgt_codecomma_reg          <= mgt_rxchariscomma(3*2+1 downto 3*2) & mgt_rxchariscomma(2*2+1 downto 2*2) & mgt_rxchariscomma(1*2+1 downto 1*2) & mgt_rxchariscomma(0*2+1 downto 0*2);
         uclk_mgt_enchansync_reg    <= uclk_mgt_enchansync;
         uclk_mgt_rxbufstatus_reg   <= uclk_mgt_rxbufstatus;
-        uclk_mgt_txresetdone_reg   <= uclk_mgt_txresetdone_wire(0) & uclk_mgt_txresetdone_wire(1) & uclk_mgt_txresetdone_wire(3) & uclk_mgt_txresetdone_wire(2);
+        uclk_mgt_txresetdone_reg   <= uclk_mgt_txresetdone_wire(3) & uclk_mgt_txresetdone_wire(2) & uclk_mgt_txresetdone_wire(1) & uclk_mgt_txresetdone_wire(0);
     end if;
   end process p_mgt_reg;
 

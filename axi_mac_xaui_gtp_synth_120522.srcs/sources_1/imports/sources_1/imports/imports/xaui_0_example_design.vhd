@@ -74,9 +74,10 @@ COMPONENT vio_0
     probe_out8 : OUT STD_LOGIC_VECTOR (79 DOWNTO 0);
     probe_out9 : OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
     probe_out10 : OUT STD_LOGIC_VECTOR (0 DOWNTO 0);
-    probe_out11 : OUT STD_LOGIC_VECTOR (0 DOWNTO 0)
-
-
+    probe_out11 : OUT STD_LOGIC_VECTOR (0 DOWNTO 0); --test enable
+    probe_out12 : OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- 
+    probe_out13 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+   probe_out14 : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
   );
 END COMPONENT;
 COMPONENT ila_1
@@ -123,7 +124,8 @@ PORT (
     probe36 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     probe37 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	probe38 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    probe39 : IN STD_LOGIC_VECTOR(63 DOWNTO 0)
+    probe39 : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+    probe40 : IN std_logic_vector ( 2 downto 0)
 	
 	
 
@@ -155,7 +157,9 @@ port (
         AXI_CRC_CHECK_ENABLE : IN STD_LOGIC;
         interframe_gap_delay_clk_cycles : IN unsigned (7 DOWNTO 0);
         insert_error_by_wrong_crc : IN STD_LOGIC;
-        axi_gen_max_frames_in : IN unsigned (31 DOWNTO 0)
+        axi_gen_max_frames_in : IN unsigned (31 DOWNTO 0);
+                axi_gen_state : OUT  std_logic_vector(2 downto 0)
+
 );
 end component;
 
@@ -516,6 +520,8 @@ end component;
     signal  loopback_mac_near_end_vio : std_logic_vector (0 downto 0) := "0";
     signal axi_crc_result_ok_vio : std_logic_vector(0 downto 0); 
     signal rx_polarities_vio : std_logic_vector( 3 downto 0);
+    signal tx_polarities_vio : std_logic_vector( 3 downto 0);
+
     signal mac_started_ila : std_logic_vector(0 downto 0);
     signal mac_started : std_logic := '0';
     signal status_notaligned : std_logic := '1'; 
@@ -613,6 +619,9 @@ signal gt0_rxdisperr_out_ila : std_logic_vector (1 downto 0);
 signal gt1_rxdisperr_out_ila : std_logic_vector (1 downto 0);
 signal gt2_rxdisperr_out_ila : std_logic_vector (1 downto 0);
 signal gt3_rxdisperr_out_ila : std_logic_vector (1 downto 0);
+
+
+signal axi_gen_state_ila : std_logic_vector (2 downto 0);
 --
   attribute SHREG_EXTRACT : string;
 
@@ -698,6 +707,10 @@ signal axi_modus_vio : std_logic_vector(0 downto 0) := "0" ; -- init with one.. 
 signal axi_modus :std_logic:='0';
 signal insert_axo_crc_error : std_logic_vector(0 downto 0) := "0";
 
+signal axi_gen_ether_type_in_vio :  std_logic_vector(15 DOWNTO 0):= X"0080" ;
+signal axi_gen_ether_frame_length_in_vio :  std_logic_vector(31 DOWNTO 0):= X"000000BB";
+
+
 -----------------------------
 --- begin architecture
 
@@ -745,7 +758,11 @@ myvio : vio_0
     probe_out8 => tx_configuration_vector_mac_vio,
     probe_out9 => loopback_mac_near_end_vio,
         probe_out10 => loopback_xaui_gtp,
-    probe_out11 => xaui_config_vector_test_enable
+    probe_out11 => xaui_config_vector_test_enable,
+probe_out12 => axi_gen_ether_type_in_vio,
+probe_out13 =>  axi_gen_ether_frame_length_in_vio,
+probe_out14 => tx_polarities_vio
+    
 
     
     
@@ -800,7 +817,8 @@ PORT MAP (
     probe36 => xgmii_rxc_xaui_o,
     probe37 =>gt_commadetect_ila,
     probe38 => axi_crc_result_ok_vio,
-    probe39 => tx_axis_fifo_tdata
+    probe39 => tx_axis_fifo_tdata,
+    probe40 => axi_gen_state_ila
 	-- add some status vector..
 );
  -----------------------------------------------------------------------------
@@ -820,11 +838,12 @@ port map(
     axi_gen_reset_in => '0',
     m_axis_gen_tlast_o => tx_axis_fifo_tlast ,
     axi_modus_gen_i => axi_modus_vio(0), --- 1 for const mode , 0 for counting mode 
-    axi_gen_ether_type_in => X"0080",
+    axi_gen_ether_type_in =>unsigned(axi_gen_ether_type_in_vio),-- X"0080",
     AXI_CRC_CHECK_ENABLE => '1',
     interframe_gap_delay_clk_cycles => X"0A", -- clock cycles waiting before next frame sending
     insert_error_by_wrong_crc => insert_axo_crc_error(0),
-      axi_gen_max_frames_in => X"000000BB"
+      axi_gen_max_frames_in => unsigned(axi_gen_ether_frame_length_in_vio),--X"000000BB"
+      axi_gen_state =>axi_gen_state_ila
   ); 
   
   
@@ -980,7 +999,7 @@ mac1 : ten_gig_eth_mac_0
        gt0_loopback_in          => "000",
    -- Polarity-------------------------------------Polarity
        gt0_rxpolarity_in        => rx_polarities_vio(0), --
-       gt0_txpolarity_in        => '0',
+       gt0_txpolarity_in        => tx_polarities_vio(0),
    -- RX Decision Feedback Equalizer(DFE)
        gt0_rxlpmreset_in        => '0',
        gt0_rxlpmhfhold_in       => '0',
@@ -1039,7 +1058,7 @@ mac1 : ten_gig_eth_mac_0
        gt1_loopback_in          => "000",
    -- Polarity---------------------------------------Polarity
        gt1_rxpolarity_in        => rx_polarities_vio(1),
-       gt1_txpolarity_in        => '1',
+       gt1_txpolarity_in        => tx_polarities_vio(1),
    -- RX Decision Feedback Equalizer(DFE)
        gt1_rxlpmreset_in        => '0',
        gt1_rxlpmhfhold_in       => '0',
@@ -1098,7 +1117,7 @@ mac1 : ten_gig_eth_mac_0
        gt2_loopback_in          => "000",
    -- Polarity-------------------------------------------Polarity
        gt2_rxpolarity_in        => rx_polarities_vio(2),
-       gt2_txpolarity_in        => '0',
+       gt2_txpolarity_in        => tx_polarities_vio(2),
    -- RX Decision Feedback Equalizer(DFE)
        gt2_rxlpmreset_in        => '0',
        gt2_rxlpmhfhold_in       => '0',
@@ -1157,7 +1176,7 @@ mac1 : ten_gig_eth_mac_0
        gt3_loopback_in          => "000",
    -- Polarity-------------------------------------------------Polarity
        gt3_rxpolarity_in        => rx_polarities_vio(3),
-       gt3_txpolarity_in        => '1',
+       gt3_txpolarity_in        => tx_polarities_vio(3),
    -- RX Decision Feedback Equalizer(DFE)
        gt3_rxlpmreset_in        => '0',
        gt3_rxlpmhfhold_in       => '0',

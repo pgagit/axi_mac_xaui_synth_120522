@@ -1,2 +1,2 @@
-ila_1.vhd,vhdl,xil_defaultlib,../../../../../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/sim/ila_1.vhd,incdir="../../../../../axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/hdl/verilog"
+ila_1.vhd,vhdl,xil_defaultlib,../../../../axi_mac_xaui_gtp_synth_120522.srcs/ila_1/ip/ila_1/sim/ila_1.vhd,incdir="../../../../axi_mac_xaui_gtp_synth_120522.srcs/ila_1/ip/ila_1/hdl/verilog"
 glbl.v,Verilog,xil_defaultlib,glbl.v

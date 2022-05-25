@@ -48,7 +48,8 @@ ENTITY MY_AXI_GEN_MASTER_TOP IS
         AXI_CRC_CHECK_ENABLE : IN STD_LOGIC;
         interframe_gap_delay_clk_cycles : IN unsigned (7 DOWNTO 0);
         insert_error_by_wrong_crc : IN STD_LOGIC;
-        axi_gen_max_frames_in : IN unsigned (31 DOWNTO 0)
+        axi_gen_max_frames_in : IN unsigned (31 DOWNTO 0);
+        axi_gen_state : OUT  std_logic_vector(2 downto 0)
     );
 END MY_AXI_GEN_MASTER_TOP;
 
@@ -69,14 +70,15 @@ ARCHITECTURE Behavioral OF MY_AXI_GEN_MASTER_TOP IS
     CONSTANT SRC_MAC_ADD : unsigned (47 DOWNTO 0) := X"5A5051525354";
     -- amount of frames in general
     SIGNAL MAX_FRAMES_TO_SEND : unsigned (31 DOWNTO 0) := X"000005DC"; -- 1500 
-    SIGNAL MIN_FRAMES_TO_SEND : unsigned (31 DOWNTO 0) := X"0000002e"; --46 Bytes
-    SIGNAL interframe_gap_delay_clk_cycles_intern : unsigned (7 DOWNTO 0) := X"0A";
+    SIGNAL MIN_FRAMES_TO_SEND : unsigned (31 DOWNTO 0) := X"000000ff"; --46 Bytes ) 2e
+    SIGNAL interframe_gap_delay_clk_cycles_intern : unsigned (7 DOWNTO 0) := X"0f";
 
     --### FSM: Define the states of state machine
     SIGNAL AXI_GEN_MODUS : STD_LOGIC := '0'; -- 0 = standard , 1 = constat values ,, can decide which mode should be used
     TYPE state IS (IDLE, SEND_STREAM, SEND_PRE_P1, SEND_PRE_P2, SEND_AXI_DATA, SEND_CRC);
     SIGNAL current_state : state := IDLE;
     SIGNAL next_state : state := IDLE;
+    signal axi_gen_state_o : std_logic_vector(2 downto 0);
     --## AXI - STATUS
     -- data
     SIGNAL data : unsigned(31 DOWNTO 0) := (OTHERS => '0');
@@ -187,17 +189,19 @@ BEGIN
     --- FSM:
     sm_pr : PROCESS (axi_gen_reset_in, m_axis_gen_clk_i, next_state, axi_gen_start_i, m_axis_gen_tready_in)
     BEGIN
-        IF axi_gen_reset_in = '1' THEN
-            next_state <= IDLE;
-        END IF;
+--        IF axi_gen_reset_in = '1' THEN
+--            next_state <= IDLE;
+--         else
+--          --   
+--        END IF;
 
-        IF AXI_GEN_MODUS = '0' THEN
+--        IF AXI_GEN_MODUS = '0' or AXI_GEN_MODUS = '1' THEN
 
             IF (rising_edge (m_axis_gen_clk_i) AND m_axis_gen_tready_in = '1') THEN
                 CASE (next_state) IS
                         ---
                     WHEN IDLE => -- its like reset
-                        --special_crc_flag <= '0';
+                        axi_gen_state <= "000";
                         interframe_gap_delay <= interframe_gap_delay + 1;
 
                         axi_data_content <= (OTHERS => '0');
@@ -220,6 +224,7 @@ BEGIN
 
                         --########################## First fix part of preamble..
                     WHEN SEND_PRE_P1 =>
+                    axi_gen_state <= "001";
                         --axi status lanes
                         interframe_gap_delay <= (OTHERS => '0');
                         m_axis_tvalid <= '1'; -- valid data on line!
@@ -242,6 +247,7 @@ BEGIN
                         END IF;
                         --########################## Second fix part of preamble..TYPE-field and 2 Byte data
                     WHEN SEND_PRE_P2 =>
+                     axi_gen_state <= "010";
                         --axi status lanes
                         m_axis_tlast <= '0'; -- won't be the last one!
                         m_axis_tvalid <= '1'; -- valid data on line!
@@ -264,6 +270,7 @@ BEGIN
                         --########################## Send column: with only data
 
                     WHEN SEND_AXI_DATA =>
+                                        axi_gen_state <= "100";
                         -- First check if MAC is ready to receive data
                         -- attention what should happen if m_axis is not ready?
                         -- answer: nothing
@@ -385,10 +392,10 @@ BEGIN
                             -- calc remaining bytes:
                             ---------------------
                             -- Decrease the amount of bytes put on the lane: 
-                            -- checks if less than 0 (by overflow because its unsigned..) 400000 is just a high value
-                            IF left_frame_data_bytes_to_send_cnt - X"8" > 40000 THEN
+                            -- checks if less than 0 (by overflow because its unsigned..) ffff is just a high value
+                            IF left_frame_data_bytes_to_send_cnt - X"8" > X"0fff" THEN
                                 ---if overflow will occure set counter to 0
-                                left_frame_data_bytes_to_send_cnt <= (OTHERS => '0'); --correct overflow to 0
+                                left_frame_data_bytes_to_send_cnt <= (OTHERS => '0'); -- NO MORE BYTES TO SEND 
                             ELSIF left_frame_data_bytes_to_send_cnt - X"8" >= 0 THEN
                                 -- if 8 or more bytes remain 
                                 -- if no overflow and bigger than 8 Bytes left, just decrease by 8
@@ -435,18 +442,18 @@ BEGIN
                                 ELSE
                                     next_state <= IDLE;
                                 END IF;
-                                ----- AMOUNT OF FRAMES
                                 ------ increment Ethernet-FRAME-Counter
+                                --- #### if frame finished
                                 IF to_integer(sent_frame_cnt) < to_integer(MAX_FRAMES_TO_SEND) THEN
-                                    -- if not sent all:
+                                    -- there are still frames remaining:
                                     sent_frame_cnt <= sent_frame_cnt + 1; -- increment frame counter
                                     total_data_bytes_for_cur_frame <= total_data_bytes_for_cur_frame + 1; -- add one for the amount bytes for the next frame
                                 ELSE
-                                    -- if sent all e.g. 1500 Frames:
-                                    -- resetframe counter
+                                    -- already sent all Frames:
+                                    -- reset frame counter
                                     -- or put it in idle
                                     sent_frame_cnt <= X"00000000";--RESET counter of sent frames
-                                    total_data_bytes_for_cur_frame <= MIN_FRAMES_TO_SEND;--starts with minum X"0000002E";
+                                    total_data_bytes_for_cur_frame <= MIN_FRAMES_TO_SEND;--reset with minum X"0000002E";
 
                                 END IF;
                             END IF;
@@ -455,6 +462,7 @@ BEGIN
                         --else
                         --end if;-- crc_sent
                     WHEN SEND_CRC =>
+                     axi_gen_state <= "111";
                         IF (send_next_column_the_crc = '1') THEN
                             -- user can also insert a wrong crc for debugging:
                             IF (insert_error_by_wrong_crc = '0') THEN
@@ -484,109 +492,115 @@ BEGIN
             END IF;
             ----------------------------------------------------
             ------------------------------------------------------
-        ELSE -- -if another Generator-Mode was chosen:
-            ---- SECOND FSM
-            CASE (next_state) IS
-                    ---
-                WHEN IDLE => -- its like reset
-                    sent_frame_cnt <= (OTHERS => '0');
-                    interframe_gap_delay <= interframe_gap_delay + 1;
+--        ELSE -- -if another Generator-Mode was chosen:
+--            ---- SECOND FSM
+--            CASE (next_state) IS
+--                    ---
+--                WHEN IDLE => -- its like reset
+--                    sent_frame_cnt <= (OTHERS => '0');
+--                    interframe_gap_delay <= interframe_gap_delay + 1;
 
-                    axi_data_content <= (OTHERS => '0');
-                    m_axis_gen_tkeep_o <= (OTHERS => '0'); -- no lane activated
-                    m_axis_tvalid <= '0'; -- nothin valid
-                    m_axis_tlast <= '0'; -- won't be the last
-                    crc_sent <= '0';
-                    --left_bytes_to_send <= X"0000002e";
-                    -- start sending .. but maybe first wait until MAC ready?
+--                    axi_data_content <= (OTHERS => '0');
+--                    m_axis_gen_tkeep_o <= (OTHERS => '0'); -- no lane activated
+--                    m_axis_tvalid <= '0'; -- nothin valid
+--                    m_axis_tlast <= '0'; -- won't be the last
+--                    crc_sent <= '0';
+--                    --left_bytes_to_send <= X"0000002e";
+--                    -- start sending .. but maybe first wait until MAC ready?
 
-                    IF (axi_gen_start_i = '1' AND m_axis_gen_tready_in = '1' AND interframe_gap_delay > 10) THEN
-                        next_state <= SEND_PRE_P1;
-                    ELSE
+--                    IF (axi_gen_start_i = '1' AND m_axis_gen_tready_in = '1' AND interframe_gap_delay > 10) THEN
+--                        next_state <= SEND_PRE_P1;
+--                    ELSE
 
-                    END IF;
+--                    END IF;
 
-                    --########################## First fix part of preamble..
-                WHEN SEND_PRE_P1 =>
-                    interframe_gap_delay <= (OTHERS => '0'); -- reset interframe gap delay...
-                    m_axis_tvalid <= '1'; -- valid data on line!
-                    m_axis_tlast <= '0'; -- won't be the last one!
-                    m_axis_gen_tkeep_o <= X"FF"; -- all lanes have vaild data
-                    -- axi data lanes
+--                    --########################## First fix part of preamble..
+--                WHEN SEND_PRE_P1 =>
+--                    interframe_gap_delay <= (OTHERS => '0'); -- reset interframe gap delay...
+--                    m_axis_tvalid <= '1'; -- valid data on line!
+--                    m_axis_tlast <= '0'; -- won't be the last one!
+--                    m_axis_gen_tkeep_o <= X"FF"; -- all lanes have vaild data
+--                    -- axi data lanes
 
-                    axi_data_content (47 DOWNTO 0) <= DEST_MAC_ADD(47 DOWNTO 0);-- 6 Bytes = 48 elements
-                    axi_data_content (63 DOWNTO 48) <= SRC_MAC_ADD(47 DOWNTO 32);-- 2 Bytes = 47- 32 = 16 elements
+--                    axi_data_content (47 DOWNTO 0) <= DEST_MAC_ADD(47 DOWNTO 0);-- 6 Bytes = 48 elements
+--                    axi_data_content (63 DOWNTO 48) <= SRC_MAC_ADD(47 DOWNTO 32);-- 2 Bytes = 47- 32 = 16 elements
 
-                    IF (m_axis_gen_tready_in = '1') -- only go to next state if MAC is ready..
-                        THEN
-                        next_state <= SEND_PRE_P2;
-                    ELSE
-                        -- stay here
-                    END IF;
+--                    IF (m_axis_gen_tready_in = '1') -- only go to next state if MAC is ready..
+--                        THEN
+--                        next_state <= SEND_PRE_P2;
+--                    ELSE
+--                        -- stay here
+--                    END IF;
 
-                WHEN SEND_PRE_P2 =>
-                    --axi status lanes
-                    m_axis_tlast <= '0'; -- won't be the last one!
-                    m_axis_tvalid <= '1'; -- valid data on line!
-                    m_axis_gen_tkeep_o <= X"FF"; -- all lanes have vaild data
-                    -- axi data lanes
-                    axi_data_content (31 DOWNTO 0) <= SRC_MAC_ADD(31 DOWNTO 0); -- 4 Bytes = 32 elements
-                    axi_data_content (47 DOWNTO 32) <= X"0806"; -- TYPE 0x0800 Ethertype -- Attention check if its right set
-                    axi_data_content (63 DOWNTO 48) <= X"0000"; -- The first axi tdata 0x0000
-                    IF (m_axis_gen_tready_in = '1') -- only go to next state if MAC is ready..
-                        THEN
-                        next_state <= SEND_AXI_DATA; -- start with stream data...
+--                WHEN SEND_PRE_P2 =>
+--                    --axi status lanes
+--                    m_axis_tlast <= '0'; -- won't be the last one!
+--                    m_axis_tvalid <= '1'; -- valid data on line!
+--                    m_axis_gen_tkeep_o <= X"FF"; -- all lanes have vaild data
+--                    -- axi data lanes
+--                    axi_data_content (31 DOWNTO 0) <= SRC_MAC_ADD(31 DOWNTO 0); -- 4 Bytes = 32 elements
+--                    axi_data_content (47 DOWNTO 32) <= X"0080"; -- TYPE 0x0800 Ethertype -- Attention check if its right set
+--                    axi_data_content (63 DOWNTO 48) <= X"0000"; -- The first axi tdata 0x0000
+--                    IF (m_axis_gen_tready_in = '1') -- only go to next state if MAC is ready..
+--                        THEN
+--                        next_state <= SEND_AXI_DATA; -- start with stream data...
 
-                    ELSE
-                    END IF;
-                    --########################## Send column: with only data
+--                    ELSE
+--                    END IF;
+--                    --########################## Send column: with only data
 
-                WHEN SEND_AXI_DATA =>
-                    -- First check if MAC is ready to receive data
-                    -- attention what should happen if m_axis is not ready?
-                    -- answer: nothing
-                    IF (m_axis_gen_tready_in = '1') THEN
+--                WHEN SEND_AXI_DATA =>
+--                    -- First check if MAC is ready to receive data
+--                    -- attention what should happen if m_axis is not ready?
+--                    -- answer: nothing
+--                    IF (m_axis_gen_tready_in = '1') THEN
 
-                        -- Update AXI STATUS signals
-                        -- if less or equal 8 Bytes to send: set tlast! tlast (= indicates last message)
-                        -- if this is the last column of the frame set tlast!
+--                        -- Update AXI STATUS signals
+--                        -- if less or equal 8 Bytes to send: set tlast! tlast (= indicates last message)
+--                        -- if this is the last column of the frame set tlast!
 
-                        --- AXI-DATA:
-                        --- Put new data onto lines: l7 ... l0
-                        axi_data_content(15 DOWNTO 0) <= X"0000";
-                        axi_data_content(31 DOWNTO 16) <= X"1111";
-                        axi_data_content(47 DOWNTO 32) <= X"2222";
-                        axi_data_content(63 DOWNTO 48) <= X"3333";
-                        sent_frame_cnt <= sent_frame_cnt + 1;
-                        IF sent_frame_cnt > 50 THEN
-                            next_state <= IDLE;
-                            m_axis_tlast <= '1';
-                        ELSE
-                        END IF;
-                    ELSE
-                    END IF;
-                WHEN OTHERS =>
-            END CASE;
-        END IF; ---
+--                        --- AXI-DATA:
+--                        --- Put new data onto lines: l7 ... l0
+--                        axi_data_content(15 DOWNTO 0) <= X"0000";
+--                        axi_data_content(31 DOWNTO 16) <= X"1111";
+--                        axi_data_content(47 DOWNTO 32) <= X"2222";
+--                        axi_data_content(63 DOWNTO 48) <= X"3333";
+--                        sent_frame_cnt <= sent_frame_cnt + 1;
+--                        IF sent_frame_cnt = 50 THEN
+--                            m_axis_tlast <= '1';
+--                        ELSE
+--                        END IF;
+--                         IF sent_frame_cnt = 51 THEN
+--                            next_state <= IDLE;
+--                            m_axis_tlast <= '1';
+--                        ELSE
+--                        END IF;
+--                    ELSE
+--                    END IF;
+--                WHEN OTHERS =>
+--            END CASE;
+--        END IF; ---
     END PROCESS sm_pr;
 
-    reset_p : PROCESS
-    BEGIN
-        -- LOAD_INIT_tb <= '1';
-        enable_test <= '0';
-        reset_tb <= '1';
-        WAIT FOR 20 ns;
-        reset_tb <= '0';
-        WAIT FOR 100 ns;
-        LOAD_INIT_tb <= '0';
-        -- while CRC_REG_tb < X"FFFFFFFF" loop
-        -- wait for 10 ns;
-        -- end loop;
+--    reset_p : PROCESS
+--    BEGIN
+--        -- LOAD_INIT_tb <= '1';
+--        enable_test <= '0';
+--        reset_tb <= '1';
+--        WAIT FOR 20 ns;
+--        reset_tb <= '0';
+--        WAIT FOR 100 ns;
+--        LOAD_INIT_tb <= '0';
+--        -- while CRC_REG_tb < X"FFFFFFFF" loop
+--        -- wait for 10 ns;
+--        -- end loop;
 
-        WAIT FOR 100 ns;
-        enable_test <= '1';
-        WAIT;
-    END PROCESS;
+--        WAIT FOR 100 ns;
+--        enable_test <= '1';
+--        WAIT;
+--    END PROCESS;
+    
+
 END Behavioral;
 
 --

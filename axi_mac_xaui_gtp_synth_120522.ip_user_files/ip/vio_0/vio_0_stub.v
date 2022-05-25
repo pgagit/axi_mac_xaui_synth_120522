@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Wed May 25 08:33:41 2022
+// Date        : Wed May 25 13:20:57 2022
 // Host        : pc-140-151-2 running 64-bit Ubuntu 20.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/sources_1/ip/vio_0/vio_0_stub.v
@@ -16,8 +16,9 @@
 (* X_CORE_INFO = "vio,Vivado 2019.1" *)
 module vio_0(clk, probe_in0, probe_in1, probe_in2, probe_in3, 
   probe_in4, probe_in5, probe_in6, probe_out0, probe_out1, probe_out2, probe_out3, probe_out4, 
-  probe_out5, probe_out6, probe_out7, probe_out8, probe_out9, probe_out10, probe_out11)
-/* synthesis syn_black_box black_box_pad_pin="clk,probe_in0[0:0],probe_in1[0:0],probe_in2[0:0],probe_in3[0:0],probe_in4[0:0],probe_in5[0:0],probe_in6[0:0],probe_out0[0:0],probe_out1[0:0],probe_out2[3:0],probe_out3[0:0],probe_out4[0:0],probe_out5[0:0],probe_out6[0:0],probe_out7[79:0],probe_out8[79:0],probe_out9[0:0],probe_out10[0:0],probe_out11[0:0]" */;
+  probe_out5, probe_out6, probe_out7, probe_out8, probe_out9, probe_out10, probe_out11, 
+  probe_out12, probe_out13, probe_out14)
+/* synthesis syn_black_box black_box_pad_pin="clk,probe_in0[0:0],probe_in1[0:0],probe_in2[0:0],probe_in3[0:0],probe_in4[0:0],probe_in5[0:0],probe_in6[0:0],probe_out0[0:0],probe_out1[0:0],probe_out2[3:0],probe_out3[0:0],probe_out4[0:0],probe_out5[0:0],probe_out6[0:0],probe_out7[79:0],probe_out8[79:0],probe_out9[0:0],probe_out10[0:0],probe_out11[0:0],probe_out12[15:0],probe_out13[31:0],probe_out14[3:0]" */;
   input clk;
   input [0:0]probe_in0;
   input [0:0]probe_in1;
@@ -38,4 +39,7 @@ module vio_0(clk, probe_in0, probe_in1, probe_in2, probe_in3,
   output [0:0]probe_out9;
   output [0:0]probe_out10;
   output [0:0]probe_out11;
+  output [15:0]probe_out12;
+  output [31:0]probe_out13;
+  output [3:0]probe_out14;
 endmodule

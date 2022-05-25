@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Mon May 23 14:35:24 2022
+-- Date        : Wed May 25 10:22:39 2022
 -- Host        : pc-140-151-2 running 64-bit Ubuntu 20.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/alexander.kohn/MYREPO2/axi_mac_xaui_GTP_synth/axi_mac_xaui_GTP_synth.srcs/sources_1/ip/ila_1/ila_1_stub.vhdl
+--               /home/alexander.kohn/MYREPO2/4_axi_mac_xaui_gtp_synth_120522/axi_mac_xaui_gtp_synth_120522.srcs/ila_1/ip/ila_1/ila_1_stub.vhdl
 -- Design      : ila_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a200tifbv676-1L
@@ -54,7 +54,8 @@ entity ila_1 is
     probe36 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     probe37 : in STD_LOGIC_VECTOR ( 3 downto 0 );
     probe38 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe39 : in STD_LOGIC_VECTOR ( 63 downto 0 )
+    probe39 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    probe40 : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
 
 end ila_1;
@@ -63,7 +64,7 @@ architecture stub of ila_1 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,probe0[7:0],probe1[5:0],probe2[7:0],probe3[6:0],probe4[63:0],probe5[0:0],probe6[0:0],probe7[0:0],probe8[7:0],probe9[63:0],probe10[0:0],probe11[0:0],probe12[0:0],probe13[2:0],probe14[0:0],probe15[0:0],probe16[0:0],probe17[0:0],probe18[7:0],probe19[63:0],probe20[7:0],probe21[25:0],probe22[29:0],probe23[0:0],probe24[0:0],probe25[1:0],probe26[1:0],probe27[1:0],probe28[1:0],probe29[1:0],probe30[1:0],probe31[1:0],probe32[1:0],probe33[0:0],probe34[79:0],probe35[79:0],probe36[7:0],probe37[3:0],probe38[0:0],probe39[63:0]";
+attribute black_box_pad_pin of stub : architecture is "clk,probe0[7:0],probe1[5:0],probe2[7:0],probe3[6:0],probe4[63:0],probe5[0:0],probe6[0:0],probe7[0:0],probe8[7:0],probe9[63:0],probe10[0:0],probe11[0:0],probe12[0:0],probe13[2:0],probe14[0:0],probe15[0:0],probe16[0:0],probe17[0:0],probe18[7:0],probe19[63:0],probe20[7:0],probe21[25:0],probe22[29:0],probe23[0:0],probe24[0:0],probe25[1:0],probe26[1:0],probe27[1:0],probe28[1:0],probe29[1:0],probe30[1:0],probe31[1:0],probe32[1:0],probe33[0:0],probe34[79:0],probe35[79:0],probe36[7:0],probe37[3:0],probe38[0:0],probe39[63:0],probe40[2:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "ila,Vivado 2019.1";
 begin

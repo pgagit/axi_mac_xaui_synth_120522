@@ -2766,7 +2766,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 24 11:41:34 UTC 2022</spirit:value>
+            <spirit:value>Wed May 25 10:26:38 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -2781,7 +2781,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f84f7438</spirit:value>
+            <spirit:value>9:755fa750</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2796,11 +2796,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 24 11:41:32 UTC 2022</spirit:value>
+            <spirit:value>Wed May 25 10:26:36 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:39ce8ab9</spirit:value>
+            <spirit:value>9:f76a4bfb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2815,11 +2815,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 24 11:41:33 UTC 2022</spirit:value>
+            <spirit:value>Wed May 25 10:26:37 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:39ce8ab9</spirit:value>
+            <spirit:value>9:f76a4bfb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2830,7 +2830,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:39ce8ab9</spirit:value>
+            <spirit:value>9:f76a4bfb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2846,11 +2846,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 24 11:41:34 UTC 2022</spirit:value>
+            <spirit:value>Wed May 25 10:26:37 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:39ce8ab9</spirit:value>
+            <spirit:value>9:f76a4bfb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2865,11 +2865,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 24 11:41:33 UTC 2022</spirit:value>
+            <spirit:value>Wed May 25 10:26:37 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3edc2a30</spirit:value>
+            <spirit:value>9:1667fd6b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2885,11 +2885,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 24 11:41:34 UTC 2022</spirit:value>
+            <spirit:value>Wed May 25 10:26:37 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3edc2a30</spirit:value>
+            <spirit:value>9:1667fd6b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2903,11 +2903,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 24 11:41:34 UTC 2022</spirit:value>
+            <spirit:value>Wed May 25 10:26:38 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:39ce8ab9</spirit:value>
+            <spirit:value>9:f76a4bfb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -9224,20 +9224,14 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choice_list_17403547</spirit:name>
-      <spirit:enumeration>GT Channel 0</spirit:enumeration>
-      <spirit:enumeration>GT Channel 1</spirit:enumeration>
-      <spirit:enumeration>GT Channel 3</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_1fb0a87d</spirit:name>
-      <spirit:enumeration>GT Channel 0</spirit:enumeration>
-      <spirit:enumeration>GT Channel 1</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_20920dd1</spirit:name>
       <spirit:enumeration>GTH</spirit:enumeration>
       <spirit:enumeration>GTY</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_483019b1</spirit:name>
+      <spirit:enumeration>GT Channel 2</spirit:enumeration>
+      <spirit:enumeration>GT Channel 3</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_4dbacc44</spirit:name>
@@ -9246,12 +9240,18 @@
       <spirit:enumeration>312.5</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_list_528fda07</spirit:name>
+      <spirit:enumeration>GT Channel 3</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_949abb3f</spirit:name>
       <spirit:enumeration>X0Y0</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_b7e7ae66</spirit:name>
-      <spirit:enumeration>GT Channel 0</spirit:enumeration>
+      <spirit:name>choice_list_b959b552</spirit:name>
+      <spirit:enumeration>GT Channel 1</spirit:enumeration>
+      <spirit:enumeration>GT Channel 2</spirit:enumeration>
+      <spirit:enumeration>GT Channel 3</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_de0da37a</spirit:name>
@@ -9594,7 +9594,7 @@
     <spirit:parameter>
       <spirit:name>Select_lane_0</spirit:name>
       <spirit:displayName>XAUI Core Lane0</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Select_lane_0" spirit:choiceRef="choice_list_de0da37a" spirit:order="10" spirit:configGroups="1 UnGrouped">GT Channel 2</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Select_lane_0" spirit:choiceRef="choice_list_de0da37a" spirit:order="10" spirit:configGroups="1 UnGrouped">GT Channel 0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -9606,7 +9606,7 @@
     <spirit:parameter>
       <spirit:name>Select_lane_1</spirit:name>
       <spirit:displayName>XAUI Core Lane1</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Select_lane_1" spirit:choiceRef="choice_list_17403547" spirit:order="11" spirit:configGroups="1 UnGrouped">GT Channel 3</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Select_lane_1" spirit:choiceRef="choice_list_b959b552" spirit:order="11" spirit:configGroups="1 UnGrouped">GT Channel 1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -9618,7 +9618,7 @@
     <spirit:parameter>
       <spirit:name>Select_lane_2</spirit:name>
       <spirit:displayName>XAUI Core Lane2</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Select_lane_2" spirit:choiceRef="choice_list_1fb0a87d" spirit:order="12" spirit:configGroups="1 UnGrouped">GT Channel 1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Select_lane_2" spirit:choiceRef="choice_list_483019b1" spirit:order="12" spirit:configGroups="1 UnGrouped">GT Channel 2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -9630,7 +9630,7 @@
     <spirit:parameter>
       <spirit:name>Select_lane_3</spirit:name>
       <spirit:displayName>XAUI Core Lane3</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Select_lane_3" spirit:choiceRef="choice_list_b7e7ae66" spirit:order="13" spirit:configGroups="1 UnGrouped">GT Channel 0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Select_lane_3" spirit:choiceRef="choice_list_528fda07" spirit:order="13" spirit:configGroups="1 UnGrouped">GT Channel 3</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
