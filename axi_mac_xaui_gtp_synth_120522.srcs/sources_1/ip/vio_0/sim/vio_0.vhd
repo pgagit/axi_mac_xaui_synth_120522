@@ -61,7 +61,7 @@ probe_in4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 probe_in5 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 probe_in6 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) := "0";
-probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) := "1" ;
+probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) := "0" ;
 probe_out2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000" ;
 probe_out3 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) := "0" ;
 probe_out4 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) := "0" ;

@@ -135,23 +135,27 @@ PORT (
 END COMPONENT  ;
 
 -----------------------------------------------------------------------------
-   -- AXI
+   -- AXI generator
    ------------------------------------
 component MY_AXI_GEN_MASTER_TOP is
 port (
-        m_axis_tkeep : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- whic lane is valid
-		m_axis_tvalid_o : OUT STD_LOGIC;
-		m_axis_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0); -- 4 byte
-		m_axis_tready : IN STD_LOGIC; -- is mac ready to receive?
-		m_axis_clk : IN STD_LOGIC;
-		axi_start : IN STD_LOGIC;
-		axi_reset : IN STD_LOGIC;
-		m_axis_tlast_o : OUT STD_LOGIC;
-		axi_modus : IN STD_LOGIC; -- 0 is normal 1 is const
-		axi_gen_ether_type_in : IN unsigned (15 DOWNTO 0);
-		AXI_CRC_CHECK_ENABLE : IN std_logic;
-		interframe_gap_delay_clk_cycles : IN unsigned (7 downto 0 );
-		insert_error_by_wrong_crc : IN std_logic
+        m_axis_gen_tkeep_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- whic lane is valid
+        m_axis_tvalid_o : OUT STD_LOGIC;
+        m_axis_gen_tdata_o : OUT STD_LOGIC_VECTOR(63 DOWNTO 0); -- 4 byte
+        m_axis_gen_tlast_o : OUT STD_LOGIC;
+        ---
+        m_axis_gen_tready_in : IN STD_LOGIC; -- is mac ready to receive?
+        --
+        m_axis_gen_clk_i : IN STD_LOGIC;
+        axi_gen_start_i : IN STD_LOGIC;
+        axi_gen_reset_in : IN STD_LOGIC;
+        --
+        axi_modus_gen_i : IN STD_LOGIC; -- 0 is normal 1 is const
+        axi_gen_ether_type_in : IN unsigned (15 DOWNTO 0);
+        AXI_CRC_CHECK_ENABLE : IN STD_LOGIC;
+        interframe_gap_delay_clk_cycles : IN unsigned (7 DOWNTO 0);
+        insert_error_by_wrong_crc : IN STD_LOGIC;
+        axi_gen_max_frames_in : IN unsigned (31 DOWNTO 0)
 );
 end component;
 
@@ -690,8 +694,8 @@ signal tx_mac_stat_valid_out : std_logic;
 signal rx_mac_stat_valid_out_ila : std_logic_vector(0 downto 0);
 signal tx_mac_stat_valid_out_ila : std_logic_vector(0 downto 0);
 
-signal axi_modus_vio : std_logic_vector(0 downto 0) := "1" ; -- init with one.. but why doesnt it work with 0?
-signal axi_modus :std_logic;
+signal axi_modus_vio : std_logic_vector(0 downto 0) := "0" ; -- init with one.. but why doesnt it work with 0?
+signal axi_modus :std_logic:='0';
 signal insert_axo_crc_error : std_logic_vector(0 downto 0) := "0";
 
 -----------------------------
@@ -806,20 +810,21 @@ PORT MAP (
   axi_generator : MY_AXI_GEN_MASTER_TOP
 port map(
 ---
-    m_axis_tkeep => tx_axis_fifo_tkeep,
+    m_axis_gen_tkeep_o => tx_axis_fifo_tkeep,
     m_axis_tvalid_o => tx_axis_fifo_tvalid,
-    m_axis_tdata => tx_axis_fifo_tdata,
-    m_axis_tready => tx_axis_fifo_ready, 
+    m_axis_gen_tdata_o => tx_axis_fifo_tdata,
+    m_axis_gen_tready_in => tx_axis_fifo_ready, 
     ---
-    m_axis_clk  => clk156_xaui_out,  -- transmitter clk..
-    axi_start => '1',
-    axi_reset => reset,
-    m_axis_tlast_o => tx_axis_fifo_tlast ,
-    axi_modus => axi_modus_vio(0), --- 1 for const mode , 0 for counting mode 
+    m_axis_gen_clk_i  => clk156_xaui_out,  -- transmitter clk..
+    axi_gen_start_i => '1',
+    axi_gen_reset_in => '0',
+    m_axis_gen_tlast_o => tx_axis_fifo_tlast ,
+    axi_modus_gen_i => axi_modus_vio(0), --- 1 for const mode , 0 for counting mode 
     axi_gen_ether_type_in => X"0080",
     AXI_CRC_CHECK_ENABLE => '1',
     interframe_gap_delay_clk_cycles => X"0A", -- clock cycles waiting before next frame sending
-    insert_error_by_wrong_crc => insert_axo_crc_error(0)
+    insert_error_by_wrong_crc => insert_axo_crc_error(0),
+      axi_gen_max_frames_in => X"000000BB"
   ); 
   
   
